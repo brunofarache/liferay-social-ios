@@ -10,22 +10,12 @@
 		CCAB24BF17443E48001F0F3D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCAB24BE17443E48001F0F3D /* UIKit.framework */; };
 		CCAB24C117443E48001F0F3D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCAB24C017443E48001F0F3D /* Foundation.framework */; };
 		CCAB24C317443E48001F0F3D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCAB24C217443E48001F0F3D /* CoreGraphics.framework */; };
-		CCAB24C917443E48001F0F3D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CCAB24C717443E48001F0F3D /* InfoPlist.strings */; };
-		CCAB24CB17443E48001F0F3D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAB24CA17443E48001F0F3D /* main.m */; };
-		CCAB24CF17443E48001F0F3D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAB24CE17443E48001F0F3D /* AppDelegate.m */; };
-		CCAB24D117443E48001F0F3D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CCAB24D017443E48001F0F3D /* Default.png */; };
-		CCAB24D317443E48001F0F3D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CCAB24D217443E48001F0F3D /* Default@2x.png */; };
-		CCAB24D517443E48001F0F3D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CCAB24D417443E48001F0F3D /* Default-568h@2x.png */; };
-		CCAB24D817443E48001F0F3D /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAB24D717443E48001F0F3D /* FirstViewController.m */; };
-		CCAB24DA17443E48001F0F3D /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = CCAB24D917443E48001F0F3D /* first.png */; };
-		CCAB24DC17443E48001F0F3D /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CCAB24DB17443E48001F0F3D /* first@2x.png */; };
-		CCAB24DF17443E48001F0F3D /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAB24DE17443E48001F0F3D /* SecondViewController.m */; };
-		CCAB24E117443E48001F0F3D /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = CCAB24E017443E48001F0F3D /* second.png */; };
-		CCAB24E317443E48001F0F3D /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CCAB24E217443E48001F0F3D /* second@2x.png */; };
-		CCAB24E617443E48001F0F3D /* FirstViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCAB24E417443E48001F0F3D /* FirstViewController_iPhone.xib */; };
-		CCAB24E917443E48001F0F3D /* FirstViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCAB24E717443E48001F0F3D /* FirstViewController_iPad.xib */; };
-		CCAB24EC17443E48001F0F3D /* SecondViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCAB24EA17443E48001F0F3D /* SecondViewController_iPhone.xib */; };
-		CCAB24EF17443E48001F0F3D /* SecondViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCAB24ED17443E48001F0F3D /* SecondViewController_iPad.xib */; };
+		CCE3A7A2174440D80022B6BF /* LiferaySocialAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE3A793174440D80022B6BF /* LiferaySocialAppDelegate.m */; };
+		CCE3A7A6174440D80022B6BF /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = CCE3A798174440D80022B6BF /* first.png */; };
+		CCE3A7A7174440D80022B6BF /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CCE3A799174440D80022B6BF /* first@2x.png */; };
+		CCE3A7AA174440D80022B6BF /* Liferay Social-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CCE3A79D174440D80022B6BF /* Liferay Social-Info.plist */; };
+		CCE3A7AB174440D80022B6BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE3A79F174440D80022B6BF /* main.m */; };
+		CCE3A7AE174442F80022B6BF /* MicroblogsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE3A7AD174442F80022B6BF /* MicroblogsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,27 +23,15 @@
 		CCAB24BE17443E48001F0F3D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CCAB24C017443E48001F0F3D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CCAB24C217443E48001F0F3D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		CCAB24C617443E48001F0F3D /* Liferay Social-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Liferay Social-Info.plist"; sourceTree = "<group>"; };
-		CCAB24C817443E48001F0F3D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		CCAB24CA17443E48001F0F3D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		CCAB24CC17443E48001F0F3D /* Liferay Social-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Liferay Social-Prefix.pch"; sourceTree = "<group>"; };
-		CCAB24CD17443E48001F0F3D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		CCAB24CE17443E48001F0F3D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CCAB24D017443E48001F0F3D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		CCAB24D217443E48001F0F3D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		CCAB24D417443E48001F0F3D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		CCAB24D617443E48001F0F3D /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		CCAB24D717443E48001F0F3D /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		CCAB24D917443E48001F0F3D /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		CCAB24DB17443E48001F0F3D /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		CCAB24DD17443E48001F0F3D /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		CCAB24DE17443E48001F0F3D /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		CCAB24E017443E48001F0F3D /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		CCAB24E217443E48001F0F3D /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
-		CCAB24E517443E48001F0F3D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController_iPhone.xib; sourceTree = "<group>"; };
-		CCAB24E817443E48001F0F3D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController_iPad.xib; sourceTree = "<group>"; };
-		CCAB24EB17443E48001F0F3D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController_iPhone.xib; sourceTree = "<group>"; };
-		CCAB24EE17443E48001F0F3D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController_iPad.xib; sourceTree = "<group>"; };
+		CCE3A792174440D80022B6BF /* LiferaySocialAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiferaySocialAppDelegate.h; sourceTree = "<group>"; };
+		CCE3A793174440D80022B6BF /* LiferaySocialAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiferaySocialAppDelegate.m; sourceTree = "<group>"; };
+		CCE3A798174440D80022B6BF /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		CCE3A799174440D80022B6BF /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		CCE3A79D174440D80022B6BF /* Liferay Social-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Liferay Social-Info.plist"; sourceTree = "<group>"; };
+		CCE3A79E174440D80022B6BF /* Liferay Social-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Liferay Social-Prefix.pch"; sourceTree = "<group>"; };
+		CCE3A79F174440D80022B6BF /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CCE3A7AC174442F80022B6BF /* MicroblogsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MicroblogsTableViewController.h; sourceTree = "<group>"; };
+		CCE3A7AD174442F80022B6BF /* MicroblogsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MicroblogsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,37 +78,49 @@
 		CCAB24C417443E48001F0F3D /* Liferay Social */ = {
 			isa = PBXGroup;
 			children = (
-				CCAB24CD17443E48001F0F3D /* AppDelegate.h */,
-				CCAB24CE17443E48001F0F3D /* AppDelegate.m */,
-				CCAB24D617443E48001F0F3D /* FirstViewController.h */,
-				CCAB24D717443E48001F0F3D /* FirstViewController.m */,
-				CCAB24D917443E48001F0F3D /* first.png */,
-				CCAB24DB17443E48001F0F3D /* first@2x.png */,
-				CCAB24DD17443E48001F0F3D /* SecondViewController.h */,
-				CCAB24DE17443E48001F0F3D /* SecondViewController.m */,
-				CCAB24E017443E48001F0F3D /* second.png */,
-				CCAB24E217443E48001F0F3D /* second@2x.png */,
-				CCAB24E417443E48001F0F3D /* FirstViewController_iPhone.xib */,
-				CCAB24E717443E48001F0F3D /* FirstViewController_iPad.xib */,
-				CCAB24EA17443E48001F0F3D /* SecondViewController_iPhone.xib */,
-				CCAB24ED17443E48001F0F3D /* SecondViewController_iPad.xib */,
-				CCAB24C517443E48001F0F3D /* Supporting Files */,
+				CCE3A78C174440D80022B6BF /* Controllers */,
+				CCE3A791174440D80022B6BF /* Delegates */,
+				CCE3A794174440D80022B6BF /* Images */,
+				CCE3A79C174440D80022B6BF /* Supporting Files */,
 			);
 			path = "Liferay Social";
 			sourceTree = "<group>";
 		};
-		CCAB24C517443E48001F0F3D /* Supporting Files */ = {
+		CCE3A78C174440D80022B6BF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CCAB24C617443E48001F0F3D /* Liferay Social-Info.plist */,
-				CCAB24C717443E48001F0F3D /* InfoPlist.strings */,
-				CCAB24CA17443E48001F0F3D /* main.m */,
-				CCAB24CC17443E48001F0F3D /* Liferay Social-Prefix.pch */,
-				CCAB24D017443E48001F0F3D /* Default.png */,
-				CCAB24D217443E48001F0F3D /* Default@2x.png */,
-				CCAB24D417443E48001F0F3D /* Default-568h@2x.png */,
+				CCE3A7AC174442F80022B6BF /* MicroblogsTableViewController.h */,
+				CCE3A7AD174442F80022B6BF /* MicroblogsTableViewController.m */,
 			);
-			name = "Supporting Files";
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CCE3A791174440D80022B6BF /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				CCE3A792174440D80022B6BF /* LiferaySocialAppDelegate.h */,
+				CCE3A793174440D80022B6BF /* LiferaySocialAppDelegate.m */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		CCE3A794174440D80022B6BF /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				CCE3A798174440D80022B6BF /* first.png */,
+				CCE3A799174440D80022B6BF /* first@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		CCE3A79C174440D80022B6BF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CCE3A79D174440D80022B6BF /* Liferay Social-Info.plist */,
+				CCE3A79E174440D80022B6BF /* Liferay Social-Prefix.pch */,
+				CCE3A79F174440D80022B6BF /* main.m */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,18 +174,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCAB24C917443E48001F0F3D /* InfoPlist.strings in Resources */,
-				CCAB24D117443E48001F0F3D /* Default.png in Resources */,
-				CCAB24D317443E48001F0F3D /* Default@2x.png in Resources */,
-				CCAB24D517443E48001F0F3D /* Default-568h@2x.png in Resources */,
-				CCAB24DA17443E48001F0F3D /* first.png in Resources */,
-				CCAB24DC17443E48001F0F3D /* first@2x.png in Resources */,
-				CCAB24E117443E48001F0F3D /* second.png in Resources */,
-				CCAB24E317443E48001F0F3D /* second@2x.png in Resources */,
-				CCAB24E617443E48001F0F3D /* FirstViewController_iPhone.xib in Resources */,
-				CCAB24E917443E48001F0F3D /* FirstViewController_iPad.xib in Resources */,
-				CCAB24EC17443E48001F0F3D /* SecondViewController_iPhone.xib in Resources */,
-				CCAB24EF17443E48001F0F3D /* SecondViewController_iPad.xib in Resources */,
+				CCE3A7A6174440D80022B6BF /* first.png in Resources */,
+				CCE3A7A7174440D80022B6BF /* first@2x.png in Resources */,
+				CCE3A7AA174440D80022B6BF /* Liferay Social-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,57 +187,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCAB24CB17443E48001F0F3D /* main.m in Sources */,
-				CCAB24CF17443E48001F0F3D /* AppDelegate.m in Sources */,
-				CCAB24D817443E48001F0F3D /* FirstViewController.m in Sources */,
-				CCAB24DF17443E48001F0F3D /* SecondViewController.m in Sources */,
+				CCE3A7A2174440D80022B6BF /* LiferaySocialAppDelegate.m in Sources */,
+				CCE3A7AB174440D80022B6BF /* main.m in Sources */,
+				CCE3A7AE174442F80022B6BF /* MicroblogsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		CCAB24C717443E48001F0F3D /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CCAB24C817443E48001F0F3D /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		CCAB24E417443E48001F0F3D /* FirstViewController_iPhone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CCAB24E517443E48001F0F3D /* en */,
-			);
-			name = FirstViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		CCAB24E717443E48001F0F3D /* FirstViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CCAB24E817443E48001F0F3D /* en */,
-			);
-			name = FirstViewController_iPad.xib;
-			sourceTree = "<group>";
-		};
-		CCAB24EA17443E48001F0F3D /* SecondViewController_iPhone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CCAB24EB17443E48001F0F3D /* en */,
-			);
-			name = SecondViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		CCAB24ED17443E48001F0F3D /* SecondViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CCAB24EE17443E48001F0F3D /* en */,
-			);
-			name = SecondViewController_iPad.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CCAB24F017443E48001F0F3D /* Debug */ = {
@@ -321,8 +258,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Liferay Social/Liferay Social-Prefix.pch";
-				INFOPLIST_FILE = "Liferay Social/Liferay Social-Info.plist";
+				GCC_PREFIX_HEADER = "Liferay Social/Supporting Files/Liferay Social-Prefix.pch";
+				INFOPLIST_FILE = "Liferay Social/Supporting Files/Liferay Social-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -332,8 +269,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Liferay Social/Liferay Social-Prefix.pch";
-				INFOPLIST_FILE = "Liferay Social/Liferay Social-Info.plist";
+				GCC_PREFIX_HEADER = "Liferay Social/Supporting Files/Liferay Social-Prefix.pch";
+				INFOPLIST_FILE = "Liferay Social/Supporting Files/Liferay Social-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -358,6 +295,7 @@
 				CCAB24F417443E48001F0F3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
