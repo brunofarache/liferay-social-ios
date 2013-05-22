@@ -1,6 +1,6 @@
 //
 //  HttpClient.m
-//  Liferay Sync
+//  Liferay Social
 //
 //  Josiane Ferreira
 //  Bruno Farache
@@ -8,8 +8,12 @@
 
 #import "AFJSONRequestOperation.h"
 #import "AFNetworkActivityIndicatorManager.h"
+#import "BaseService.h"
 #import "HttpClient.h"
 #import "PrefsUtil.h"
+
+static HttpClient *_client = nil;
+static NSString *_path = @"/api/secure/jsonws/invoke";
 
 @implementation HttpClient
 
@@ -25,104 +29,91 @@
 	return self;
 }
 
-#pragma mark - Class Methods
+#pragma mark - Private Methods
 
-+ (HttpClient *)client {
++ (HttpClient *)getClient {
+	return [self getClient:AFFormURLParameterEncoding];
+}
+
++ (HttpClient *)getClient:(int)parameterEncoding {
 	static dispatch_once_t predicate;
-	static HttpClient *_client = nil;
+
+	NSURL *baseURL = [NSURL URLWithString:[PrefsUtil getServer]];
 
 	dispatch_once(&predicate, ^{
-		NSURL *URL = [NSURL URLWithString:[PrefsUtil getServer]];
-
-		_client = [[self alloc] initWithBaseURL:URL];
+		_client = [[self alloc] initWithBaseURL:baseURL];
 	});
-
-	return _client;
-}
-
-+ (NSString *)getMethod:(BOOL)post {
-	return post ? @"POST" : @"GET";
-}
-
-+ (void)setupClient {
-	HttpClient *client = [self client];
 
 	NSHTTPCookieStorage *cookieStorage =
 		[NSHTTPCookieStorage sharedHTTPCookieStorage];
 
 	[cookieStorage setCookieAcceptPolicy:NSHTTPCookieAcceptPolicyNever];
 
-	NSURL *baseURL = [NSURL URLWithString:[PrefsUtil getServer]];
-
-	client.baseURL = baseURL;
+	[_client setBaseURL:baseURL];
+	[_client setParameterEncoding:parameterEncoding];
 
 	NSString *email = [PrefsUtil getEmail];
 	NSString *password = [PrefsUtil getPassword];
 
-	[client clearAuthorizationHeader];
-	[client setAuthorizationHeaderWithUsername:email password:password];
+	[_client clearAuthorizationHeader];
+	[_client setAuthorizationHeaderWithUsername:email password:password];
+
+	return _client;
+}
+
++ (AsyncRequest *)_getAsyncRequest:(id)parameters {
+	HttpClient *client = [self getClient:AFJSONParameterEncoding];
+
+	NSString *method = [self getMethod:YES];
+
+	NSURLRequest *request =
+		[client requestWithMethod:method path:_path parameters:parameters];
+
+	return [[AsyncRequest alloc] initWithRequest:request];
+}
+
++ (NSString *)getMethod:(BOOL)post {
+	return post ? @"POST" : @"GET";
 }
 
 #pragma mark - Static Methods
 
-+ (AsyncRequest *)getAsyncRequest:(NSString *)URL post:(BOOL)post {
-	return [self getAsyncRequest:URL post:post params:nil];
-}
-
-+ (AsyncRequest *)getAsyncRequest:(NSString *)URL post:(BOOL)post
-		params:(NSDictionary *)params {
-
-	return [self getAsyncRequest:URL post:post params:params download:NO];
-}
-
-+ (AsyncRequest *)getAsyncRequest:(NSString *)URL post:(BOOL)post
-		params:(NSDictionary *)params download:(BOOL)download {
-
-	[self setupClient];
-
-	HttpClient *client = [self client];
-
-	NSString *method = [self getMethod:post];
-
-	NSURLRequest *request =
-		[client requestWithMethod:method path:URL parameters:params];
-
-	return [[AsyncRequest alloc] initWithRequest:request download:download];
-}
-
 + (AsyncRequest *)getDownloadAsyncRequest:(NSString *)URL
 		filePath:(NSString *)filePath {
 
-	AsyncRequest *request =
-		[self getAsyncRequest:URL post:NO params:nil download:YES];
+	HttpClient *client = [self getClient];
 
-	request.outputStream =
+	NSString *method = [self getMethod:NO];
+
+	NSURLRequest *request =
+		[client requestWithMethod:method path:URL parameters:nil];
+
+	AsyncRequest *asyncRequest =
+		[[AsyncRequest alloc] initWithRequest:request download:YES];
+
+	asyncRequest.outputStream =
 		[NSOutputStream outputStreamToFileAtPath:filePath append:NO];
 
-	return request;
+	return asyncRequest;
 }
 
-+ (NSURLRequest *)getSyncRequest:(NSString *)URL post:(BOOL)post {
-	[self setupClient];
++ (AsyncRequest *)getAsyncRequest:(NSDictionary *)command {
+	return [self _getAsyncRequest:command];
+}
 
-	HttpClient *client = [self client];
-
-	NSString *method = [self getMethod:post];
-
-	return [client requestWithMethod:method path:URL parameters:nil];
++ (AsyncRequest *)getBatchAsyncRequest:(NSArray *)commands {
+	return [self _getAsyncRequest:commands];
 }
 
 + (AsyncRequest *)getUploadAsyncRequest:(NSString *)URL data:(NSData *)data
-		params:(NSDictionary *)params {
+		parameters:(NSDictionary *)parameters {
 
-	[self setupClient];
-
-	HttpClient *client = [self client];
+	HttpClient *client = [self getClient];
 
 	void (^body)(id<AFMultipartFormData>) =
 		^(id<AFMultipartFormData> form) {
-			NSString *title = [params objectForKey:@"title"];
-			NSString *mimeType = [params objectForKey:@"mimeType"];
+			NSString *title = [parameters objectForKey:@"title"];
+			NSString *mimeType = [parameters objectForKey:@"mimeType"];
 
 			[form appendPartWithFileData:data name:@"file" fileName:title
 				mimeType:mimeType];
@@ -130,9 +121,17 @@
 
 	NSURLRequest *request =
 		[client multipartFormRequestWithMethod:@"POST" path:URL
-			parameters:params constructingBodyWithBlock:body];
+			parameters:parameters constructingBodyWithBlock:body];
 
 	return [[AsyncRequest alloc] initWithRequest:request];
+}
+
++ (NSURLRequest *)getSyncRequest:(NSDictionary *)command {
+	HttpClient *client = [self getClient:AFJSONParameterEncoding];
+
+	NSString *method = [self getMethod:YES];
+
+	return [client requestWithMethod:method path:_path parameters:command];
 }
 
 @end

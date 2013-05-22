@@ -1,6 +1,6 @@
 //
 //  ProgressDelegate.m
-//  Liferay Sync
+//  Liferay Social
 //
 //	Bruno Farache
 //	Josiane Bezerra

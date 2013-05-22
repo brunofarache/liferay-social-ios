@@ -1,6 +1,6 @@
 //
 //  PrefsUtil.m
-//  Liferay Sync
+//  Liferay Social
 //
 //	Bruno Farache
 //
@@ -41,7 +41,8 @@ static NSUserDefaults *_userDefaults;
 }
 
 + (NSString *)getEmail {
-	return [_userDefaults stringForKey:@"email"];
+	return @"test@liferay.com";
+//	return [_userDefaults stringForKey:@"email"];
 }
 
 + (NSString *)getFolderPath {
@@ -69,7 +70,8 @@ static NSUserDefaults *_userDefaults;
 }
 
 + (NSString *)getPassword {
-	return [_userDefaults stringForKey:@"password"];
+	return @"test";
+//	return [_userDefaults stringForKey:@"password"];
 }
 
 + (CGRect)getScreenFrame {
@@ -91,7 +93,8 @@ static NSUserDefaults *_userDefaults;
 }
 
 + (NSString *)getServer {
-	return [_userDefaults stringForKey:@"server"];
+	return @"http://localhost:8081";
+//	return [_userDefaults stringForKey:@"server"];
 }
 
 + (BOOL)isTrustCertificate {

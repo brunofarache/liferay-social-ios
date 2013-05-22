@@ -14,9 +14,20 @@
 		CC31CBC417454E78006CDD4B /* Validator.m in Sources */ = {isa = PBXBuildFile; fileRef = CC31CBC317454E78006CDD4B /* Validator.m */; };
 		CC31CBC817454EBD006CDD4B /* UIView+Loading.m in Sources */ = {isa = PBXBuildFile; fileRef = CC31CBC717454EBD006CDD4B /* UIView+Loading.m */; };
 		CC31CBCF17454EF2006CDD4B /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = CC31CBCE17454EF2006CDD4B /* MBProgressHUD.m */; };
+		CC31CBD317455097006CDD4B /* BaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = CC31CBD217455097006CDD4B /* BaseService.m */; };
+		CC31CBD6174550D3006CDD4B /* HandleException.m in Sources */ = {isa = PBXBuildFile; fileRef = CC31CBD5174550D3006CDD4B /* HandleException.m */; };
+		CC31CBE3174550FA006CDD4B /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = CC31CBDA174550FA006CDD4B /* NSObject+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CC31CBE4174550FA006CDD4B /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = CC31CBDC174550FA006CDD4B /* NSString+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CC31CBE5174550FA006CDD4B /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = CC31CBDE174550FA006CDD4B /* SBJsonBase.m */; };
+		CC31CBE6174550FA006CDD4B /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CC31CBE0174550FA006CDD4B /* SBJsonParser.m */; };
+		CC31CBE7174550FA006CDD4B /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = CC31CBE2174550FA006CDD4B /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CC4B4F6A1746BCF3008C06C6 /* GetEntriesDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4B4F691746BCF3008C06C6 /* GetEntriesDelegate.m */; };
+		CC4B4F6E1746BEF9008C06C6 /* MicroblogsService.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4B4F6D1746BEF9008C06C6 /* MicroblogsService.m */; };
+		CC4B4F711746BF11008C06C6 /* MicroblogsEntryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4B4F701746BF11008C06C6 /* MicroblogsEntryModel.m */; };
 		CCAB24BF17443E48001F0F3D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCAB24BE17443E48001F0F3D /* UIKit.framework */; };
 		CCAB24C117443E48001F0F3D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCAB24C017443E48001F0F3D /* Foundation.framework */; };
 		CCAB24C317443E48001F0F3D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCAB24C217443E48001F0F3D /* CoreGraphics.framework */; };
+		CCB2A2DB174D455A006C3486 /* ContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB2A2DA174D455A006C3486 /* ContactsTableViewController.m */; };
 		CCE3A7A2174440D80022B6BF /* LiferaySocialAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE3A793174440D80022B6BF /* LiferaySocialAppDelegate.m */; };
 		CCE3A7A6174440D80022B6BF /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = CCE3A798174440D80022B6BF /* first.png */; };
 		CCE3A7A7174440D80022B6BF /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CCE3A799174440D80022B6BF /* first@2x.png */; };
@@ -51,10 +62,33 @@
 		CC31CBC717454EBD006CDD4B /* UIView+Loading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Loading.m"; sourceTree = "<group>"; };
 		CC31CBCD17454EF2006CDD4B /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		CC31CBCE17454EF2006CDD4B /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		CC31CBD117455097006CDD4B /* BaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseService.h; sourceTree = "<group>"; };
+		CC31CBD217455097006CDD4B /* BaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseService.m; sourceTree = "<group>"; };
+		CC31CBD4174550D3006CDD4B /* HandleException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandleException.h; sourceTree = "<group>"; };
+		CC31CBD5174550D3006CDD4B /* HandleException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandleException.m; sourceTree = "<group>"; };
+		CC31CBD8174550FA006CDD4B /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		CC31CBD9174550FA006CDD4B /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		CC31CBDA174550FA006CDD4B /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		CC31CBDB174550FA006CDD4B /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		CC31CBDC174550FA006CDD4B /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		CC31CBDD174550FA006CDD4B /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		CC31CBDE174550FA006CDD4B /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		CC31CBDF174550FA006CDD4B /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		CC31CBE0174550FA006CDD4B /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		CC31CBE1174550FA006CDD4B /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		CC31CBE2174550FA006CDD4B /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		CC4B4F681746BCF3008C06C6 /* GetEntriesDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetEntriesDelegate.h; sourceTree = "<group>"; };
+		CC4B4F691746BCF3008C06C6 /* GetEntriesDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetEntriesDelegate.m; sourceTree = "<group>"; };
+		CC4B4F6C1746BEF9008C06C6 /* MicroblogsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MicroblogsService.h; sourceTree = "<group>"; };
+		CC4B4F6D1746BEF9008C06C6 /* MicroblogsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MicroblogsService.m; sourceTree = "<group>"; };
+		CC4B4F6F1746BF11008C06C6 /* MicroblogsEntryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MicroblogsEntryModel.h; sourceTree = "<group>"; };
+		CC4B4F701746BF11008C06C6 /* MicroblogsEntryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MicroblogsEntryModel.m; sourceTree = "<group>"; };
 		CCAB24BB17443E48001F0F3D /* Liferay Social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Liferay Social.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCAB24BE17443E48001F0F3D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CCAB24C017443E48001F0F3D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CCAB24C217443E48001F0F3D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CCB2A2D9174D455A006C3486 /* ContactsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsTableViewController.h; sourceTree = "<group>"; };
+		CCB2A2DA174D455A006C3486 /* ContactsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsTableViewController.m; sourceTree = "<group>"; };
 		CCE3A792174440D80022B6BF /* LiferaySocialAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiferaySocialAppDelegate.h; sourceTree = "<group>"; };
 		CCE3A793174440D80022B6BF /* LiferaySocialAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiferaySocialAppDelegate.m; sourceTree = "<group>"; };
 		CCE3A798174440D80022B6BF /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
@@ -107,6 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				CC31CBB517454C64006CDD4B /* Http */,
+				CC31CBD4174550D3006CDD4B /* HandleException.h */,
+				CC31CBD5174550D3006CDD4B /* HandleException.m */,
 				CC31CBBF17454E11006CDD4B /* PrefsUtil.h */,
 				CC31CBC017454E11006CDD4B /* PrefsUtil.m */,
 				CC31CBC217454E78006CDD4B /* Validator.h */,
@@ -142,6 +178,45 @@
 				CC31CBCE17454EF2006CDD4B /* MBProgressHUD.m */,
 			);
 			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		CC31CBD017455097006CDD4B /* Portal Services */ = {
+			isa = PBXGroup;
+			children = (
+				CC4B4F6B1746BEF9008C06C6 /* Microblogs */,
+				CC31CBD117455097006CDD4B /* BaseService.h */,
+				CC31CBD217455097006CDD4B /* BaseService.m */,
+			);
+			path = "Portal Services";
+			sourceTree = "<group>";
+		};
+		CC31CBD7174550FA006CDD4B /* SBJson */ = {
+			isa = PBXGroup;
+			children = (
+				CC31CBD8174550FA006CDD4B /* JSON.h */,
+				CC31CBD9174550FA006CDD4B /* NSObject+SBJSON.h */,
+				CC31CBDA174550FA006CDD4B /* NSObject+SBJSON.m */,
+				CC31CBDB174550FA006CDD4B /* NSString+SBJSON.h */,
+				CC31CBDC174550FA006CDD4B /* NSString+SBJSON.m */,
+				CC31CBDD174550FA006CDD4B /* SBJsonBase.h */,
+				CC31CBDE174550FA006CDD4B /* SBJsonBase.m */,
+				CC31CBDF174550FA006CDD4B /* SBJsonParser.h */,
+				CC31CBE0174550FA006CDD4B /* SBJsonParser.m */,
+				CC31CBE1174550FA006CDD4B /* SBJsonWriter.h */,
+				CC31CBE2174550FA006CDD4B /* SBJsonWriter.m */,
+			);
+			path = SBJson;
+			sourceTree = "<group>";
+		};
+		CC4B4F6B1746BEF9008C06C6 /* Microblogs */ = {
+			isa = PBXGroup;
+			children = (
+				CC4B4F6F1746BF11008C06C6 /* MicroblogsEntryModel.h */,
+				CC4B4F701746BF11008C06C6 /* MicroblogsEntryModel.m */,
+				CC4B4F6C1746BEF9008C06C6 /* MicroblogsService.h */,
+				CC4B4F6D1746BEF9008C06C6 /* MicroblogsService.m */,
+			);
+			path = Microblogs;
 			sourceTree = "<group>";
 		};
 		CCAB24B217443E48001F0F3D = {
@@ -181,6 +256,7 @@
 				CCE3A791174440D80022B6BF /* Delegates */,
 				CCE3A794174440D80022B6BF /* Images */,
 				CCE3A7AF17454A050022B6BF /* Libraries */,
+				CC31CBD017455097006CDD4B /* Portal Services */,
 				CCE3A79C174440D80022B6BF /* Supporting Files */,
 				CC31CBB417454C64006CDD4B /* Util */,
 			);
@@ -190,6 +266,8 @@
 		CCE3A78C174440D80022B6BF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CCB2A2D9174D455A006C3486 /* ContactsTableViewController.h */,
+				CCB2A2DA174D455A006C3486 /* ContactsTableViewController.m */,
 				CCE3A7AC174442F80022B6BF /* MicroblogsTableViewController.h */,
 				CCE3A7AD174442F80022B6BF /* MicroblogsTableViewController.m */,
 			);
@@ -199,6 +277,8 @@
 		CCE3A791174440D80022B6BF /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
+				CC4B4F681746BCF3008C06C6 /* GetEntriesDelegate.h */,
+				CC4B4F691746BCF3008C06C6 /* GetEntriesDelegate.m */,
 				CCE3A792174440D80022B6BF /* LiferaySocialAppDelegate.h */,
 				CCE3A793174440D80022B6BF /* LiferaySocialAppDelegate.m */,
 				CC31CBBC17454C89006CDD4B /* ProgressDelegate.h */,
@@ -229,6 +309,7 @@
 		CCE3A7AF17454A050022B6BF /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				CC31CBD7174550FA006CDD4B /* SBJson */,
 				CCE3A7B017454A050022B6BF /* AFNetworking */,
 				CC31CBCC17454EF2006CDD4B /* MBProgressHUD */,
 			);
@@ -344,6 +425,17 @@
 				CC31CBC417454E78006CDD4B /* Validator.m in Sources */,
 				CC31CBC817454EBD006CDD4B /* UIView+Loading.m in Sources */,
 				CC31CBCF17454EF2006CDD4B /* MBProgressHUD.m in Sources */,
+				CC31CBD317455097006CDD4B /* BaseService.m in Sources */,
+				CC31CBD6174550D3006CDD4B /* HandleException.m in Sources */,
+				CC31CBE3174550FA006CDD4B /* NSObject+SBJSON.m in Sources */,
+				CC31CBE4174550FA006CDD4B /* NSString+SBJSON.m in Sources */,
+				CC31CBE5174550FA006CDD4B /* SBJsonBase.m in Sources */,
+				CC31CBE6174550FA006CDD4B /* SBJsonParser.m in Sources */,
+				CC31CBE7174550FA006CDD4B /* SBJsonWriter.m in Sources */,
+				CC4B4F6A1746BCF3008C06C6 /* GetEntriesDelegate.m in Sources */,
+				CC4B4F6E1746BEF9008C06C6 /* MicroblogsService.m in Sources */,
+				CC4B4F711746BF11008C06C6 /* MicroblogsEntryModel.m in Sources */,
+				CCB2A2DB174D455A006C3486 /* ContactsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,6 +1,6 @@
 //
 //  PrefsUtil.h
-//  Liferay Sync
+//  Liferay Social
 //
 //	Bruno Farache
 //

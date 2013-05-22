@@ -1,25 +1,20 @@
 //
-//	MicroblogsTableViewController.m
+//	ContactsTableViewController.m
 //	Liferay Social
 //
 //	Bruno Farache
 //
 
-#import "MicroblogsEntryModel.h"
-#import "MicroblogsTableViewController.h"
-#import "MicroblogsService.h"
+#import "ContactsTableViewController.h"
 
-@implementation MicroblogsTableViewController
+@implementation ContactsTableViewController
 
 - (id)init {
     self = [super initWithStyle:UITableViewStylePlain];
 
     if (self) {
-		self.title = @"Microblogs";
+		self.title = @"Contacts";
 		self.tabBarItem.image = [UIImage imageNamed:@"first"];
-
-		[MicroblogsService getEntries:self
-			loadingView:self.navigationController.view];
     }
 
     return self;
@@ -51,10 +46,6 @@
 				initWithStyle:UITableViewCellStyleDefault
 				reuseIdentifier:CellIdentifier];
     }
-
-	MicroblogsEntryModel *entry = [self.entries objectAtIndex:indexPath.row];
-
-	cell.textLabel.text = entry.content;
 
     return cell;
 }
