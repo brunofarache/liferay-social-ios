@@ -10,7 +10,7 @@
 
 @interface MicroblogsService : BaseService
 
-+ (void)getEntries:(MicroblogsTableViewController *)viewController
-	   loadingView:(UIView *)loadingView;
++ (void)getMicroblogsEntries:(MicroblogsTableViewController *)viewController
+	loadingView:(UIView *)loadingView;
 
 @end

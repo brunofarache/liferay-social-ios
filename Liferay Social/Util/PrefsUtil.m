@@ -66,7 +66,8 @@ static NSUserDefaults *_userDefaults;
 }
 
 + (NSNumber *)getGroupId {
-	return [_userDefaults objectForKey:@"groupId"];
+	return @(10180);
+//	return [_userDefaults objectForKey:@"groupId"];
 }
 
 + (NSString *)getPassword {

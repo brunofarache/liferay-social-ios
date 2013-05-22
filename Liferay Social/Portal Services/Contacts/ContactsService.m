@@ -1,34 +1,34 @@
 //
-//  MicroblogsService.m
+//  ContactsService.m
 //  Liferay Social
 //
 //	Bruno Farache
 //
 
 #import "AsyncRequest.h"
-#import "MicroblogsService.h"
-#import "GetMicroblogsEntriesDelegate.h"
+#import "ContactsService.h"
+#import "GetGroupUsersDelegate.h"
 #import "HttpClient.h"
+#import "PrefsUtil.h"
 
-static NSString *_serviceName = @"microblogs-portlet/microblogsentry";
+static NSString *_serviceName = @"user";
 
-@implementation MicroblogsService
+@implementation ContactsService
 
-+ (void)getMicroblogsEntries:(MicroblogsTableViewController *)viewController
++ (void)getGroupUsers:(ContactsTableViewController *)viewController
 		loadingView:(UIView *)loadingView {
 
-	NSString *key = [self getCommand:@"get-microblogs-entries"];
+	NSString *key = [self getCommand:@"get-group-users"];
 
 	NSDictionary *value = @{
-		@"start": @(-1),
-		@"end":  @(-1)
+		@"groupId": [PrefsUtil getGroupId]
 	};
 
 	NSDictionary *command = @{key: value};
 
 	AsyncRequest *request = [HttpClient getAsyncRequest:command];
 
-	id delegate = [[GetMicroblogsEntriesDelegate alloc] init:viewController];
+	id delegate = [[GetGroupUsersDelegate alloc] init:viewController];
 
 	[request setDelegate:delegate loadingView:loadingView];
 

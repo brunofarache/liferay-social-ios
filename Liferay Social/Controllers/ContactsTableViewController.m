@@ -6,6 +6,8 @@
 //
 
 #import "ContactsTableViewController.h"
+#import "ContactsService.h"
+#import "UserModel.h"
 
 @implementation ContactsTableViewController
 
@@ -15,7 +17,10 @@
     if (self) {
 		self.title = @"Contacts";
 		self.tabBarItem.image = [UIImage imageNamed:@"first"];
-    }
+
+		[ContactsService getGroupUsers:self
+			  loadingView:self.navigationController.view];
+	}
 
     return self;
 }
@@ -46,6 +51,10 @@
 				initWithStyle:UITableViewCellStyleDefault
 				reuseIdentifier:CellIdentifier];
     }
+
+	UserModel *user = [self.entries objectAtIndex:indexPath.row];
+
+	cell.textLabel.text = user.firstName;
 
     return cell;
 }

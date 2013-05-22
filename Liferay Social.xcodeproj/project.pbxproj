@@ -21,13 +21,16 @@
 		CC31CBE5174550FA006CDD4B /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = CC31CBDE174550FA006CDD4B /* SBJsonBase.m */; };
 		CC31CBE6174550FA006CDD4B /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CC31CBE0174550FA006CDD4B /* SBJsonParser.m */; };
 		CC31CBE7174550FA006CDD4B /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = CC31CBE2174550FA006CDD4B /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		CC4B4F6A1746BCF3008C06C6 /* GetEntriesDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4B4F691746BCF3008C06C6 /* GetEntriesDelegate.m */; };
 		CC4B4F6E1746BEF9008C06C6 /* MicroblogsService.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4B4F6D1746BEF9008C06C6 /* MicroblogsService.m */; };
 		CC4B4F711746BF11008C06C6 /* MicroblogsEntryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4B4F701746BF11008C06C6 /* MicroblogsEntryModel.m */; };
 		CCAB24BF17443E48001F0F3D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCAB24BE17443E48001F0F3D /* UIKit.framework */; };
 		CCAB24C117443E48001F0F3D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCAB24C017443E48001F0F3D /* Foundation.framework */; };
 		CCAB24C317443E48001F0F3D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCAB24C217443E48001F0F3D /* CoreGraphics.framework */; };
 		CCB2A2DB174D455A006C3486 /* ContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB2A2DA174D455A006C3486 /* ContactsTableViewController.m */; };
+		CCB2A2E1174D566B006C3486 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB2A2DE174D566B006C3486 /* UserModel.m */; };
+		CCB2A2E2174D566B006C3486 /* ContactsService.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB2A2E0174D566B006C3486 /* ContactsService.m */; };
+		CCB2A2E7174D5C51006C3486 /* GetMicroblogsEntriesDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB2A2E6174D5C51006C3486 /* GetMicroblogsEntriesDelegate.m */; };
+		CCB2A2EA174D5CE8006C3486 /* GetGroupUsersDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB2A2E9174D5CE8006C3486 /* GetGroupUsersDelegate.m */; };
 		CCE3A7A2174440D80022B6BF /* LiferaySocialAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE3A793174440D80022B6BF /* LiferaySocialAppDelegate.m */; };
 		CCE3A7A6174440D80022B6BF /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = CCE3A798174440D80022B6BF /* first.png */; };
 		CCE3A7A7174440D80022B6BF /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CCE3A799174440D80022B6BF /* first@2x.png */; };
@@ -77,8 +80,6 @@
 		CC31CBE0174550FA006CDD4B /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
 		CC31CBE1174550FA006CDD4B /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		CC31CBE2174550FA006CDD4B /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
-		CC4B4F681746BCF3008C06C6 /* GetEntriesDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetEntriesDelegate.h; sourceTree = "<group>"; };
-		CC4B4F691746BCF3008C06C6 /* GetEntriesDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetEntriesDelegate.m; sourceTree = "<group>"; };
 		CC4B4F6C1746BEF9008C06C6 /* MicroblogsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MicroblogsService.h; sourceTree = "<group>"; };
 		CC4B4F6D1746BEF9008C06C6 /* MicroblogsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MicroblogsService.m; sourceTree = "<group>"; };
 		CC4B4F6F1746BF11008C06C6 /* MicroblogsEntryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MicroblogsEntryModel.h; sourceTree = "<group>"; };
@@ -89,6 +90,14 @@
 		CCAB24C217443E48001F0F3D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		CCB2A2D9174D455A006C3486 /* ContactsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsTableViewController.h; sourceTree = "<group>"; };
 		CCB2A2DA174D455A006C3486 /* ContactsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsTableViewController.m; sourceTree = "<group>"; };
+		CCB2A2DD174D566B006C3486 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		CCB2A2DE174D566B006C3486 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		CCB2A2DF174D566B006C3486 /* ContactsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsService.h; sourceTree = "<group>"; };
+		CCB2A2E0174D566B006C3486 /* ContactsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsService.m; sourceTree = "<group>"; };
+		CCB2A2E5174D5C51006C3486 /* GetMicroblogsEntriesDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetMicroblogsEntriesDelegate.h; sourceTree = "<group>"; };
+		CCB2A2E6174D5C51006C3486 /* GetMicroblogsEntriesDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetMicroblogsEntriesDelegate.m; sourceTree = "<group>"; };
+		CCB2A2E8174D5CE8006C3486 /* GetGroupUsersDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetGroupUsersDelegate.h; sourceTree = "<group>"; };
+		CCB2A2E9174D5CE8006C3486 /* GetGroupUsersDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetGroupUsersDelegate.m; sourceTree = "<group>"; };
 		CCE3A792174440D80022B6BF /* LiferaySocialAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiferaySocialAppDelegate.h; sourceTree = "<group>"; };
 		CCE3A793174440D80022B6BF /* LiferaySocialAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiferaySocialAppDelegate.m; sourceTree = "<group>"; };
 		CCE3A798174440D80022B6BF /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
@@ -183,6 +192,7 @@
 		CC31CBD017455097006CDD4B /* Portal Services */ = {
 			isa = PBXGroup;
 			children = (
+				CCB2A2DC174D566B006C3486 /* Contacts */,
 				CC4B4F6B1746BEF9008C06C6 /* Microblogs */,
 				CC31CBD117455097006CDD4B /* BaseService.h */,
 				CC31CBD217455097006CDD4B /* BaseService.m */,
@@ -263,6 +273,35 @@
 			path = "Liferay Social";
 			sourceTree = "<group>";
 		};
+		CCB2A2DC174D566B006C3486 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				CCB2A2DD174D566B006C3486 /* UserModel.h */,
+				CCB2A2DE174D566B006C3486 /* UserModel.m */,
+				CCB2A2DF174D566B006C3486 /* ContactsService.h */,
+				CCB2A2E0174D566B006C3486 /* ContactsService.m */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		CCB2A2E3174D5C51006C3486 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				CCB2A2E8174D5CE8006C3486 /* GetGroupUsersDelegate.h */,
+				CCB2A2E9174D5CE8006C3486 /* GetGroupUsersDelegate.m */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		CCB2A2E4174D5C51006C3486 /* Microblogs */ = {
+			isa = PBXGroup;
+			children = (
+				CCB2A2E5174D5C51006C3486 /* GetMicroblogsEntriesDelegate.h */,
+				CCB2A2E6174D5C51006C3486 /* GetMicroblogsEntriesDelegate.m */,
+			);
+			path = Microblogs;
+			sourceTree = "<group>";
+		};
 		CCE3A78C174440D80022B6BF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,8 +316,8 @@
 		CCE3A791174440D80022B6BF /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
-				CC4B4F681746BCF3008C06C6 /* GetEntriesDelegate.h */,
-				CC4B4F691746BCF3008C06C6 /* GetEntriesDelegate.m */,
+				CCB2A2E3174D5C51006C3486 /* Contacts */,
+				CCB2A2E4174D5C51006C3486 /* Microblogs */,
 				CCE3A792174440D80022B6BF /* LiferaySocialAppDelegate.h */,
 				CCE3A793174440D80022B6BF /* LiferaySocialAppDelegate.m */,
 				CC31CBBC17454C89006CDD4B /* ProgressDelegate.h */,
@@ -432,10 +471,13 @@
 				CC31CBE5174550FA006CDD4B /* SBJsonBase.m in Sources */,
 				CC31CBE6174550FA006CDD4B /* SBJsonParser.m in Sources */,
 				CC31CBE7174550FA006CDD4B /* SBJsonWriter.m in Sources */,
-				CC4B4F6A1746BCF3008C06C6 /* GetEntriesDelegate.m in Sources */,
 				CC4B4F6E1746BEF9008C06C6 /* MicroblogsService.m in Sources */,
 				CC4B4F711746BF11008C06C6 /* MicroblogsEntryModel.m in Sources */,
 				CCB2A2DB174D455A006C3486 /* ContactsTableViewController.m in Sources */,
+				CCB2A2E1174D566B006C3486 /* UserModel.m in Sources */,
+				CCB2A2E2174D566B006C3486 /* ContactsService.m in Sources */,
+				CCB2A2E7174D5C51006C3486 /* GetMicroblogsEntriesDelegate.m in Sources */,
+				CCB2A2EA174D5CE8006C3486 /* GetGroupUsersDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,18 +1,18 @@
 //
-//  GetEntriesDelegate.m
+//  GetGroupUsersDelegate.m
 //  Liferay Social
 //
 //	Bruno Farache
 //
 
-#import "GetEntriesDelegate.h"
+#import "GetGroupUsersDelegate.h"
 #import "BaseService.h"
 #import "JSON.h"
-#import "MicroblogsEntryModel.h"
+#import "UserModel.h"
 
-@implementation GetEntriesDelegate
+@implementation GetGroupUsersDelegate
 
-- (id)init:(MicroblogsTableViewController *)viewController {
+- (id)init:(ContactsTableViewController *)viewController {
 	self = [super init];
 
 	if (self) {
@@ -40,8 +40,7 @@
 	NSMutableArray *entries = [NSMutableArray array];
 
 	for (NSDictionary *jsonObj in jsonArray) {
-		MicroblogsEntryModel *entry =
-			[[MicroblogsEntryModel alloc] initWithJSON:jsonObj];
+		UserModel *entry = [[UserModel alloc] initWithJSON:jsonObj];
 
 		[entries addObject:entry];
 	}

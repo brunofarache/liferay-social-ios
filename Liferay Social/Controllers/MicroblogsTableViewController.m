@@ -18,7 +18,7 @@
 		self.title = @"Microblogs";
 		self.tabBarItem.image = [UIImage imageNamed:@"first"];
 
-		[MicroblogsService getEntries:self
+		[MicroblogsService getMicroblogsEntries:self
 			loadingView:self.navigationController.view];
     }
 

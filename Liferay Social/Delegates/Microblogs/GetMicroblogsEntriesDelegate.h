@@ -1,5 +1,5 @@
 //
-//  GetEntriesDelegate.h
+//  GetMicroblogsEntriesDelegate.h
 //  Liferay Social
 //
 //	Bruno Farache
@@ -7,7 +7,7 @@
 
 #import "MicroblogsTableViewController.h"
 
-@interface GetEntriesDelegate : NSObject
+@interface GetMicroblogsEntriesDelegate : NSObject
 
 - (id)init:(MicroblogsTableViewController *)viewController;
 
