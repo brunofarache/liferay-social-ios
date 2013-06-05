@@ -23,6 +23,10 @@
 		CC31CBE7174550FA006CDD4B /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = CC31CBE2174550FA006CDD4B /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CC4B4F6E1746BEF9008C06C6 /* MicroblogsService.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4B4F6D1746BEF9008C06C6 /* MicroblogsService.m */; };
 		CC4B4F711746BF11008C06C6 /* MicroblogsEntryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4B4F701746BF11008C06C6 /* MicroblogsEntryModel.m */; };
+		CC924492175FC8C30000E97D /* MessagesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC924491175FC8C30000E97D /* MessagesTableViewController.m */; };
+		CC924498175FCA660000E97D /* UserThreadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CC924495175FCA660000E97D /* UserThreadModel.m */; };
+		CC924499175FCA660000E97D /* UserThreadService.m in Sources */ = {isa = PBXBuildFile; fileRef = CC924497175FCA660000E97D /* UserThreadService.m */; };
+		CC92449D175FCCFD0000E97D /* GetUserThreadsDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC92449C175FCCFD0000E97D /* GetUserThreadsDelegate.m */; };
 		CCAB24BF17443E48001F0F3D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCAB24BE17443E48001F0F3D /* UIKit.framework */; };
 		CCAB24C117443E48001F0F3D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCAB24C017443E48001F0F3D /* Foundation.framework */; };
 		CCAB24C317443E48001F0F3D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCAB24C217443E48001F0F3D /* CoreGraphics.framework */; };
@@ -84,6 +88,14 @@
 		CC4B4F6D1746BEF9008C06C6 /* MicroblogsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MicroblogsService.m; sourceTree = "<group>"; };
 		CC4B4F6F1746BF11008C06C6 /* MicroblogsEntryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MicroblogsEntryModel.h; sourceTree = "<group>"; };
 		CC4B4F701746BF11008C06C6 /* MicroblogsEntryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MicroblogsEntryModel.m; sourceTree = "<group>"; };
+		CC924490175FC8C30000E97D /* MessagesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesTableViewController.h; sourceTree = "<group>"; };
+		CC924491175FC8C30000E97D /* MessagesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagesTableViewController.m; sourceTree = "<group>"; };
+		CC924494175FCA660000E97D /* UserThreadModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserThreadModel.h; sourceTree = "<group>"; };
+		CC924495175FCA660000E97D /* UserThreadModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserThreadModel.m; sourceTree = "<group>"; };
+		CC924496175FCA660000E97D /* UserThreadService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserThreadService.h; sourceTree = "<group>"; };
+		CC924497175FCA660000E97D /* UserThreadService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserThreadService.m; sourceTree = "<group>"; };
+		CC92449B175FCCFD0000E97D /* GetUserThreadsDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetUserThreadsDelegate.h; sourceTree = "<group>"; };
+		CC92449C175FCCFD0000E97D /* GetUserThreadsDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetUserThreadsDelegate.m; sourceTree = "<group>"; };
 		CCAB24BB17443E48001F0F3D /* Liferay Social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Liferay Social.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCAB24BE17443E48001F0F3D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CCAB24C017443E48001F0F3D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -193,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				CCB2A2DC174D566B006C3486 /* Contacts */,
+				CC924493175FCA660000E97D /* Messages */,
 				CC4B4F6B1746BEF9008C06C6 /* Microblogs */,
 				CC31CBD117455097006CDD4B /* BaseService.h */,
 				CC31CBD217455097006CDD4B /* BaseService.m */,
@@ -227,6 +240,26 @@
 				CC4B4F6D1746BEF9008C06C6 /* MicroblogsService.m */,
 			);
 			path = Microblogs;
+			sourceTree = "<group>";
+		};
+		CC924493175FCA660000E97D /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				CC924494175FCA660000E97D /* UserThreadModel.h */,
+				CC924495175FCA660000E97D /* UserThreadModel.m */,
+				CC924496175FCA660000E97D /* UserThreadService.h */,
+				CC924497175FCA660000E97D /* UserThreadService.m */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
+		CC92449A175FCCFD0000E97D /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				CC92449B175FCCFD0000E97D /* GetUserThreadsDelegate.h */,
+				CC92449C175FCCFD0000E97D /* GetUserThreadsDelegate.m */,
+			);
+			path = Messages;
 			sourceTree = "<group>";
 		};
 		CCAB24B217443E48001F0F3D = {
@@ -307,6 +340,8 @@
 			children = (
 				CCB2A2D9174D455A006C3486 /* ContactsTableViewController.h */,
 				CCB2A2DA174D455A006C3486 /* ContactsTableViewController.m */,
+				CC924490175FC8C30000E97D /* MessagesTableViewController.h */,
+				CC924491175FC8C30000E97D /* MessagesTableViewController.m */,
 				CCE3A7AC174442F80022B6BF /* MicroblogsTableViewController.h */,
 				CCE3A7AD174442F80022B6BF /* MicroblogsTableViewController.m */,
 			);
@@ -317,6 +352,7 @@
 			isa = PBXGroup;
 			children = (
 				CCB2A2E3174D5C51006C3486 /* Contacts */,
+				CC92449A175FCCFD0000E97D /* Messages */,
 				CCB2A2E4174D5C51006C3486 /* Microblogs */,
 				CCE3A792174440D80022B6BF /* LiferaySocialAppDelegate.h */,
 				CCE3A793174440D80022B6BF /* LiferaySocialAppDelegate.m */,
@@ -478,6 +514,10 @@
 				CCB2A2E2174D566B006C3486 /* ContactsService.m in Sources */,
 				CCB2A2E7174D5C51006C3486 /* GetMicroblogsEntriesDelegate.m in Sources */,
 				CCB2A2EA174D5CE8006C3486 /* GetGroupUsersDelegate.m in Sources */,
+				CC924492175FC8C30000E97D /* MessagesTableViewController.m in Sources */,
+				CC924498175FCA660000E97D /* UserThreadModel.m in Sources */,
+				CC924499175FCA660000E97D /* UserThreadService.m in Sources */,
+				CC92449D175FCCFD0000E97D /* GetUserThreadsDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
