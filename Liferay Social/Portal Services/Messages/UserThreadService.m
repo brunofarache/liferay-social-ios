@@ -17,13 +17,17 @@ static NSString *_serviceName = @"private-messaging-portlet/userthread";
 + (void)getUserThreads:(MessagesTableViewController *)viewController
 		loadingView:(UIView *)loadingView {
 
-	NSString *key = [self getCommand:@"get-user-user-threads"];
+	NSString *key =
+		@"$threads = /private-messaging-portlet/userthread/get-user-user-threads";
 
 	NSDictionary *value = @{
-		@"deleted": @(NO)
+		@"deleted": @(NO),
+		@"$message = /mbmessage/get-message": @{
+			@"@messageId": @"$threads.topMBMessageId"
+		}
 	};
 
-	NSDictionary *command = @{key: value};
+	NSDictionary *command = @{key : value};
 
 	AsyncRequest *request = [HttpClient getAsyncRequest:command];
 
