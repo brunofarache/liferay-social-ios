@@ -22,7 +22,7 @@ static NSString *_serviceName = @"private-messaging-portlet/userthread";
 
 	NSDictionary *value = @{
 		@"deleted": @(NO),
-		@"$message = /mbmessage/get-message": @{
+		@"$topMBMessage = /mbmessage/get-message": @{
 			@"@messageId": @"$threads.topMBMessageId"
 		}
 	};

@@ -55,7 +55,7 @@
 
 	UserThreadModel *entry = [self.entries objectAtIndex:indexPath.row];
 
-	cell.textLabel.text = entry.userName;
+	cell.textLabel.text = entry.topMBMessage.body;
 	
     return cell;
 }

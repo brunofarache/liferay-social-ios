@@ -24,6 +24,11 @@
 		self.modifiedDate =
 			[self convertNumberToDate:[jsonObj objectForKey:@"modifiedDate"]];
 
+		NSDictionary *topMBMessageJson = [jsonObj objectForKey:@"topMBMessage"];
+
+		self.topMBMessage =
+			[[MBMessageModel alloc] initWithJSON:topMBMessageJson];
+
 		self.topMBMessageId =
 			[[jsonObj objectForKey:@"topMBMessageId"] longValue];
 
