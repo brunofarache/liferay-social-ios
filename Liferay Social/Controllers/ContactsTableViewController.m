@@ -8,6 +8,7 @@
 #import "ContactsTableViewController.h"
 #import "ContactsService.h"
 #import "UserModel.h"
+#import "PhoneService.h"
 
 @implementation ContactsTableViewController
 
@@ -58,5 +59,20 @@
 
     return cell;
 }
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView
+		didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+	UserModel *user = [self.entries objectAtIndex:indexPath.row];
+
+	NSArray *phones = [PhoneService getPhones:user.contactId];
+
+	if ([phones count]) {
+		user.phone = phones[0];
+	}
+}
+
 
 @end

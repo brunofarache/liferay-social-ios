@@ -5,8 +5,9 @@
 //	Bruno Farache
 //
 
-@interface UserModel : NSObject
+#import "PhoneModel.h"
 
+@interface UserModel : NSObject
 
 @property (nonatomic) long companyId;
 @property (nonatomic) long contactId;
@@ -20,6 +21,7 @@
 @property (nonatomic, strong) NSDate *lastLoginDate;
 @property (nonatomic, strong) NSString *lastName;
 @property (nonatomic, strong) NSString *middleName;
+@property (nonatomic, strong) PhoneModel *phone;
 @property (nonatomic) long portraitId;
 @property (nonatomic, strong) NSString *screenName;
 @property (nonatomic, strong) NSString *timeZoneId;

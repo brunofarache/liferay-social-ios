@@ -22,6 +22,8 @@
 
 + (NSURLRequest *)getSyncRequest:(NSDictionary *)commad;
 
++ (id)sendSyncRequest:(NSDictionary *)command;
+
 @property (readwrite, nonatomic, retain) NSURL *baseURL;
 
 @end

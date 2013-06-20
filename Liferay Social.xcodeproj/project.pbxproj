@@ -23,6 +23,8 @@
 		CC31CBE7174550FA006CDD4B /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = CC31CBE2174550FA006CDD4B /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CC4B4F6E1746BEF9008C06C6 /* MicroblogsService.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4B4F6D1746BEF9008C06C6 /* MicroblogsService.m */; };
 		CC4B4F711746BF11008C06C6 /* MicroblogsEntryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4B4F701746BF11008C06C6 /* MicroblogsEntryModel.m */; };
+		CC51A45D176B6A0800745190 /* PhoneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CC51A45C176B6A0800745190 /* PhoneModel.m */; };
+		CC51A460176B6CA000745190 /* PhoneService.m in Sources */ = {isa = PBXBuildFile; fileRef = CC51A45F176B6CA000745190 /* PhoneService.m */; };
 		CC924492175FC8C30000E97D /* MessagesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC924491175FC8C30000E97D /* MessagesTableViewController.m */; };
 		CC924498175FCA660000E97D /* UserThreadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CC924495175FCA660000E97D /* UserThreadModel.m */; };
 		CC924499175FCA660000E97D /* UserThreadService.m in Sources */ = {isa = PBXBuildFile; fileRef = CC924497175FCA660000E97D /* UserThreadService.m */; };
@@ -53,6 +55,7 @@
 		CCE3A7CC17454A050022B6BF /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE3A7C317454A050022B6BF /* UIImageView+AFNetworking.m */; };
 		CCE3A7CF17454AB20022B6BF /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE3A7CD17454AB20022B6BF /* MobileCoreServices.framework */; };
 		CCE3A7D017454AB20022B6BF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE3A7CE17454AB20022B6BF /* SystemConfiguration.framework */; };
+		CCE469A7177387E800B6FCDA /* ContactsDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE469A6177387E800B6FCDA /* ContactsDetailsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +92,10 @@
 		CC4B4F6D1746BEF9008C06C6 /* MicroblogsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MicroblogsService.m; sourceTree = "<group>"; };
 		CC4B4F6F1746BF11008C06C6 /* MicroblogsEntryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MicroblogsEntryModel.h; sourceTree = "<group>"; };
 		CC4B4F701746BF11008C06C6 /* MicroblogsEntryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MicroblogsEntryModel.m; sourceTree = "<group>"; };
+		CC51A45B176B6A0800745190 /* PhoneModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneModel.h; sourceTree = "<group>"; };
+		CC51A45C176B6A0800745190 /* PhoneModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneModel.m; sourceTree = "<group>"; };
+		CC51A45E176B6CA000745190 /* PhoneService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneService.h; sourceTree = "<group>"; };
+		CC51A45F176B6CA000745190 /* PhoneService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneService.m; sourceTree = "<group>"; };
 		CC924490175FC8C30000E97D /* MessagesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesTableViewController.h; sourceTree = "<group>"; };
 		CC924491175FC8C30000E97D /* MessagesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagesTableViewController.m; sourceTree = "<group>"; };
 		CC924494175FCA660000E97D /* UserThreadModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserThreadModel.h; sourceTree = "<group>"; };
@@ -143,6 +150,8 @@
 		CCE3A7C317454A050022B6BF /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		CCE3A7CD17454AB20022B6BF /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		CCE3A7CE17454AB20022B6BF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		CCE469A5177387E800B6FCDA /* ContactsDetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsDetailsTableViewController.h; sourceTree = "<group>"; };
+		CCE469A6177387E800B6FCDA /* ContactsDetailsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsDetailsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -314,10 +323,14 @@
 		CCB2A2DC174D566B006C3486 /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
-				CCB2A2DD174D566B006C3486 /* UserModel.h */,
-				CCB2A2DE174D566B006C3486 /* UserModel.m */,
 				CCB2A2DF174D566B006C3486 /* ContactsService.h */,
 				CCB2A2E0174D566B006C3486 /* ContactsService.m */,
+				CC51A45B176B6A0800745190 /* PhoneModel.h */,
+				CC51A45C176B6A0800745190 /* PhoneModel.m */,
+				CC51A45E176B6CA000745190 /* PhoneService.h */,
+				CC51A45F176B6CA000745190 /* PhoneService.m */,
+				CCB2A2DD174D566B006C3486 /* UserModel.h */,
+				CCB2A2DE174D566B006C3486 /* UserModel.m */,
 			);
 			path = Contacts;
 			sourceTree = "<group>";
@@ -343,6 +356,8 @@
 		CCE3A78C174440D80022B6BF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CCE469A5177387E800B6FCDA /* ContactsDetailsTableViewController.h */,
+				CCE469A6177387E800B6FCDA /* ContactsDetailsTableViewController.m */,
 				CCB2A2D9174D455A006C3486 /* ContactsTableViewController.h */,
 				CCB2A2DA174D455A006C3486 /* ContactsTableViewController.m */,
 				CC924490175FC8C30000E97D /* MessagesTableViewController.h */,
@@ -524,6 +539,9 @@
 				CC924499175FCA660000E97D /* UserThreadService.m in Sources */,
 				CC92449D175FCCFD0000E97D /* GetUserThreadsDelegate.m in Sources */,
 				CC9244A0175FE2360000E97D /* MBMessageModel.m in Sources */,
+				CC51A45D176B6A0800745190 /* PhoneModel.m in Sources */,
+				CC51A460176B6CA000745190 /* PhoneService.m in Sources */,
+				CCE469A7177387E800B6FCDA /* ContactsDetailsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

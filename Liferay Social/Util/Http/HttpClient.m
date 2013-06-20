@@ -10,6 +10,7 @@
 #import "AFNetworkActivityIndicatorManager.h"
 #import "BaseService.h"
 #import "HttpClient.h"
+#import "JSON.h"
 #import "PrefsUtil.h"
 
 static HttpClient *_client = nil;
@@ -76,6 +77,31 @@ static NSString *_path = @"/api/secure/jsonws/invoke";
 	return post ? @"POST" : @"GET";
 }
 
++ (id)_sendSyncRequest:(id)parameters {
+	HttpClient *client = [self getClient:AFJSONParameterEncoding];
+
+	NSString *method = [self getMethod:YES];
+
+	NSURLRequest *request =
+		[client requestWithMethod:method path:_path parameters:parameters];
+
+	NSURLResponse *response;
+	NSError *error;
+
+	NSData *data =
+		[NSURLConnection sendSynchronousRequest:request
+			returningResponse:&response error:&error];
+
+	NSString *json =
+		[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+
+	if (error) {
+		return nil;
+	}
+
+	return [[[SBJsonParser alloc] init] objectWithString:json];
+}
+
 #pragma mark - Static Methods
 
 + (AsyncRequest *)getDownloadAsyncRequest:(NSString *)URL
@@ -132,6 +158,10 @@ static NSString *_path = @"/api/secure/jsonws/invoke";
 	NSString *method = [self getMethod:YES];
 
 	return [client requestWithMethod:method path:_path parameters:command];
+}
+
++ (id)sendSyncRequest:(NSDictionary *)command {
+	return [self _sendSyncRequest:command];
 }
 
 @end
