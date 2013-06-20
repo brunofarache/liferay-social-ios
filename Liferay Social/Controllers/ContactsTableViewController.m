@@ -5,6 +5,7 @@
 //	Bruno Farache
 //
 
+#import "ContactDetailsTableViewController.h"
 #import "ContactsTableViewController.h"
 #import "ContactsService.h"
 #import "UserModel.h"
@@ -72,6 +73,11 @@
 	if ([phones count]) {
 		user.phone = phones[0];
 	}
+
+	ContactDetailsTableViewController *details =
+		[[ContactDetailsTableViewController alloc] init:user];
+
+	[self.navigationController pushViewController:details animated:YES];
 }
 
 

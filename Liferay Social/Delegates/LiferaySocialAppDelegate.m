@@ -21,7 +21,8 @@
 	self.tabBarController = [[UITabBarController alloc] init];
 
 	UIViewController *contactsViewController =
-		[[ContactsTableViewController alloc] init];
+		[self getNavigationController:
+			[[ContactsTableViewController alloc] init]];
 
 	UIViewController *messagesViewController =
 		[[MessagesTableViewController alloc] init];
@@ -38,6 +39,15 @@
     [self.window makeKeyAndVisible];
 
 	return YES;
+}
+
+- (UINavigationController *)getNavigationController:(UIViewController *)root {
+	UINavigationController *navigationController =
+		[[UINavigationController alloc] initWithRootViewController:root];
+
+	[navigationController.navigationBar setBarStyle:UIBarStyleBlack];
+
+	return navigationController;
 }
 
 @end
