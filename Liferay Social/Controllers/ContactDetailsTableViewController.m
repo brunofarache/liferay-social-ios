@@ -14,6 +14,7 @@
 
     if (self) {
 		self.user = user;
+		self.title = user.firstName;
 	}
 
     return self;
@@ -22,7 +23,7 @@
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView
@@ -51,6 +52,9 @@
 	}
 	else if (indexPath.section == 1) {
 		cell.textLabel.text = self.user.emailAddress;
+	}
+	else if (indexPath.section == 2) {
+		cell.textLabel.text = @"Add to contacts";
 	}
 
     return cell;
