@@ -14,7 +14,7 @@
 #import "PrefsUtil.h"
 
 static HttpClient *_client = nil;
-static NSString *_path = @"/api/secure/jsonws/invoke";
+static NSString *_path = @"/api/jsonws/invoke";
 
 @implementation HttpClient
 

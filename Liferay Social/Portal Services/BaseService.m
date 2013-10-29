@@ -23,7 +23,7 @@
 
 + (NSString *)getURL:(NSString *)serviceName methodName:(NSString *)methodName {
 	NSString *URL =
-		[NSString stringWithFormat:@"api/secure/jsonws/%@/%@", serviceName,
+		[NSString stringWithFormat:@"api/jsonws/%@/%@", serviceName,
 			methodName];
 
 	return URL;

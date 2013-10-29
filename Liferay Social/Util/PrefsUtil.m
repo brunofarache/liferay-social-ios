@@ -66,7 +66,7 @@ static NSUserDefaults *_userDefaults;
 }
 
 + (NSNumber *)getGroupId {
-	return @(10180);
+	return @(10184);
 //	return [_userDefaults objectForKey:@"groupId"];
 }
 
@@ -94,7 +94,7 @@ static NSUserDefaults *_userDefaults;
 }
 
 + (NSString *)getServer {
-	return @"http://localhost:8081";
+	return @"http://localhost:8080";
 //	return [_userDefaults stringForKey:@"server"];
 }
 
