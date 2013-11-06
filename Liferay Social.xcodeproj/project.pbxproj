@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		292C8DA1186DB2CA008C549B /* LRBaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 292C8D98186DB2CA008C549B /* LRBaseService.m */; };
+		292C8DA2186DB2CA008C549B /* LRBatchSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 292C8D99186DB2CA008C549B /* LRBatchSession.m */; };
+		292C8DA3186DB2CA008C549B /* LRHttpUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 292C8D9A186DB2CA008C549B /* LRHttpUtil.m */; };
+		292C8DA4186DB2CA008C549B /* LRSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 292C8D9B186DB2CA008C549B /* LRSession.m */; };
+		292C8DA5186DB2CA008C549B /* LRMicroblogsentryService_v62.m in Sources */ = {isa = PBXBuildFile; fileRef = 292C8DA0186DB2CA008C549B /* LRMicroblogsentryService_v62.m */; };
 		CC31CBBA17454C64006CDD4B /* AsyncRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CC31CBB717454C64006CDD4B /* AsyncRequest.m */; };
 		CC31CBBB17454C64006CDD4B /* HttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CC31CBB917454C64006CDD4B /* HttpClient.m */; };
 		CC31CBBE17454C89006CDD4B /* ProgressDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC31CBBD17454C89006CDD4B /* ProgressDelegate.m */; };
@@ -54,6 +59,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		292C8D92186DB2CA008C549B /* LRBaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRBaseService.h; sourceTree = "<group>"; };
+		292C8D93186DB2CA008C549B /* LRBatchSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRBatchSession.h; sourceTree = "<group>"; };
+		292C8D94186DB2CA008C549B /* LRCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRCallback.h; sourceTree = "<group>"; };
+		292C8D95186DB2CA008C549B /* LRHttpUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRHttpUtil.h; sourceTree = "<group>"; };
+		292C8D96186DB2CA008C549B /* LRSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRSession.h; sourceTree = "<group>"; };
+		292C8D98186DB2CA008C549B /* LRBaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRBaseService.m; sourceTree = "<group>"; };
+		292C8D99186DB2CA008C549B /* LRBatchSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRBatchSession.m; sourceTree = "<group>"; };
+		292C8D9A186DB2CA008C549B /* LRHttpUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRHttpUtil.m; sourceTree = "<group>"; };
+		292C8D9B186DB2CA008C549B /* LRSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRSession.m; sourceTree = "<group>"; };
+		292C8D9E186DB2CA008C549B /* LRMicroblogsentryService_v62.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRMicroblogsentryService_v62.h; sourceTree = "<group>"; };
+		292C8DA0186DB2CA008C549B /* LRMicroblogsentryService_v62.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRMicroblogsentryService_v62.m; sourceTree = "<group>"; };
 		CC31CBB617454C64006CDD4B /* AsyncRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncRequest.h; sourceTree = "<group>"; };
 		CC31CBB717454C64006CDD4B /* AsyncRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncRequest.m; sourceTree = "<group>"; };
 		CC31CBB817454C64006CDD4B /* HttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpClient.h; sourceTree = "<group>"; };
@@ -155,6 +171,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		292C8D8F186DB2CA008C549B /* Liferay Mobile SDK */ = {
+			isa = PBXGroup;
+			children = (
+				292C8D90186DB2CA008C549B /* core */,
+				292C8D9C186DB2CA008C549B /* v62 */,
+			);
+			path = "Liferay Mobile SDK";
+			sourceTree = "<group>";
+		};
+		292C8D90186DB2CA008C549B /* core */ = {
+			isa = PBXGroup;
+			children = (
+				292C8D91186DB2CA008C549B /* h */,
+				292C8D97186DB2CA008C549B /* m */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		292C8D91186DB2CA008C549B /* h */ = {
+			isa = PBXGroup;
+			children = (
+				292C8D92186DB2CA008C549B /* LRBaseService.h */,
+				292C8D93186DB2CA008C549B /* LRBatchSession.h */,
+				292C8D94186DB2CA008C549B /* LRCallback.h */,
+				292C8D95186DB2CA008C549B /* LRHttpUtil.h */,
+				292C8D96186DB2CA008C549B /* LRSession.h */,
+			);
+			path = h;
+			sourceTree = "<group>";
+		};
+		292C8D97186DB2CA008C549B /* m */ = {
+			isa = PBXGroup;
+			children = (
+				292C8D98186DB2CA008C549B /* LRBaseService.m */,
+				292C8D99186DB2CA008C549B /* LRBatchSession.m */,
+				292C8D9A186DB2CA008C549B /* LRHttpUtil.m */,
+				292C8D9B186DB2CA008C549B /* LRSession.m */,
+			);
+			path = m;
+			sourceTree = "<group>";
+		};
+		292C8D9C186DB2CA008C549B /* v62 */ = {
+			isa = PBXGroup;
+			children = (
+				292C8D9D186DB2CA008C549B /* h */,
+				292C8D9F186DB2CA008C549B /* m */,
+			);
+			path = v62;
+			sourceTree = "<group>";
+		};
+		292C8D9D186DB2CA008C549B /* h */ = {
+			isa = PBXGroup;
+			children = (
+				292C8D9E186DB2CA008C549B /* LRMicroblogsentryService_v62.h */,
+			);
+			path = h;
+			sourceTree = "<group>";
+		};
+		292C8D9F186DB2CA008C549B /* m */ = {
+			isa = PBXGroup;
+			children = (
+				292C8DA0186DB2CA008C549B /* LRMicroblogsentryService_v62.m */,
+			);
+			path = m;
+			sourceTree = "<group>";
+		};
 		CC31CBB417454C64006CDD4B /* Util */ = {
 			isa = PBXGroup;
 			children = (
@@ -363,6 +445,7 @@
 		CCE3A7AF17454A050022B6BF /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				292C8D8F186DB2CA008C549B /* Liferay Mobile SDK */,
 				CC31CBD7174550FA006CDD4B /* SBJson */,
 				CCE3A7B017454A050022B6BF /* AFNetworking */,
 				CC31CBCC17454EF2006CDD4B /* MBProgressHUD */,
@@ -463,23 +546,27 @@
 				CCE3A7A2174440D80022B6BF /* LiferaySocialAppDelegate.m in Sources */,
 				CCE3A7AB174440D80022B6BF /* main.m in Sources */,
 				CCE3A7AE174442F80022B6BF /* MicroblogsTableViewController.m in Sources */,
+				292C8DA2186DB2CA008C549B /* LRBatchSession.m in Sources */,
 				CCE3A7C417454A050022B6BF /* AFHTTPClient.m in Sources */,
 				CCE3A7C517454A050022B6BF /* AFHTTPRequestOperation.m in Sources */,
 				CCE3A7C617454A050022B6BF /* AFImageRequestOperation.m in Sources */,
 				CCE3A7C717454A050022B6BF /* AFJSONRequestOperation.m in Sources */,
 				CCE3A7C817454A050022B6BF /* AFNetworkActivityIndicatorManager.m in Sources */,
+				292C8DA5186DB2CA008C549B /* LRMicroblogsentryService_v62.m in Sources */,
 				CCE3A7C917454A050022B6BF /* AFPropertyListRequestOperation.m in Sources */,
 				CCE3A7CA17454A050022B6BF /* AFURLConnectionOperation.m in Sources */,
 				CCE3A7CB17454A050022B6BF /* AFXMLRequestOperation.m in Sources */,
 				CCE3A7CC17454A050022B6BF /* UIImageView+AFNetworking.m in Sources */,
 				CC31CBBA17454C64006CDD4B /* AsyncRequest.m in Sources */,
 				CC31CBBB17454C64006CDD4B /* HttpClient.m in Sources */,
+				292C8DA1186DB2CA008C549B /* LRBaseService.m in Sources */,
 				CC31CBBE17454C89006CDD4B /* ProgressDelegate.m in Sources */,
 				CC31CBC117454E11006CDD4B /* PrefsUtil.m in Sources */,
 				CC31CBC417454E78006CDD4B /* Validator.m in Sources */,
 				CC31CBC817454EBD006CDD4B /* UIView+Loading.m in Sources */,
 				CC31CBCF17454EF2006CDD4B /* MBProgressHUD.m in Sources */,
 				CC31CBD317455097006CDD4B /* BaseService.m in Sources */,
+				292C8DA3186DB2CA008C549B /* LRHttpUtil.m in Sources */,
 				CC31CBD6174550D3006CDD4B /* HandleException.m in Sources */,
 				CC31CBE3174550FA006CDD4B /* NSObject+SBJSON.m in Sources */,
 				CC31CBE4174550FA006CDD4B /* NSString+SBJSON.m in Sources */,
@@ -489,6 +576,7 @@
 				CC4B4F6E1746BEF9008C06C6 /* MicroblogsService.m in Sources */,
 				CC4B4F711746BF11008C06C6 /* MicroblogsEntryModel.m in Sources */,
 				CCB2A2DB174D455A006C3486 /* ContactsTableViewController.m in Sources */,
+				292C8DA4186DB2CA008C549B /* LRSession.m in Sources */,
 				CCB2A2E1174D566B006C3486 /* UserModel.m in Sources */,
 				CCB2A2E2174D566B006C3486 /* ContactsService.m in Sources */,
 				CCB2A2E7174D5C51006C3486 /* GetMicroblogsEntriesDelegate.m in Sources */,
