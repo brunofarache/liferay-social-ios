@@ -23,7 +23,7 @@
 		[self getNavigationController:[[ContactsTableViewController alloc] init]];
 
 	UIViewController *microblogsViewController =
-		[[MicroblogsTableViewController alloc] init];
+		[self getNavigationController:[[MicroblogsTableViewController alloc] init]];
 
 	self.tabBarController.viewControllers =
 		@[contactsViewController, microblogsViewController];
