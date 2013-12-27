@@ -98,6 +98,14 @@ static NSUserDefaults *_userDefaults;
 //	return [_userDefaults stringForKey:@"server"];
 }
 
++ (LRSession *)getSession {
+	NSString *server = [self getServer];
+	NSString *email = [self getEmail];
+	NSString *password = [self getPassword];
+
+	return [[LRSession alloc] init:server username:email password:password];
+}
+
 + (BOOL)isTrustCertificate {
 	NSString *server = [self getServer];
 

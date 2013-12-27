@@ -5,6 +5,8 @@
 //	Bruno Farache
 //
 
+#import "LRSession.h"
+
 @interface PrefsUtil : NSObject
 
 + (NSString*)encodeURL:(NSString *)string;
@@ -16,6 +18,7 @@
 + (CGRect)getScreenFrame;
 + (CGRect)getScreenFrame:(UIDeviceOrientation)orientation;
 + (NSString *)getServer;
++ (LRSession *)getSession;
 + (BOOL)isTrustCertificate;
 + (BOOL)needsSetup;
 + (BOOL)reloadUserSites;

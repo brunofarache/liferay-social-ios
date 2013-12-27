@@ -5,10 +5,11 @@
 //	Bruno Farache
 //
 
-#import "AsyncRequest.h"
+#import "GetMicroblogsCallback.h"
+#import "LRMicroblogsentryService_v62.h"
 #import "MicroblogsService.h"
-#import "GetMicroblogsEntriesDelegate.h"
-#import "HttpClient.h"
+#import "PrefsUtil.h"
+#import "UIView+Loading.h"
 
 static NSString *_serviceName = @"microblogs-portlet/microblogsentry";
 
@@ -17,26 +18,22 @@ static NSString *_serviceName = @"microblogs-portlet/microblogsentry";
 + (void)getMicroblogsEntries:(MicroblogsTableViewController *)viewController
 		loadingView:(UIView *)loadingView {
 
-	NSString *key = [self getCommand:@"get-microblogs-entries"];
+	LRMicroblogsentryService_v62 *service =
+		[[LRMicroblogsentryService_v62 alloc] init];
 
-	NSDictionary *value = @{
-		@"start": @(-1),
-		@"end":  @(-1)
-	};
+	GetMicroblogsCallback *callback =
+		[[GetMicroblogsCallback alloc] init:viewController loadingView:loadingView];
 
-	NSDictionary *command = @{key: value};
+	LRSession *session = [PrefsUtil getSession];
+	[session setCallback:callback];
 
-	AsyncRequest *request = [HttpClient getAsyncRequest:command];
+	[service setSession:session];
 
-	id delegate = [[GetMicroblogsEntriesDelegate alloc] init:viewController];
+	[loadingView showLoadingHUD];
 
-	[request setDelegate:delegate loadingView:loadingView];
+	NSError *error;
 
-	[request start];
-}
-
-+ (NSString *)getCommand:(NSString *)methodName {
-	return [self getCommand:_serviceName methodName:methodName];
+	[service getMicroblogsEntriesWithStart:-1 end:-1 error:&error];
 }
 
 @end

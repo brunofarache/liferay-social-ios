@@ -37,7 +37,6 @@
 		CCB2A2DB174D455A006C3486 /* ContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB2A2DA174D455A006C3486 /* ContactsTableViewController.m */; };
 		CCB2A2E1174D566B006C3486 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB2A2DE174D566B006C3486 /* UserModel.m */; };
 		CCB2A2E2174D566B006C3486 /* ContactsService.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB2A2E0174D566B006C3486 /* ContactsService.m */; };
-		CCB2A2E7174D5C51006C3486 /* GetMicroblogsEntriesDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB2A2E6174D5C51006C3486 /* GetMicroblogsEntriesDelegate.m */; };
 		CCB2A2EA174D5CE8006C3486 /* GetGroupUsersDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB2A2E9174D5CE8006C3486 /* GetGroupUsersDelegate.m */; };
 		CCE3A7A2174440D80022B6BF /* LiferaySocialAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE3A793174440D80022B6BF /* LiferaySocialAppDelegate.m */; };
 		CCE3A7A6174440D80022B6BF /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = CCE3A798174440D80022B6BF /* first.png */; };
@@ -120,8 +119,6 @@
 		CCB2A2DE174D566B006C3486 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		CCB2A2DF174D566B006C3486 /* ContactsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsService.h; sourceTree = "<group>"; };
 		CCB2A2E0174D566B006C3486 /* ContactsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsService.m; sourceTree = "<group>"; };
-		CCB2A2E5174D5C51006C3486 /* GetMicroblogsEntriesDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetMicroblogsEntriesDelegate.h; sourceTree = "<group>"; };
-		CCB2A2E6174D5C51006C3486 /* GetMicroblogsEntriesDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetMicroblogsEntriesDelegate.m; sourceTree = "<group>"; };
 		CCB2A2E8174D5CE8006C3486 /* GetGroupUsersDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetGroupUsersDelegate.h; sourceTree = "<group>"; };
 		CCB2A2E9174D5CE8006C3486 /* GetGroupUsersDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetGroupUsersDelegate.m; sourceTree = "<group>"; };
 		CCE3A792174440D80022B6BF /* LiferaySocialAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiferaySocialAppDelegate.h; sourceTree = "<group>"; };
@@ -401,15 +398,6 @@
 			path = Contacts;
 			sourceTree = "<group>";
 		};
-		CCB2A2E4174D5C51006C3486 /* Microblogs */ = {
-			isa = PBXGroup;
-			children = (
-				CCB2A2E5174D5C51006C3486 /* GetMicroblogsEntriesDelegate.h */,
-				CCB2A2E6174D5C51006C3486 /* GetMicroblogsEntriesDelegate.m */,
-			);
-			path = Microblogs;
-			sourceTree = "<group>";
-		};
 		CCE3A78C174440D80022B6BF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -427,7 +415,6 @@
 			isa = PBXGroup;
 			children = (
 				CCB2A2E3174D5C51006C3486 /* Contacts */,
-				CCB2A2E4174D5C51006C3486 /* Microblogs */,
 				CCE3A792174440D80022B6BF /* LiferaySocialAppDelegate.h */,
 				CCE3A793174440D80022B6BF /* LiferaySocialAppDelegate.m */,
 				CC31CBBC17454C89006CDD4B /* ProgressDelegate.h */,
@@ -593,7 +580,6 @@
 				292C8DA4186DB2CA008C549B /* LRSession.m in Sources */,
 				CCB2A2E1174D566B006C3486 /* UserModel.m in Sources */,
 				CCB2A2E2174D566B006C3486 /* ContactsService.m in Sources */,
-				CCB2A2E7174D5C51006C3486 /* GetMicroblogsEntriesDelegate.m in Sources */,
 				CCB2A2EA174D5CE8006C3486 /* GetGroupUsersDelegate.m in Sources */,
 				CC51A45D176B6A0800745190 /* PhoneModel.m in Sources */,
 				CC51A460176B6CA000745190 /* PhoneService.m in Sources */,
