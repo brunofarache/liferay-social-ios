@@ -12,6 +12,7 @@
 		292C8DA3186DB2CA008C549B /* LRHttpUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 292C8D9A186DB2CA008C549B /* LRHttpUtil.m */; };
 		292C8DA4186DB2CA008C549B /* LRSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 292C8D9B186DB2CA008C549B /* LRSession.m */; };
 		292C8DA5186DB2CA008C549B /* LRMicroblogsentryService_v62.m in Sources */ = {isa = PBXBuildFile; fileRef = 292C8DA0186DB2CA008C549B /* LRMicroblogsentryService_v62.m */; };
+		292C8DAC186DB629008C549B /* GetMicroblogsCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = 292C8DAB186DB629008C549B /* GetMicroblogsCallback.m */; };
 		CC31CBBA17454C64006CDD4B /* AsyncRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CC31CBB717454C64006CDD4B /* AsyncRequest.m */; };
 		CC31CBBB17454C64006CDD4B /* HttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CC31CBB917454C64006CDD4B /* HttpClient.m */; };
 		CC31CBBE17454C89006CDD4B /* ProgressDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC31CBBD17454C89006CDD4B /* ProgressDelegate.m */; };
@@ -70,6 +71,8 @@
 		292C8D9B186DB2CA008C549B /* LRSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRSession.m; sourceTree = "<group>"; };
 		292C8D9E186DB2CA008C549B /* LRMicroblogsentryService_v62.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRMicroblogsentryService_v62.h; sourceTree = "<group>"; };
 		292C8DA0186DB2CA008C549B /* LRMicroblogsentryService_v62.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRMicroblogsentryService_v62.m; sourceTree = "<group>"; };
+		292C8DAA186DB629008C549B /* GetMicroblogsCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GetMicroblogsCallback.h; path = Callbacks/GetMicroblogsCallback.h; sourceTree = "<group>"; };
+		292C8DAB186DB629008C549B /* GetMicroblogsCallback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GetMicroblogsCallback.m; path = Callbacks/GetMicroblogsCallback.m; sourceTree = "<group>"; };
 		CC31CBB617454C64006CDD4B /* AsyncRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncRequest.h; sourceTree = "<group>"; };
 		CC31CBB717454C64006CDD4B /* AsyncRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncRequest.m; sourceTree = "<group>"; };
 		CC31CBB817454C64006CDD4B /* HttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpClient.h; sourceTree = "<group>"; };
@@ -237,6 +240,15 @@
 			path = m;
 			sourceTree = "<group>";
 		};
+		292C8DA6186DB5BE008C549B /* Callbacks */ = {
+			isa = PBXGroup;
+			children = (
+				292C8DAA186DB629008C549B /* GetMicroblogsCallback.h */,
+				292C8DAB186DB629008C549B /* GetMicroblogsCallback.m */,
+			);
+			name = Callbacks;
+			sourceTree = "<group>";
+		};
 		CC31CBB417454C64006CDD4B /* Util */ = {
 			isa = PBXGroup;
 			children = (
@@ -352,6 +364,7 @@
 		CCAB24C417443E48001F0F3D /* Liferay Social */ = {
 			isa = PBXGroup;
 			children = (
+				292C8DA6186DB5BE008C549B /* Callbacks */,
 				CC31CBC517454EBD006CDD4B /* Categories */,
 				CCE3A78C174440D80022B6BF /* Controllers */,
 				CCE3A791174440D80022B6BF /* Delegates */,
@@ -544,6 +557,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCE3A7A2174440D80022B6BF /* LiferaySocialAppDelegate.m in Sources */,
+				292C8DAC186DB629008C549B /* GetMicroblogsCallback.m in Sources */,
 				CCE3A7AB174440D80022B6BF /* main.m in Sources */,
 				CCE3A7AE174442F80022B6BF /* MicroblogsTableViewController.m in Sources */,
 				292C8DA2186DB2CA008C549B /* LRBatchSession.m in Sources */,
