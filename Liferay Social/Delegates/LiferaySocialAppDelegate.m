@@ -7,7 +7,6 @@
 
 #import "ContactsTableViewController.h"
 #import "LiferaySocialAppDelegate.h"
-#import "MessagesTableViewController.h"
 #import "MicroblogsTableViewController.h"
 
 @implementation LiferaySocialAppDelegate
@@ -21,22 +20,17 @@
 	self.tabBarController = [[UITabBarController alloc] init];
 
 	UIViewController *contactsViewController =
-		[self getNavigationController:
-			[[ContactsTableViewController alloc] init]];
-
-	UIViewController *messagesViewController =
-		[[MessagesTableViewController alloc] init];
+		[self getNavigationController:[[ContactsTableViewController alloc] init]];
 
 	UIViewController *microblogsViewController =
 		[[MicroblogsTableViewController alloc] init];
 
 	self.tabBarController.viewControllers =
-  		@[contactsViewController, messagesViewController,
-	  		microblogsViewController];
+		@[contactsViewController, microblogsViewController];
 
 	self.window.rootViewController = self.tabBarController;
 
-    [self.window makeKeyAndVisible];
+	[self.window makeKeyAndVisible];
 
 	return YES;
 }
