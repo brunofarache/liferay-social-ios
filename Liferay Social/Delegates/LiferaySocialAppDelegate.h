@@ -5,8 +5,7 @@
 //	Bruno Farache
 //
 
-@interface LiferaySocialAppDelegate : UIResponder
-	<UIApplicationDelegate, UITabBarControllerDelegate>
+@interface LiferaySocialAppDelegate : NSObject <UIApplicationDelegate>
 
 @property (strong, nonatomic) UITabBarController *tabBarController;
 @property (strong, nonatomic) UIWindow *window;
