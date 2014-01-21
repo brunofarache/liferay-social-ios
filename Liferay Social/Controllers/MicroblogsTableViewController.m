@@ -31,6 +31,41 @@
 	return 1;
 }
 
+- (UITableViewCell *)tableView:(UITableView *)tableView
+		cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+
+	static NSString *CellIdentifier = @"Cell";
+
+	UITableViewCell *cell =
+		[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+
+	if (cell == nil) {
+		cell =
+			[[UITableViewCell alloc]
+				initWithStyle:UITableViewCellStyleSubtitle
+				reuseIdentifier:CellIdentifier];
+	}
+
+	MicroblogsEntryModel *entry = [self.entries objectAtIndex:indexPath.row];
+
+	cell.textLabel.font = [UIFont boldSystemFontOfSize:TITLE_FONT_SIZE];
+	cell.textLabel.text = entry.userName;
+
+	cell.detailTextLabel.font = [UIFont systemFontOfSize:DETAIL_FONT_SIZE];
+	cell.detailTextLabel.text = entry.content;
+	cell.detailTextLabel.numberOfLines = 0;
+
+	return cell;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView
+		numberOfRowsInSection:(NSInteger)section {
+
+	return [self.entries count];
+}
+
+#pragma mark - UITableViewDelegate
+
 - (void)tableView:(UITableView *)tableView
 		didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
@@ -69,39 +104,6 @@
 		attributes:detailAtributtes context:nil].size;
 
 	return (titleSize.height + detailSize.height + CELL_PADDING);
-}
-
-- (NSInteger)tableView:(UITableView *)tableView
-		numberOfRowsInSection:(NSInteger)section {
-
-	return [self.entries count];
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView
-		cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-
-	static NSString *CellIdentifier = @"Cell";
-
-	UITableViewCell *cell =
-		[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-
-	if (cell == nil) {
-		cell =
-			[[UITableViewCell alloc]
-				initWithStyle:UITableViewCellStyleSubtitle
-				reuseIdentifier:CellIdentifier];
-	}
-
-	MicroblogsEntryModel *entry = [self.entries objectAtIndex:indexPath.row];
-
-	cell.textLabel.font = [UIFont boldSystemFontOfSize:TITLE_FONT_SIZE];
-	cell.textLabel.text = entry.userName;
-
-	cell.detailTextLabel.font = [UIFont systemFontOfSize:DETAIL_FONT_SIZE];
-	cell.detailTextLabel.text = entry.content;
-	cell.detailTextLabel.numberOfLines = 0;
-
-	return cell;
 }
 
 @end
