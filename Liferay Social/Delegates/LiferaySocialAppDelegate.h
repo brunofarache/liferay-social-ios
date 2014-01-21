@@ -5,8 +5,6 @@
 //	Bruno Farache
 //
 
-#import <UIKit/UIKit.h>
-
 @interface LiferaySocialAppDelegate : UIResponder
 	<UIApplicationDelegate, UITabBarControllerDelegate>
 
