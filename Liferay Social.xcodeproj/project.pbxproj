@@ -44,7 +44,6 @@
 		CCE3A7A2174440D80022B6BF /* LiferaySocialAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE3A793174440D80022B6BF /* LiferaySocialAppDelegate.m */; };
 		CCE3A7A6174440D80022B6BF /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = CCE3A798174440D80022B6BF /* first.png */; };
 		CCE3A7A7174440D80022B6BF /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CCE3A799174440D80022B6BF /* first@2x.png */; };
-		CCE3A7AA174440D80022B6BF /* Liferay Social-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CCE3A79D174440D80022B6BF /* Liferay Social-Info.plist */; };
 		CCE3A7AB174440D80022B6BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE3A79F174440D80022B6BF /* main.m */; };
 		CCE3A7AE174442F80022B6BF /* MicroblogsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE3A7AD174442F80022B6BF /* MicroblogsTableViewController.m */; };
 		CCE3A7C417454A050022B6BF /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE3A7B217454A050022B6BF /* AFHTTPClient.m */; };
@@ -543,7 +542,6 @@
 				CCE3A7A6174440D80022B6BF /* first.png in Resources */,
 				7520D262188EB9F300E191B0 /* Default-568h@2x.png in Resources */,
 				CCE3A7A7174440D80022B6BF /* first@2x.png in Resources */,
-				CCE3A7AA174440D80022B6BF /* Liferay Social-Info.plist in Resources */,
 				7520D265188EBEEE00E191B0 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
