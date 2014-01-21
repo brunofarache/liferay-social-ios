@@ -20,13 +20,19 @@
 	self.tabBarController = [[UITabBarController alloc] init];
 
 	UIViewController *contactsViewController =
-		[self getNavigationController:[[ContactsTableViewController alloc] init]];
+		[[ContactsTableViewController alloc] init];
+
+	UINavigationController *contactsNavigationController =
+		[self getNavigationController:contactsViewController];
 
 	UIViewController *microblogsViewController =
-		[self getNavigationController:[[MicroblogsTableViewController alloc] init]];
+		[[MicroblogsTableViewController alloc] init];
+
+	UINavigationController *microblogsNavigationController =
+		[self getNavigationController:microblogsViewController];
 
 	self.tabBarController.viewControllers =
-		@[contactsViewController, microblogsViewController];
+		@[contactsNavigationController, microblogsNavigationController];
 
 	self.window.rootViewController = self.tabBarController;
 
