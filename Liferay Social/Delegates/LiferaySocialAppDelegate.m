@@ -41,6 +41,8 @@
 	return YES;
 }
 
+#pragma mark - Private Methods
+
 - (UINavigationController *)getNavigationController:(UIViewController *)root {
 	UINavigationController *navigationController =
 		[[UINavigationController alloc] initWithRootViewController:root];
