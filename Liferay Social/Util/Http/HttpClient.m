@@ -32,6 +32,42 @@ static NSString *_path = @"/api/jsonws/invoke";
 
 #pragma mark - Private Methods
 
++ (AsyncRequest *)_getAsyncRequest:(id)parameters {
+	HttpClient *client = [self getClient:AFJSONParameterEncoding];
+
+	NSString *method = [self getMethod:YES];
+
+	NSURLRequest *request =
+		[client requestWithMethod:method path:_path parameters:parameters];
+
+	return [[AsyncRequest alloc] initWithRequest:request];
+}
+
++ (id)_sendSyncRequest:(id)parameters {
+	HttpClient *client = [self getClient:AFJSONParameterEncoding];
+
+	NSString *method = [self getMethod:YES];
+
+	NSURLRequest *request =
+		[client requestWithMethod:method path:_path parameters:parameters];
+
+	NSURLResponse *response;
+	NSError *error;
+
+	NSData *data =
+		[NSURLConnection sendSynchronousRequest:request
+			returningResponse:&response error:&error];
+
+	NSString *json =
+		[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+
+	if (error) {
+		return nil;
+	}
+
+	return [[[SBJsonParser alloc] init] objectWithString:json];
+}
+
 + (HttpClient *)getClient {
 	return [self getClient:AFFormURLParameterEncoding];
 }
@@ -62,47 +98,19 @@ static NSString *_path = @"/api/jsonws/invoke";
 	return _client;
 }
 
-+ (AsyncRequest *)_getAsyncRequest:(id)parameters {
-	HttpClient *client = [self getClient:AFJSONParameterEncoding];
-
-	NSString *method = [self getMethod:YES];
-
-	NSURLRequest *request =
-		[client requestWithMethod:method path:_path parameters:parameters];
-
-	return [[AsyncRequest alloc] initWithRequest:request];
-}
-
 + (NSString *)getMethod:(BOOL)post {
 	return post ? @"POST" : @"GET";
 }
 
-+ (id)_sendSyncRequest:(id)parameters {
-	HttpClient *client = [self getClient:AFJSONParameterEncoding];
+#pragma mark - Static Methods
 
-	NSString *method = [self getMethod:YES];
-
-	NSURLRequest *request =
-		[client requestWithMethod:method path:_path parameters:parameters];
-
-	NSURLResponse *response;
-	NSError *error;
-
-	NSData *data =
-		[NSURLConnection sendSynchronousRequest:request
-			returningResponse:&response error:&error];
-
-	NSString *json =
-		[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-
-	if (error) {
-		return nil;
-	}
-
-	return [[[SBJsonParser alloc] init] objectWithString:json];
++ (AsyncRequest *)getAsyncRequest:(NSDictionary *)command {
+	return [self _getAsyncRequest:command];
 }
 
-#pragma mark - Static Methods
++ (AsyncRequest *)getBatchAsyncRequest:(NSArray *)commands {
+	return [self _getAsyncRequest:commands];
+}
 
 + (AsyncRequest *)getDownloadAsyncRequest:(NSString *)URL
 		filePath:(NSString *)filePath {
@@ -121,14 +129,6 @@ static NSString *_path = @"/api/jsonws/invoke";
 		[NSOutputStream outputStreamToFileAtPath:filePath append:NO];
 
 	return asyncRequest;
-}
-
-+ (AsyncRequest *)getAsyncRequest:(NSDictionary *)command {
-	return [self _getAsyncRequest:command];
-}
-
-+ (AsyncRequest *)getBatchAsyncRequest:(NSArray *)commands {
-	return [self _getAsyncRequest:commands];
 }
 
 + (AsyncRequest *)getUploadAsyncRequest:(NSString *)URL data:(NSData *)data
