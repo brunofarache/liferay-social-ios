@@ -251,6 +251,19 @@
 			name = Callbacks;
 			sourceTree = "<group>";
 		};
+		751D1B5F1890513100CB2591 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CC4B4F6F1746BF11008C06C6 /* MicroblogsEntryModel.h */,
+				CC4B4F701746BF11008C06C6 /* MicroblogsEntryModel.m */,
+				CC51A45B176B6A0800745190 /* PhoneModel.h */,
+				CC51A45C176B6A0800745190 /* PhoneModel.m */,
+				CCB2A2DD174D566B006C3486 /* UserModel.h */,
+				CCB2A2DE174D566B006C3486 /* UserModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		CC31CBB417454C64006CDD4B /* Util */ = {
 			isa = PBXGroup;
 			children = (
@@ -326,8 +339,6 @@
 		CC4B4F6B1746BEF9008C06C6 /* Microblogs */ = {
 			isa = PBXGroup;
 			children = (
-				CC4B4F6F1746BF11008C06C6 /* MicroblogsEntryModel.h */,
-				CC4B4F701746BF11008C06C6 /* MicroblogsEntryModel.m */,
 				CC4B4F6C1746BEF9008C06C6 /* MicroblogsService.h */,
 				CC4B4F6D1746BEF9008C06C6 /* MicroblogsService.m */,
 			);
@@ -366,6 +377,7 @@
 		CCAB24C417443E48001F0F3D /* Liferay Social */ = {
 			isa = PBXGroup;
 			children = (
+				751D1B5F1890513100CB2591 /* Models */,
 				292C8DA6186DB5BE008C549B /* Callbacks */,
 				CC31CBC517454EBD006CDD4B /* Categories */,
 				CCE3A78C174440D80022B6BF /* Controllers */,
@@ -384,12 +396,8 @@
 			children = (
 				CCB2A2DF174D566B006C3486 /* ContactsService.h */,
 				CCB2A2E0174D566B006C3486 /* ContactsService.m */,
-				CC51A45B176B6A0800745190 /* PhoneModel.h */,
-				CC51A45C176B6A0800745190 /* PhoneModel.m */,
 				CC51A45E176B6CA000745190 /* PhoneService.h */,
 				CC51A45F176B6CA000745190 /* PhoneService.m */,
-				CCB2A2DD174D566B006C3486 /* UserModel.h */,
-				CCB2A2DE174D566B006C3486 /* UserModel.m */,
 			);
 			path = Contacts;
 			sourceTree = "<group>";
