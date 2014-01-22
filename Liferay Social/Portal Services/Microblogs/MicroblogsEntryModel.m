@@ -32,9 +32,9 @@
 			[[jsonObj objectForKey:@"receiverUserId"] longValue];
 
 		self.socialRelationType =
-			[[jsonObj objectForKey:@"socialRelationType"] integerValue];
+			[[jsonObj objectForKey:@"socialRelationType"] intValue];
 
-		self.type = [[jsonObj objectForKey:@"type"] integerValue];
+		self.type = [[jsonObj objectForKey:@"type"] intValue];
 		self.userId = [[jsonObj objectForKey:@"userId"] longValue];
 		self.userName = [jsonObj objectForKey:@"userName"];
 	}
