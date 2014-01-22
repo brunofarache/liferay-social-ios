@@ -5,7 +5,6 @@
 //	Bruno Farache
 //
 
-#import "MicroblogsEntryModel.h"
 #import "MicroblogsTableViewController.h"
 #import "MicroblogsService.h"
 

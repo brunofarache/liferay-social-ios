@@ -5,6 +5,11 @@
 //	Bruno Farache
 //
 
+#import "HandleException.h"
+#import "JSON.h"
+#import "PrefsUtil.h"
+#import "UIView+Loading.h"
+
 typedef enum {
 	CertificateError
 } ErrorTag;

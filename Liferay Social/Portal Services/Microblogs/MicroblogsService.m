@@ -5,11 +5,7 @@
 //	Bruno Farache
 //
 
-#import "GetMicroblogsCallback.h"
-#import "LRMicroblogsentryService_v62.h"
 #import "MicroblogsService.h"
-#import "PrefsUtil.h"
-#import "UIView+Loading.h"
 
 static NSString *_serviceName = @"microblogs-portlet/microblogsentry";
 

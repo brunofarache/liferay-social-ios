@@ -5,9 +5,7 @@
 //	Bruno Farache
 //
 
-#import "ContactsTableViewController.h"
 #import "LiferaySocialAppDelegate.h"
-#import "MicroblogsTableViewController.h"
 
 @implementation LiferaySocialAppDelegate
 

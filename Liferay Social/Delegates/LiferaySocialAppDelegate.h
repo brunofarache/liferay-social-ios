@@ -5,6 +5,9 @@
 //	Bruno Farache
 //
 
+#import "ContactsTableViewController.h"
+#import "MicroblogsTableViewController.h"
+
 @interface LiferaySocialAppDelegate : NSObject <UIApplicationDelegate>
 
 @property (strong, nonatomic) UITabBarController *tabBarController;

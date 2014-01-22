@@ -6,12 +6,7 @@
 //  Bruno Farache
 //
 
-#import "AFJSONRequestOperation.h"
-#import "AFNetworkActivityIndicatorManager.h"
-#import "BaseService.h"
 #import "HttpClient.h"
-#import "JSON.h"
-#import "PrefsUtil.h"
 
 static HttpClient *_client = nil;
 static NSString *_path = @"/api/jsonws/invoke";
