@@ -47,12 +47,12 @@
 
 	MicroblogsEntryModel *entry = [self.entries objectAtIndex:indexPath.row];
 
-	cell.textLabel.font = [UIFont boldSystemFontOfSize:TITLE_FONT_SIZE];
-	cell.textLabel.text = entry.userName;
+	[cell.textLabel setFont:[UIFont boldSystemFontOfSize:TITLE_FONT_SIZE]];
+	[cell.textLabel setText:entry.userName];
 
-	cell.detailTextLabel.font = [UIFont systemFontOfSize:DETAIL_FONT_SIZE];
-	cell.detailTextLabel.text = entry.content;
-	cell.detailTextLabel.numberOfLines = 0;
+	[cell.detailTextLabel setFont:[UIFont systemFontOfSize:DETAIL_FONT_SIZE]];
+	[cell.detailTextLabel setText:entry.content];
+	[cell.detailTextLabel setNumberOfLines:0];
 
 	return cell;
 }
