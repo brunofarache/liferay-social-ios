@@ -53,7 +53,7 @@
 
 	UserModel *user = [self.entries objectAtIndex:indexPath.row];
 
-	cell.textLabel.text = user.firstName;
+	[cell.textLabel setText:user.firstName];
 
 	return cell;
 }
