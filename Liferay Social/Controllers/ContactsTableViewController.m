@@ -5,11 +5,8 @@
 //	Bruno Farache
 //
 
-#import "ContactDetailsTableViewController.h"
 #import "ContactsTableViewController.h"
 #import "ContactsService.h"
-#import "UserModel.h"
-#import "PhoneService.h"
 
 @implementation ContactsTableViewController
 
