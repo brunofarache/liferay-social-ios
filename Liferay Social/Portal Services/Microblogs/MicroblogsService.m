@@ -18,7 +18,8 @@ static NSString *_serviceName = @"microblogs-portlet/microblogsentry";
 		[[LRMicroblogsentryService_v62 alloc] init];
 
 	GetMicroblogsCallback *callback =
-		[[GetMicroblogsCallback alloc] init:viewController loadingView:loadingView];
+		[[GetMicroblogsCallback alloc]
+			init:viewController loadingView:loadingView];
 
 	LRSession *session = [PrefsUtil getSession];
 	[session setCallback:callback];
