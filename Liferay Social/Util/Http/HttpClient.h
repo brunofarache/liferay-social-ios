@@ -15,7 +15,7 @@
 
 @interface HttpClient : AFHTTPClient
 
-@property (readwrite, nonatomic, retain) NSURL *baseURL;
+@property (nonatomic, strong) NSURL *baseURL;
 
 + (AsyncRequest *)getAsyncRequest:(NSDictionary *)command;
 + (AsyncRequest *)getBatchAsyncRequest:(NSArray *)commands;
