@@ -5,11 +5,11 @@
 //  Silvio Santos
 //
 
-#import <Foundation/Foundation.h>
 #import "LRCallback.h"
 #import "MicroblogsTableViewController.h"
+#import "UIView+Loading.h"
 
-@interface GetMicroblogsCallback : NSObject<LRCallback>
+@interface GetMicroblogsCallback : NSObject <LRCallback>
 
 @property (nonatomic, strong) UIView *loadingView;
 @property (nonatomic, strong) MicroblogsTableViewController *viewController;

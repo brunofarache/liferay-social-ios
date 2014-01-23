@@ -6,8 +6,6 @@
 //
 
 #import "GetMicroblogsCallback.h"
-#import "MicroblogsEntryModel.h"
-#import "UIView+Loading.h"
 
 @implementation GetMicroblogsCallback
 
@@ -15,7 +13,7 @@
 		loadingView:(UIView *)loadingView {
 
 	self = [super init];
-	
+
 	if (self) {
 		self.viewController = viewController;
 		self.loadingView = loadingView;
@@ -26,8 +24,6 @@
 
 - (void)onFailure:(NSError *)error {
 	[self.loadingView hideLoadingHUD];
-
-	NSLog(@"%@", error);
 }
 
 - (void)onSuccess:(id)result {
