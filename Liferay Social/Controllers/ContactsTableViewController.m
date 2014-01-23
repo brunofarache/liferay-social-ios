@@ -68,7 +68,7 @@
 	NSArray *phones = [PhoneService getPhones:user.contactId];
 
 	if ([phones count]) {
-		user.phone = phones[0];
+		[user setPhone:phones[0]];
 	}
 
 	ContactDetailsTableViewController *details =
