@@ -9,8 +9,8 @@
 
 @interface GetGroupUsersDelegate : NSObject
 
-- (id)init:(ContactsTableViewController *)viewController;
-
 @property (nonatomic, strong) ContactsTableViewController *viewController;
+
+- (id)init:(ContactsTableViewController *)viewController;
 
 @end
