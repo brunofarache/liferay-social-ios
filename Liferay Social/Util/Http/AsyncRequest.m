@@ -22,7 +22,7 @@
 	if (self) {
 		NSString *trust = NSURLAuthenticationMethodServerTrust;
 
-		BOOL (^protectionBlock)(NSURLConnection *, NSURLProtectionSpace *) =
+		BOOL (^ protectionBlock)(NSURLConnection *, NSURLProtectionSpace *) =
 			^(NSURLConnection *connection, NSURLProtectionSpace *space) {
 				if (![space.authenticationMethod isEqualToString:trust]) {
 					return YES;
@@ -31,7 +31,7 @@
 				return [PrefsUtil isTrustCertificate];
 			};
 
-		void (^authBlock)(NSURLConnection *, NSURLAuthenticationChallenge *);
+		void (^ authBlock)(NSURLConnection *, NSURLAuthenticationChallenge *);
 
 		if (download) {
 			authBlock = [self getDownloadAuthBlock];
@@ -75,7 +75,7 @@
 - (void (^)(NSURLConnection *, NSURLAuthenticationChallenge *))
 		getDownloadAuthBlock {
 
-	return	^(NSURLConnection *conn, NSURLAuthenticationChallenge *challenge) {
+	return ^(NSURLConnection *conn, NSURLAuthenticationChallenge *challenge) {
 		[self useCredential:challenge];
 	};
 }
@@ -109,7 +109,7 @@
 
 	[loadingView showLoadingHUD];
 
-	void (^success)(AFHTTPRequestOperation *, id) =
+	void (^ success)(AFHTTPRequestOperation *, id) =
 		^(AFHTTPRequestOperation *operation, id responseObject) {
 			NSString *response =
 				[[NSString alloc]
@@ -120,7 +120,7 @@
 			[self.delegate requestFinished:response type:self.tag];
 		};
 
-	void (^failure)(AFHTTPRequestOperation *, NSError *) =
+	void (^ failure)(AFHTTPRequestOperation *, NSError *) =
 		^(AFHTTPRequestOperation *operation, NSError *error) {
 			[loadingView hideLoadingHUD];
 
@@ -133,7 +133,7 @@
 - (void)setProgressDelegate:(ProgressDelegate *)delegate {
 	_progressDelegate = delegate;
 
-	void (^progressBlock)(NSUInteger, long long, long long) =
+	void (^ progressBlock)(NSUInteger, long long, long long) =
 		^(NSUInteger bytes, long long sent, long long total) {
 			float progress = (float)sent / (float)total;
 

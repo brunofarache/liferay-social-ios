@@ -131,7 +131,7 @@ static NSString *_path = @"/api/jsonws/invoke";
 
 	HttpClient *client = [self getClient];
 
-	void (^body)(id<AFMultipartFormData>) =
+	void (^ body)(id<AFMultipartFormData>) =
 		^(id<AFMultipartFormData> form) {
 			NSString *title = [parameters objectForKey:@"title"];
 			NSString *mimeType = [parameters objectForKey:@"mimeType"];
