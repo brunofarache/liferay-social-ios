@@ -26,6 +26,39 @@
 		loadingView:self.navigationController.view];
 }
 
+#pragma mark - Private Methods
+
+- (CGFloat)getCellHeight:(NSString *)username content:(NSString *)content {
+	NSDictionary *titleAtributtes = @{ NSFontAttributeName : TITLE_FONT };
+
+	CGSize titleSize = [self getTextSize:username attributes:titleAtributtes];
+
+	NSDictionary *detailAtributtes = @{ NSFontAttributeName : DETAIL_FONT };
+
+	CGSize detailSize = [self getTextSize:content attributes:detailAtributtes];
+
+	return (titleSize.height + detailSize.height + CELL_PADDING);
+}
+
+- (CGSize)getTextSize:(NSString *)text attributes:(NSDictionary *)attributes {
+	CGSize screenSize = [[UIScreen mainScreen] bounds].size;
+
+	CGSize size;
+
+	if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1) {
+		size = [text boundingRectWithSize:screenSize
+			options:NSStringDrawingUsesLineFragmentOrigin
+			attributes:attributes context:nil].size;
+	}
+	else {
+		UIFont *font = [attributes objectForKey:NSFontAttributeName];
+
+		size = [text sizeWithFont:font constrainedToSize:screenSize lineBreakMode:NSLineBreakByWordWrapping];
+	}
+
+	return size;
+}
+
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -49,10 +82,10 @@
 
 	MicroblogsEntryModel *entry = [self.entries objectAtIndex:indexPath.row];
 
-	[cell.textLabel setFont:[UIFont boldSystemFontOfSize:TITLE_FONT_SIZE]];
+	[cell.textLabel setFont:TITLE_FONT];
 	[cell.textLabel setText:entry.userName];
 
-	[cell.detailTextLabel setFont:[UIFont systemFontOfSize:DETAIL_FONT_SIZE]];
+	[cell.detailTextLabel setFont:DETAIL_FONT];
 	[cell.detailTextLabel setText:entry.content];
 	[cell.detailTextLabel setNumberOfLines:0];
 
@@ -81,30 +114,7 @@
 	NSString *username = [entry userName];
 	NSString *content = [entry content];
 
-	CGSize screenSize = [[UIScreen mainScreen] bounds].size;
-
-	UIFont *titleFont = [UIFont boldSystemFontOfSize:TITLE_FONT_SIZE];
-	UIFont *detailFont = [UIFont systemFontOfSize:DETAIL_FONT_SIZE];
-
-	NSDictionary *titleAtributtes =
-		[NSDictionary dictionaryWithObject:titleFont
-		forKey: NSFontAttributeName];
-
-	CGSize titleSize =
-		[username boundingRectWithSize:screenSize
-		options:NSStringDrawingUsesLineFragmentOrigin
-		attributes:titleAtributtes context:nil].size;
-
-	NSDictionary *detailAtributtes =
-		[NSDictionary dictionaryWithObject:detailFont
-		forKey: NSFontAttributeName];
-
-	CGSize detailSize =
-		[content boundingRectWithSize:screenSize
-		options:NSStringDrawingUsesLineFragmentOrigin
-		attributes:detailAtributtes context:nil].size;
-
-	return (titleSize.height + detailSize.height + CELL_PADDING);
+	return [self getCellHeight:username content:content];
 }
 
 @end
