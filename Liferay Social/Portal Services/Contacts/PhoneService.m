@@ -5,9 +5,7 @@
 //	Bruno Farache
 //
 
-#import "AsyncRequest.h"
 #import "PhoneService.h"
-#import "HttpClient.h"
 
 static NSString *_serviceName = @"phone";
 

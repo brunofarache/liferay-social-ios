@@ -6,6 +6,7 @@
 //
 
 #import "BaseService.h"
+#import "HttpClient.h"
 #import "PhoneModel.h"
 
 @interface PhoneService : BaseService
