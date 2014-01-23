@@ -6,9 +6,6 @@
 //
 
 #import "GetGroupUsersDelegate.h"
-#import "BaseService.h"
-#import "JSON.h"
-#import "UserModel.h"
 
 @implementation GetGroupUsersDelegate
 

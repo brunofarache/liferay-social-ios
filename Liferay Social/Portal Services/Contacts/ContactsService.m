@@ -5,11 +5,7 @@
 //	Bruno Farache
 //
 
-#import "AsyncRequest.h"
 #import "ContactsService.h"
-#import "GetGroupUsersDelegate.h"
-#import "HttpClient.h"
-#import "PrefsUtil.h"
 
 static NSString *_serviceName = @"user";
 
