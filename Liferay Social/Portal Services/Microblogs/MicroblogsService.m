@@ -22,6 +22,7 @@ static NSString *_serviceName = @"microblogs-portlet/microblogsentry";
 			init:viewController loadingView:loadingView];
 
 	LRSession *session = [PrefsUtil getSession];
+
 	[session setCallback:callback];
 
 	[service setSession:session];

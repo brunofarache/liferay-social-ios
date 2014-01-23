@@ -15,7 +15,7 @@
 	if (self) {
 		self.companyId = [[jsonObj objectForKey:@"companyId"] longValue];
 		self.contactId = [[jsonObj objectForKey:@"contactId"] longValue];
-		
+
 		self.createDate =
 			[self convertNumberToDate:[jsonObj objectForKey:@"createDate"]];
 
