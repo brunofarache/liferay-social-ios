@@ -1,6 +1,6 @@
 //
 //  AsyncRequest.m
-//  Liferay Sync
+//  Liferay Social
 //
 //  Josiane Ferreira
 //  Bruno Farache
