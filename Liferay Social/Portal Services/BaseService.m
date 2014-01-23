@@ -1,15 +1,11 @@
 //
-//  BaseService.m
-//  Liferay Social
+// BaseService.m
+// Liferay Social
 //
-//	Bruno Farache
+// Bruno Farache
 //
 
 #import "BaseService.h"
-#import "HandleException.h"
-#import "JSON.h"
-#import "PrefsUtil.h"
-#import "UIView+Loading.h"
 
 #define INVALID_CERTIFICATE_CODE -1202
 

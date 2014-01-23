@@ -1,13 +1,16 @@
 //
-//  PrefsUtil.h
-//  Liferay Social
+// PrefsUtil.h
+// Liferay Social
 //
-//	Bruno Farache
+// Bruno Farache
 //
+
+#import "LRSession.h"
+#import "Validator.h"
 
 @interface PrefsUtil : NSObject
 
-+ (NSString*)encodeURL:(NSString *)string;
++ (NSString *)encodeURL:(NSString *)string;
 + (NSString *)getEmail;
 + (NSString *)getFolderPath;
 + (NSString *)getGroupFriendlyURL;
@@ -16,6 +19,7 @@
 + (CGRect)getScreenFrame;
 + (CGRect)getScreenFrame:(UIDeviceOrientation)orientation;
 + (NSString *)getServer;
++ (LRSession *)getSession;
 + (BOOL)isTrustCertificate;
 + (BOOL)needsSetup;
 + (BOOL)reloadUserSites;

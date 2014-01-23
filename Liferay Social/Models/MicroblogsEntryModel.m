@@ -1,41 +1,42 @@
 //
-//  UserThreadModel.m
-//  Liferay Social
+// FileModel.m
+// Liferay Social
 //
-//	Bruno Farache
+// Bruno Farache
 //
 
-#import "UserThreadModel.h"
+#import "MicroblogsEntryModel.h"
 
-@implementation UserThreadModel
+@implementation MicroblogsEntryModel
 
 - (id)initWithJSON:(NSDictionary *)jsonObj {
 	self = [super init];
 
 	if (self) {
 		self.companyId = [[jsonObj objectForKey:@"companyId"] longValue];
+		self.content = [jsonObj objectForKey:@"content"];
 
 		self.createDate =
 			[self convertNumberToDate:[jsonObj objectForKey:@"createDate"]];
 
-		self.deleted = [[jsonObj objectForKey:@"deleted"] boolValue];
-		self.mbThreadId = [[jsonObj objectForKey:@"mbThreadId"] longValue];
+		self.microblogsEntryId =
+			[[jsonObj objectForKey:@"microblogsEntryId"] longValue];
 
 		self.modifiedDate =
 			[self convertNumberToDate:[jsonObj objectForKey:@"modifiedDate"]];
 
-		NSDictionary *topMBMessageJson = [jsonObj objectForKey:@"topMBMessage"];
+		self.receiverMicroblogsEntryId =
+			[[jsonObj objectForKey:@"receiverMicroblogsEntryId"] longValue];
 
-		self.topMBMessage =
-			[[MBMessageModel alloc] initWithJSON:topMBMessageJson];
+		self.receiverUserId =
+			[[jsonObj objectForKey:@"receiverUserId"] longValue];
 
-		self.topMBMessageId =
-			[[jsonObj objectForKey:@"topMBMessageId"] longValue];
+		self.socialRelationType =
+			[[jsonObj objectForKey:@"socialRelationType"] intValue];
 
-		self.read = [[jsonObj objectForKey:@"read"] boolValue];
+		self.type = [[jsonObj objectForKey:@"type"] intValue];
 		self.userId = [[jsonObj objectForKey:@"userId"] longValue];
 		self.userName = [jsonObj objectForKey:@"userName"];
-		self.userThreadId = [[jsonObj objectForKey:@"userThreadId"] longValue];
 	}
 
 	return self;

@@ -1,9 +1,9 @@
 //
-//  ProgressDelegate.h
-//  Liferay Social
+// ProgressDelegate.h
+// Liferay Social
 //
-//	Bruno Farache
-//	Josiane Bezerra
+// Bruno Farache
+// Josiane Bezerra
 //
 
 @interface ProgressDelegate : NSObject

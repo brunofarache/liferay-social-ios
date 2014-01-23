@@ -1,14 +1,11 @@
 //
-//  MicroblogsService.m
-//  Liferay Social
+// MicroblogsService.m
+// Liferay Social
 //
-//	Bruno Farache
+// Bruno Farache
 //
 
-#import "AsyncRequest.h"
 #import "MicroblogsService.h"
-#import "GetMicroblogsEntriesDelegate.h"
-#import "HttpClient.h"
 
 static NSString *_serviceName = @"microblogs-portlet/microblogsentry";
 
@@ -17,26 +14,24 @@ static NSString *_serviceName = @"microblogs-portlet/microblogsentry";
 + (void)getMicroblogsEntries:(MicroblogsTableViewController *)viewController
 		loadingView:(UIView *)loadingView {
 
-	NSString *key = [self getCommand:@"get-microblogs-entries"];
+	LRMicroblogsentryService_v62 *service =
+		[[LRMicroblogsentryService_v62 alloc] init];
 
-	NSDictionary *value = @{
-		@"start": @(-1),
-		@"end":  @(-1)
-	};
+	GetMicroblogsCallback *callback =
+		[[GetMicroblogsCallback alloc]
+			init:viewController loadingView:loadingView];
 
-	NSDictionary *command = @{key: value};
+	LRSession *session = [PrefsUtil getSession];
 
-	AsyncRequest *request = [HttpClient getAsyncRequest:command];
+	[session setCallback:callback];
 
-	id delegate = [[GetMicroblogsEntriesDelegate alloc] init:viewController];
+	[service setSession:session];
 
-	[request setDelegate:delegate loadingView:loadingView];
+	[loadingView showLoadingHUD];
 
-	[request start];
-}
+	NSError *error;
 
-+ (NSString *)getCommand:(NSString *)methodName {
-	return [self getCommand:_serviceName methodName:methodName];
+	[service getMicroblogsEntriesWithStart:-1 end:-1 error:&error];
 }
 
 @end

@@ -1,8 +1,8 @@
 //
-//  FileModel.h
-//  Liferay Social
+// FileModel.h
+// Liferay Social
 //
-//	Bruno Farache
+// Bruno Farache
 //
 
 @interface MicroblogsEntryModel : NSObject

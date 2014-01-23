@@ -1,13 +1,15 @@
 //
-//  AsyncRequest.h
-//  Liferay Sync
+// AsyncRequest.h
+// Liferay Social
 //
-//  Josiane Ferreira
-//  Bruno Farache
+// Josiane Ferreira
+// Bruno Farache
 //
 
 #import "AFHTTPRequestOperation.h"
 #import "ProgressDelegate.h"
+#import "PrefsUtil.h"
+#import "UIView+Loading.h"
 
 typedef enum {
 	AddEntryRequest,

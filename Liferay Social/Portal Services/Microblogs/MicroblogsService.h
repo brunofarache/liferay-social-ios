@@ -1,12 +1,16 @@
 //
-//  MicroblogsService.h
-//  Liferay Social
+// MicroblogsService.h
+// Liferay Social
 //
-//	Bruno Farache
+// Bruno Farache
 //
 
 #import "BaseService.h"
+#import "GetMicroblogsCallback.h"
+#import "LRMicroblogsentryService_v62.h"
 #import "MicroblogsTableViewController.h"
+#import "PrefsUtil.h"
+#import "UIView+Loading.h"
 
 @interface MicroblogsService : BaseService
 

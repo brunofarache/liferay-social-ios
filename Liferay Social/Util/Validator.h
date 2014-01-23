@@ -1,8 +1,8 @@
 //
-//  Validator.h
-//  Liferay Social
+// Validator.h
+// Liferay Social
 //
-//	Bruno Farache
+// Bruno Farache
 //
 
 @interface Validator : NSObject

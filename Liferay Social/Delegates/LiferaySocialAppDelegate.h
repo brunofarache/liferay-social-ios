@@ -1,16 +1,16 @@
 //
-//  AppDelegate.h
-//	Liferay Social
+// AppDelegate.h
+// Liferay Social
 //
-//	Bruno Farache
+// Bruno Farache
 //
 
-#import <UIKit/UIKit.h>
+#import "ContactsTableViewController.h"
+#import "MicroblogsTableViewController.h"
 
-@interface LiferaySocialAppDelegate : UIResponder
-	<UIApplicationDelegate, UITabBarControllerDelegate>
+@interface LiferaySocialAppDelegate : NSObject <UIApplicationDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) UITabBarController *tabBarController;
+@property (strong, nonatomic) UIWindow *window;
 
 @end

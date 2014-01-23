@@ -1,8 +1,8 @@
 //
-//  PhoneModel.h
-//  Liferay Social
+// PhoneModel.h
+// Liferay Social
 //
-//	Bruno Farache
+// Bruno Farache
 //
 
 @interface PhoneModel : NSObject

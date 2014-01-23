@@ -1,8 +1,8 @@
 //
-//  Validator.m
-//  Liferay Social
+// Validator.m
+// Liferay Social
 //
-//	Bruno Farache
+// Bruno Farache
 //
 
 #import "Validator.h"

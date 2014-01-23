@@ -1,9 +1,14 @@
 //
-//  BaseService.h
-//  Liferay Social
+// BaseService.h
+// Liferay Social
 //
-//	Bruno Farache
+// Bruno Farache
 //
+
+#import "HandleException.h"
+#import "JSON.h"
+#import "PrefsUtil.h"
+#import "UIView+Loading.h"
 
 typedef enum {
 	CertificateError

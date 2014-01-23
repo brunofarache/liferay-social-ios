@@ -1,13 +1,11 @@
 //
-//  PhoneService.m
-//  Liferay Social
+// PhoneService.m
+// Liferay Social
 //
-//	Bruno Farache
+// Bruno Farache
 //
 
-#import "AsyncRequest.h"
 #import "PhoneService.h"
-#import "HttpClient.h"
 
 static NSString *_serviceName = @"phone";
 
@@ -21,7 +19,7 @@ static NSString *_serviceName = @"phone";
 		@"classPk": @(contactId)
 	};
 
-	NSDictionary *command = @{key: value};
+	NSDictionary *command = @{ key: value };
 
 	NSArray *jsonArray = [HttpClient sendSyncRequest:command];
 

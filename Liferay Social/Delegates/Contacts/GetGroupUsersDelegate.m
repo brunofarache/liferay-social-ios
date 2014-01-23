@@ -1,14 +1,11 @@
 //
-//  GetGroupUsersDelegate.m
-//  Liferay Social
+// GetGroupUsersDelegate.m
+// Liferay Social
 //
-//	Bruno Farache
+// Bruno Farache
 //
 
 #import "GetGroupUsersDelegate.h"
-#import "BaseService.h"
-#import "JSON.h"
-#import "UserModel.h"
 
 @implementation GetGroupUsersDelegate
 

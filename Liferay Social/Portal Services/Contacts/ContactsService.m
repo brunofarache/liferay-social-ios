@@ -1,15 +1,11 @@
 //
-//  ContactsService.m
-//  Liferay Social
+// ContactsService.m
+// Liferay Social
 //
-//	Bruno Farache
+// Bruno Farache
 //
 
-#import "AsyncRequest.h"
 #import "ContactsService.h"
-#import "GetGroupUsersDelegate.h"
-#import "HttpClient.h"
-#import "PrefsUtil.h"
 
 static NSString *_serviceName = @"user";
 
@@ -24,7 +20,7 @@ static NSString *_serviceName = @"user";
 		@"groupId": [PrefsUtil getGroupId]
 	};
 
-	NSDictionary *command = @{key: value};
+	NSDictionary *command = @{ key: value };
 
 	AsyncRequest *request = [HttpClient getAsyncRequest:command];
 

@@ -1,36 +1,35 @@
 //
-//	ContactsTableViewController.m
-//	Liferay Social
+// ContactsTableViewController.m
+// Liferay Social
 //
-//	Bruno Farache
+// Bruno Farache
 //
 
-#import "ContactDetailsTableViewController.h"
 #import "ContactsTableViewController.h"
 #import "ContactsService.h"
-#import "UserModel.h"
-#import "PhoneService.h"
 
 @implementation ContactsTableViewController
 
 - (id)init {
-    self = [super initWithStyle:UITableViewStylePlain];
+	self = [super initWithStyle:UITableViewStylePlain];
 
-    if (self) {
+	if (self) {
 		self.title = @"Contacts";
 		self.tabBarItem.image = [UIImage imageNamed:@"first"];
-
-		[ContactsService getGroupUsers:self
-			  loadingView:self.navigationController.view];
 	}
 
-    return self;
+	return self;
+}
+
+- (void)viewDidLoad {
+	[ContactsService getGroupUsers:self
+		loadingView:self.navigationController.view];
 }
 
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+	return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView
@@ -52,13 +51,13 @@
 			[[UITableViewCell alloc]
 				initWithStyle:UITableViewCellStyleDefault
 				reuseIdentifier:CellIdentifier];
-    }
+	}
 
 	UserModel *user = [self.entries objectAtIndex:indexPath.row];
 
-	cell.textLabel.text = user.firstName;
+	[cell.textLabel setText:user.firstName];
 
-    return cell;
+	return cell;
 }
 
 #pragma mark - UITableViewDelegate
@@ -71,7 +70,7 @@
 	NSArray *phones = [PhoneService getPhones:user.contactId];
 
 	if ([phones count]) {
-		user.phone = phones[0];
+		[user setPhone:phones[0]];
 	}
 
 	ContactDetailsTableViewController *details =
@@ -79,6 +78,5 @@
 
 	[self.navigationController pushViewController:details animated:YES];
 }
-
 
 @end

@@ -1,8 +1,8 @@
 //
-//  HandleException.h
-//  Liferay Social
+// HandleException.h
+// Liferay Social
 //
-//  Josiane Ferreira
+// Josiane Ferreira
 //
 
 @interface HandleException : NSObject

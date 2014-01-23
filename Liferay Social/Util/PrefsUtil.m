@@ -1,12 +1,11 @@
 //
-//  PrefsUtil.m
-//  Liferay Social
+// PrefsUtil.m
+// Liferay Social
 //
-//	Bruno Farache
+// Bruno Farache
 //
 
 #import "PrefsUtil.h"
-#import "Validator.h"
 
 #define INVALID_GROUP_ID -1
 
@@ -25,7 +24,7 @@ static NSUserDefaults *_userDefaults;
 	}
 }
 
-+ (NSString*)encodeURL:(NSString *)string {
++ (NSString *)encodeURL:(NSString *)string {
 	NSString *newString =
 		CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(
 			kCFAllocatorDefault, (CFStringRef)string, NULL,
@@ -96,6 +95,14 @@ static NSUserDefaults *_userDefaults;
 + (NSString *)getServer {
 	return @"http://localhost:8080";
 //	return [_userDefaults stringForKey:@"server"];
+}
+
++ (LRSession *)getSession {
+	NSString *server = [self getServer];
+	NSString *email = [self getEmail];
+	NSString *password = [self getPassword];
+
+	return [[LRSession alloc] init:server username:email password:password];
 }
 
 + (BOOL)isTrustCertificate {

@@ -1,14 +1,11 @@
 //
-//	AppDelegate.m
-//	Liferay Social
+// AppDelegate.m
+// Liferay Social
 //
-//	Bruno Farache
+// Bruno Farache
 //
 
-#import "ContactsTableViewController.h"
 #import "LiferaySocialAppDelegate.h"
-#import "MessagesTableViewController.h"
-#import "MicroblogsTableViewController.h"
 
 @implementation LiferaySocialAppDelegate
 
@@ -21,25 +18,28 @@
 	self.tabBarController = [[UITabBarController alloc] init];
 
 	UIViewController *contactsViewController =
-		[self getNavigationController:
-			[[ContactsTableViewController alloc] init]];
+		[[ContactsTableViewController alloc] init];
 
-	UIViewController *messagesViewController =
-		[[MessagesTableViewController alloc] init];
+	UINavigationController *contactsNavigationController =
+		[self getNavigationController:contactsViewController];
 
 	UIViewController *microblogsViewController =
 		[[MicroblogsTableViewController alloc] init];
 
+	UINavigationController *microblogsNavigationController =
+		[self getNavigationController:microblogsViewController];
+
 	self.tabBarController.viewControllers =
-  		@[contactsViewController, messagesViewController,
-	  		microblogsViewController];
+		@[contactsNavigationController, microblogsNavigationController];
 
 	self.window.rootViewController = self.tabBarController;
 
-    [self.window makeKeyAndVisible];
+	[self.window makeKeyAndVisible];
 
 	return YES;
 }
+
+#pragma mark - Private Methods
 
 - (UINavigationController *)getNavigationController:(UIViewController *)root {
 	UINavigationController *navigationController =

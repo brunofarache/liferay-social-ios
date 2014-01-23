@@ -1,12 +1,14 @@
 //
-//  ContactsService.h
-//  Liferay Social
+// ContactsService.h
+// Liferay Social
 //
-//	Bruno Farache
+// Bruno Farache
 //
 
-#import "BaseService.h"
 #import "ContactsTableViewController.h"
+#import "GetGroupUsersDelegate.h"
+#import "HttpClient.h"
+#import "PrefsUtil.h"
 
 @interface ContactsService : BaseService
 

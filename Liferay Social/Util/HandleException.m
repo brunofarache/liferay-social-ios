@@ -1,8 +1,8 @@
 //
-//  HandleException.m
-//  Liferay Social
+// HandleException.m
+// Liferay Social
 //
-//  Josiane Ferreira
+// Josiane Ferreira
 //
 
 #import "HandleException.h"

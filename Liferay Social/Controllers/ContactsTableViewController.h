@@ -1,11 +1,13 @@
 //
-//	ContactsTableViewController.h
-//	Liferay Social
+// ContactsTableViewController.h
+// Liferay Social
 //
-//	Bruno Farache
+// Bruno Farache
 //
 
-#import <UIKit/UIKit.h>
+#import "ContactDetailsTableViewController.h"
+#import "UserModel.h"
+#import "PhoneService.h"
 
 @interface ContactsTableViewController : UITableViewController
 
