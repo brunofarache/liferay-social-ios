@@ -24,6 +24,8 @@
 
 - (void)onFailure:(NSError *)error {
 	[self.loadingView hideLoadingHUD];
+
+	[BaseService showErrorMessage:error view:self.loadingView];
 }
 
 - (void)onSuccess:(id)result {
