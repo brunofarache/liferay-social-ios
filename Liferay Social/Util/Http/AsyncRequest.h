@@ -8,6 +8,8 @@
 
 #import "AFHTTPRequestOperation.h"
 #import "ProgressDelegate.h"
+#import "PrefsUtil.h"
+#import "UIView+Loading.h"
 
 typedef enum {
 	AddEntryRequest,

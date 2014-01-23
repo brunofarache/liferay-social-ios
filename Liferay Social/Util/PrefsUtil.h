@@ -6,6 +6,7 @@
 //
 
 #import "LRSession.h"
+#import "Validator.h"
 
 @interface PrefsUtil : NSObject
 

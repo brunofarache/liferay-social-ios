@@ -7,9 +7,6 @@
 //
 
 #import "AsyncRequest.h"
-#import "HttpClient.h"
-#import "PrefsUtil.h"
-#import "UIView+Loading.h"
 
 @implementation AsyncRequest
 

@@ -6,7 +6,6 @@
 //
 
 #import "PrefsUtil.h"
-#import "Validator.h"
 
 #define INVALID_GROUP_ID -1
 
