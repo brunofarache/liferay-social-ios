@@ -16,12 +16,14 @@
 	if (self) {
 		self.title = @"Microblogs";
 		self.tabBarItem.image = [UIImage imageNamed:@"first"];
-
-		[MicroblogsService getMicroblogsEntries:self
-			loadingView:self.navigationController.view];
 	}
 
 	return self;
+}
+
+- (void)viewDidLoad {
+	[MicroblogsService getMicroblogsEntries:self
+		loadingView:self.navigationController.view];
 }
 
 #pragma mark - UITableViewDataSource

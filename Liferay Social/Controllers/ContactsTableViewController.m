@@ -16,12 +16,14 @@
 	if (self) {
 		self.title = @"Contacts";
 		self.tabBarItem.image = [UIImage imageNamed:@"first"];
-
-		[ContactsService getGroupUsers:self
-			loadingView:self.navigationController.view];
 	}
 
 	return self;
+}
+
+- (void)viewDidLoad {
+	[ContactsService getGroupUsers:self
+		loadingView:self.navigationController.view];
 }
 
 #pragma mark - UITableViewDataSource
