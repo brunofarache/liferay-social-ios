@@ -20,7 +20,7 @@ static NSString *_serviceName = @"user";
 		@"groupId": [PrefsUtil getGroupId]
 	};
 
-	NSDictionary *command = @{key: value};
+	NSDictionary *command = @{ key: value };
 
 	AsyncRequest *request = [HttpClient getAsyncRequest:command];
 

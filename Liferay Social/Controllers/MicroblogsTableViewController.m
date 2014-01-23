@@ -29,11 +29,11 @@
 #pragma mark - Private Methods
 
 - (CGFloat)getCellHeight:(NSString *)username content:(NSString *)content {
-	NSDictionary *titleAtributtes = @{ NSFontAttributeName : TITLE_FONT };
+	NSDictionary *titleAtributtes = @{ NSFontAttributeName: TITLE_FONT };
 
 	CGSize titleSize = [self getTextSize:username attributes:titleAtributtes];
 
-	NSDictionary *detailAtributtes = @{ NSFontAttributeName : DETAIL_FONT };
+	NSDictionary *detailAtributtes = @{ NSFontAttributeName: DETAIL_FONT };
 
 	CGSize detailSize = [self getTextSize:content attributes:detailAtributtes];
 

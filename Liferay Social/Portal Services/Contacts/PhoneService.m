@@ -19,7 +19,7 @@ static NSString *_serviceName = @"phone";
 		@"classPk": @(contactId)
 	};
 
-	NSDictionary *command = @{key: value};
+	NSDictionary *command = @{ key: value };
 
 	NSArray *jsonArray = [HttpClient sendSyncRequest:command];
 
