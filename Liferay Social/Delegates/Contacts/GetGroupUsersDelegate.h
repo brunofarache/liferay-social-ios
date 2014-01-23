@@ -1,8 +1,8 @@
 //
-//  GetGroupUsersDelegate.h
-//  Liferay Social
+// GetGroupUsersDelegate.h
+// Liferay Social
 //
-//	Bruno Farache
+// Bruno Farache
 //
 
 #import "ContactsTableViewController.h"

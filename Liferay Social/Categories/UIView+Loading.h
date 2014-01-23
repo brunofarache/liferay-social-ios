@@ -1,8 +1,8 @@
 //
-//  UIView+Loading.h
-//  Liferay Social
+// UIView+Loading.h
+// Liferay Social
 //
-//  Josiane Ferreira
+// Josiane Ferreira
 //
 
 #import "MBProgressHUD.h"

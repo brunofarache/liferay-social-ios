@@ -1,8 +1,8 @@
 //
-//  PrefsUtil.h
-//  Liferay Social
+// PrefsUtil.h
+// Liferay Social
 //
-//	Bruno Farache
+// Bruno Farache
 //
 
 #import "LRSession.h"

@@ -1,8 +1,8 @@
 //
-//  GetUserThreadsDelegate.m
-//  Liferay Social
+// GetUserThreadsDelegate.m
+// Liferay Social
 //
-//	Bruno Farache
+// Bruno Farache
 //
 
 #import "GetUserThreadsDelegate.h"

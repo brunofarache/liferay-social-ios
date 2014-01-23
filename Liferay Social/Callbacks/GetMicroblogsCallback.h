@@ -1,8 +1,8 @@
 //
-//  MicroblogsCallback.h
-//  Liferay Social
+// MicroblogsCallback.h
+// Liferay Social
 //
-//  Silvio Santos
+// Silvio Santos
 //
 
 #import "BaseService.h"

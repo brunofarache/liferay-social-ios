@@ -1,8 +1,8 @@
 //
-//  PhoneModel.m
-//  Liferay Social
+// PhoneModel.m
+// Liferay Social
 //
-//	Bruno Farache
+// Bruno Farache
 //
 
 #import "PhoneModel.h"

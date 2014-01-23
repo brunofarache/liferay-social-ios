@@ -1,8 +1,8 @@
 //
-//  GetUserThreadsDelegate.h
-//  Liferay Social
+// GetUserThreadsDelegate.h
+// Liferay Social
 //
-//	Bruno Farache
+// Bruno Farache
 //
 
 #import "MessagesTableViewController.h"

@@ -1,8 +1,8 @@
 //
-//	MicroblogsTableViewController.h
-//	Liferay Social
+// MicroblogsTableViewController.h
+// Liferay Social
 //
-//	Bruno Farache
+// Bruno Farache
 //
 
 #import "MicroblogsEntryModel.h"

@@ -1,8 +1,8 @@
 //
-//  AppDelegate.h
-//	Liferay Social
+// AppDelegate.h
+// Liferay Social
 //
-//	Bruno Farache
+// Bruno Farache
 //
 
 #import "ContactsTableViewController.h"

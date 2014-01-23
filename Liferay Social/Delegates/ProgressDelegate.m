@@ -1,9 +1,9 @@
 //
-//  ProgressDelegate.m
-//  Liferay Social
+// ProgressDelegate.m
+// Liferay Social
 //
-//	Bruno Farache
-//	Josiane Bezerra
+// Bruno Farache
+// Josiane Bezerra
 //
 
 #import "ProgressDelegate.h"

@@ -1,8 +1,8 @@
 //
-//  PhoneService.m
-//  Liferay Social
+// PhoneService.m
+// Liferay Social
 //
-//	Bruno Farache
+// Bruno Farache
 //
 
 #import "PhoneService.h"

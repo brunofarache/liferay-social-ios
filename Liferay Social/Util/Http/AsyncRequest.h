@@ -1,9 +1,9 @@
 //
-//  AsyncRequest.h
-//  Liferay Social
+// AsyncRequest.h
+// Liferay Social
 //
-//  Josiane Ferreira
-//  Bruno Farache
+// Josiane Ferreira
+// Bruno Farache
 //
 
 #import "AFHTTPRequestOperation.h"

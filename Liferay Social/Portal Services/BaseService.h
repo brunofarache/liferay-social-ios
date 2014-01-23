@@ -1,8 +1,8 @@
 //
-//  BaseService.h
-//  Liferay Social
+// BaseService.h
+// Liferay Social
 //
-//	Bruno Farache
+// Bruno Farache
 //
 
 #import "HandleException.h"

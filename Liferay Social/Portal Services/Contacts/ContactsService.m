@@ -1,8 +1,8 @@
 //
-//  ContactsService.m
-//  Liferay Social
+// ContactsService.m
+// Liferay Social
 //
-//	Bruno Farache
+// Bruno Farache
 //
 
 #import "ContactsService.h"

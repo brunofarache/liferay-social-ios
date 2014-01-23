@@ -1,8 +1,8 @@
 //
-//  UIView+Loading.m
-//  Liferay Social
+// UIView+Loading.m
+// Liferay Social
 //
-//  Josiane Ferreira
+// Josiane Ferreira
 //
 
 #import "UIView+Loading.h"

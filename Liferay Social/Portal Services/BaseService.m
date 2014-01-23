@@ -1,8 +1,8 @@
 //
-//  BaseService.m
-//  Liferay Social
+// BaseService.m
+// Liferay Social
 //
-//	Bruno Farache
+// Bruno Farache
 //
 
 #import "BaseService.h"

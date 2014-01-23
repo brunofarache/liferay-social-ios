@@ -1,8 +1,8 @@
 //
-//	AppDelegate.m
-//	Liferay Social
+// AppDelegate.m
+// Liferay Social
 //
-//	Bruno Farache
+// Bruno Farache
 //
 
 #import "LiferaySocialAppDelegate.h"

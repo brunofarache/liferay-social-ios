@@ -1,8 +1,8 @@
 //
-//  FileModel.m
-//  Liferay Social
+// FileModel.m
+// Liferay Social
 //
-//	Bruno Farache
+// Bruno Farache
 //
 
 #import "MicroblogsEntryModel.h"

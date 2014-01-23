@@ -1,9 +1,9 @@
 //
-//  AsyncRequest.m
-//  Liferay Social
+// AsyncRequest.m
+// Liferay Social
 //
-//  Josiane Ferreira
-//  Bruno Farache
+// Josiane Ferreira
+// Bruno Farache
 //
 
 #import "AsyncRequest.h"

@@ -1,8 +1,8 @@
 //
-//	ContactsDetailsTableViewController.m
-//	Liferay Social
+// ContactsDetailsTableViewController.m
+// Liferay Social
 //
-//	Bruno Farache
+// Bruno Farache
 //
 
 #import "ContactDetailsTableViewController.h"

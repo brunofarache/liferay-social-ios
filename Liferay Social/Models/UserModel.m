@@ -1,8 +1,8 @@
 //
-//  UserModel.m
-//  Liferay Social
+// UserModel.m
+// Liferay Social
 //
-//	Bruno Farache
+// Bruno Farache
 //
 
 #import "UserModel.h"

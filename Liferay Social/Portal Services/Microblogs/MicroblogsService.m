@@ -1,8 +1,8 @@
 //
-//  MicroblogsService.m
-//  Liferay Social
+// MicroblogsService.m
+// Liferay Social
 //
-//	Bruno Farache
+// Bruno Farache
 //
 
 #import "MicroblogsService.h"

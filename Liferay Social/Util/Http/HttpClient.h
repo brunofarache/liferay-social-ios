@@ -1,9 +1,9 @@
 //
-//  HttpClient.h
-//  Liferay Social
+// HttpClient.h
+// Liferay Social
 //
-//  Josiane Ferreira
-//  Bruno Farache
+// Josiane Ferreira
+// Bruno Farache
 //
 
 #import "AFHTTPClient.h"

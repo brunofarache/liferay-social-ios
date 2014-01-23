@@ -1,8 +1,8 @@
 //
-//  MicroblogsCallback.m
-//  Liferay Social
+// MicroblogsCallback.m
+// Liferay Social
 //
-//  Silvio Santos
+// Silvio Santos
 //
 
 #import "GetMicroblogsCallback.h"

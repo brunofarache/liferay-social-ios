@@ -1,8 +1,8 @@
 //
-//  PrefsUtil.m
-//  Liferay Social
+// PrefsUtil.m
+// Liferay Social
 //
-//	Bruno Farache
+// Bruno Farache
 //
 
 #import "PrefsUtil.h"
