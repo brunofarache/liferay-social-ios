@@ -27,6 +27,8 @@
 }
 
 - (void)onSuccess:(id)result {
+	[self.loadingView hideLoadingHUD];
+
 	NSArray *jsonArray = result;
 
 	self.viewController.entries = [self toArray:jsonArray];
