@@ -5,7 +5,6 @@
 //	Bruno Farache
 //
 
-#import <UIKit/UIKit.h>
 #import "UserModel.h"
 
 @interface ContactDetailsTableViewController : UITableViewController

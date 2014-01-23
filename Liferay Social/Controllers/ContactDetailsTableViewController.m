@@ -10,20 +10,20 @@
 @implementation ContactDetailsTableViewController
 
 - (id)init:(UserModel *)user {
-    self = [super initWithStyle:UITableViewStyleGrouped];
+	self = [super initWithStyle:UITableViewStyleGrouped];
 
-    if (self) {
+	if (self) {
 		self.user = user;
 		self.title = user.firstName;
 	}
 
-    return self;
+	return self;
 }
 
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 3;
+	return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView
@@ -45,19 +45,19 @@
 			[[UITableViewCell alloc]
 				initWithStyle:UITableViewCellStyleDefault
 				reuseIdentifier:CellIdentifier];
-    }
+	}
 
 	if (indexPath.section == 0) {
-		cell.textLabel.text = self.user.phone.number;
+		[cell.textLabel setText:self.user.phone.number];
 	}
 	else if (indexPath.section == 1) {
-		cell.textLabel.text = self.user.emailAddress;
+		[cell.textLabel setText:self.user.emailAddress];
 	}
 	else if (indexPath.section == 2) {
-		cell.textLabel.text = @"Add to contacts";
+		[cell.textLabel setText:@"Add to contacts"];
 	}
 
-    return cell;
+	return cell;
 }
 
 #pragma mark - UITableViewDelegate
@@ -79,6 +79,5 @@
 
 	[[UIApplication sharedApplication] openURL:URL];
 }
-
 
 @end
