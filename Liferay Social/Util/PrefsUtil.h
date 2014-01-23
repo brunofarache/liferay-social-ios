@@ -10,7 +10,7 @@
 
 @interface PrefsUtil : NSObject
 
-+ (NSString*)encodeURL:(NSString *)string;
++ (NSString *)encodeURL:(NSString *)string;
 + (NSString *)getEmail;
 + (NSString *)getFolderPath;
 + (NSString *)getGroupFriendlyURL;

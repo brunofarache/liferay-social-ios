@@ -24,7 +24,7 @@ static NSUserDefaults *_userDefaults;
 	}
 }
 
-+ (NSString*)encodeURL:(NSString *)string {
++ (NSString *)encodeURL:(NSString *)string {
 	NSString *newString =
 		CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(
 			kCFAllocatorDefault, (CFStringRef)string, NULL,
