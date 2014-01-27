@@ -57,14 +57,17 @@
 	CGSize size;
 
 	if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1) {
-		size = [text boundingRectWithSize:screenSize
-			options:NSStringDrawingUsesLineFragmentOrigin
-			attributes:attributes context:nil].size;
+		CGRect rect = [text boundingRectWithSize:screenSize
+			options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes
+			context:nil];
+
+		size = rect.size;
 	}
 	else {
 		UIFont *font = [attributes objectForKey:NSFontAttributeName];
 
-		size = [text sizeWithFont:font constrainedToSize:screenSize lineBreakMode:NSLineBreakByWordWrapping];
+		size = [text sizeWithFont:font constrainedToSize:screenSize
+			lineBreakMode:NSLineBreakByWordWrapping];
 	}
 
 	return size;
