@@ -18,8 +18,6 @@
  * @author Bruno Farache
  */
 
-static NSString *_serviceName = @"microblogs-portlet/microblogsentry";
-
 @implementation MicroblogsService
 
 + (void)getMicroblogsEntries:(MicroblogsTableViewController *)viewController
@@ -35,9 +33,7 @@ static NSString *_serviceName = @"microblogs-portlet/microblogsentry";
 	LRSession *session = [PrefsUtil getSession];
 
 	[session setCallback:callback];
-
 	[service setSession:session];
-
 	[loadingView showLoadingHUD];
 
 	NSError *error;

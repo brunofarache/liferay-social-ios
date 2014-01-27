@@ -38,7 +38,6 @@ static NSString *_serviceName = @"user";
 	id delegate = [[GetGroupUsersDelegate alloc] init:viewController];
 
 	[request setDelegate:delegate loadingView:loadingView];
-
 	[request start];
 }
 
