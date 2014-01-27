@@ -12,17 +12,35 @@
  * details.
  */
 
-#import "BaseService.h"
-#import "GetMicroblogsCallback.h"
-#import "LRMicroblogsentryService_v62.h"
+#import "ServiceFactory.h"
 
 /**
  * @author Bruno Farache
  */
 
-@interface MicroblogsService : BaseService
+static NSMutableDictionary *_services;
 
-+ (void)getMicroblogsEntries:(MicroblogsTableViewController *)viewController
-	loadingView:(UIView *)loadingView;
+@implementation ServiceFactory
+
++ (void)initialize {
+	if (!_services) {
+		_services = [[NSMutableDictionary alloc] init];
+	}
+}
+
++ (LRBaseService *)getService:(Class)clazz session:(LRSession *)session {
+	LRBaseService *service = [_services objectForKey:NSStringFromClass(clazz)];
+
+	if (!service) {
+		service = [[clazz alloc] init:session];
+
+		[_services setObject:service forKey:NSStringFromClass(clazz)];
+	}
+	else {
+		[service setSession:session];
+	}
+
+	return service;
+}
 
 @end

@@ -21,6 +21,7 @@
 #define INVALID_GROUP_ID -1
 
 static NSMutableArray *_folderPath;
+static LRSession *_session;
 static NSUserDefaults *_userDefaults;
 
 @implementation PrefsUtil
@@ -52,7 +53,6 @@ static NSUserDefaults *_userDefaults;
 
 + (NSString *)getEmail {
 	return @"test@liferay.com";
-//	return [_userDefaults stringForKey:@"email"];
 }
 
 + (NSString *)getFolderPath {
@@ -77,12 +77,10 @@ static NSUserDefaults *_userDefaults;
 
 + (NSNumber *)getGroupId {
 	return @(10184);
-//	return [_userDefaults objectForKey:@"groupId"];
 }
 
 + (NSString *)getPassword {
 	return @"test";
-//	return [_userDefaults stringForKey:@"password"];
 }
 
 + (CGRect)getScreenFrame {
@@ -105,15 +103,25 @@ static NSUserDefaults *_userDefaults;
 
 + (NSString *)getServer {
 	return @"http://localhost:8080";
-//	return [_userDefaults stringForKey:@"server"];
 }
 
 + (LRSession *)getSession {
-	NSString *server = [self getServer];
-	NSString *email = [self getEmail];
-	NSString *password = [self getPassword];
+	return [self getSession:nil];
+}
 
-	return [[LRSession alloc] init:server username:email password:password];
++ (LRSession *)getSession:(id<LRCallback>)callback {
+	if (!_session) {
+		NSString *server = [self getServer];
+		NSString *email = [self getEmail];
+		NSString *password = [self getPassword];
+
+		_session = [[LRSession alloc] init:server username:email
+			password:password];
+	}
+
+	[_session setCallback:callback];
+
+	return _session;
 }
 
 + (BOOL)isTrustCertificate {
@@ -143,14 +151,16 @@ static NSUserDefaults *_userDefaults;
 
 + (void)saveEmail:(NSString *)email {
 	[_userDefaults setObject:email forKey:@"email"];
-
 	[_userDefaults synchronize];
+
+	_session = nil;
 }
 
 + (void)savePassword:(NSString *)password {
 	[_userDefaults setObject:password forKey:@"password"];
-
 	[_userDefaults synchronize];
+
+	_session = nil;
 }
 
 + (void)saveServer:(NSString *)server {
@@ -159,8 +169,9 @@ static NSUserDefaults *_userDefaults;
 	}
 
 	[_userDefaults setObject:server forKey:@"server"];
-
 	[_userDefaults synchronize];
+
+	_session = nil;
 }
 
 + (void)setTrustCertificate:(BOOL)trustCertificate {

@@ -17,6 +17,7 @@
 		7520D265188EBEEE00E191B0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7520D263188EBEEE00E191B0 /* Default.png */; };
 		7520D266188EBEEE00E191B0 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7520D264188EBEEE00E191B0 /* Default@2x.png */; };
 		CC1CCBA71896FFD400C8B364 /* DateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1CCBA51896FFD400C8B364 /* DateUtil.m */; };
+		CC1CCBAB189705F700C8B364 /* ServiceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1CCBAA189705F700C8B364 /* ServiceFactory.m */; };
 		CC31CBBA17454C64006CDD4B /* AsyncRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CC31CBB717454C64006CDD4B /* AsyncRequest.m */; };
 		CC31CBBB17454C64006CDD4B /* HttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CC31CBB917454C64006CDD4B /* HttpClient.m */; };
 		CC31CBC117454E11006CDD4B /* PrefsUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CC31CBC017454E11006CDD4B /* PrefsUtil.m */; };
@@ -30,7 +31,6 @@
 		CC31CBE5174550FA006CDD4B /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = CC31CBDE174550FA006CDD4B /* SBJsonBase.m */; };
 		CC31CBE6174550FA006CDD4B /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CC31CBE0174550FA006CDD4B /* SBJsonParser.m */; };
 		CC31CBE7174550FA006CDD4B /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = CC31CBE2174550FA006CDD4B /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		CC4B4F6E1746BEF9008C06C6 /* MicroblogsService.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4B4F6D1746BEF9008C06C6 /* MicroblogsService.m */; };
 		CC4B4F711746BF11008C06C6 /* MicroblogsEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4B4F701746BF11008C06C6 /* MicroblogsEntry.m */; };
 		CC51A45D176B6A0800745190 /* Phone.m in Sources */ = {isa = PBXBuildFile; fileRef = CC51A45C176B6A0800745190 /* Phone.m */; };
 		CC51A460176B6CA000745190 /* PhoneService.m in Sources */ = {isa = PBXBuildFile; fileRef = CC51A45F176B6CA000745190 /* PhoneService.m */; };
@@ -80,6 +80,8 @@
 		CC1CCBA51896FFD400C8B364 /* DateUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtil.m; sourceTree = "<group>"; };
 		CC1CCBA61896FFD400C8B364 /* DateUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtil.h; sourceTree = "<group>"; };
 		CC1CCBA8189704D900C8B364 /* UIDimensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDimensions.h; sourceTree = "<group>"; };
+		CC1CCBA9189705F700C8B364 /* ServiceFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceFactory.h; sourceTree = "<group>"; };
+		CC1CCBAA189705F700C8B364 /* ServiceFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceFactory.m; sourceTree = "<group>"; };
 		CC31CBB617454C64006CDD4B /* AsyncRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncRequest.h; sourceTree = "<group>"; };
 		CC31CBB717454C64006CDD4B /* AsyncRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncRequest.m; sourceTree = "<group>"; };
 		CC31CBB817454C64006CDD4B /* HttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpClient.h; sourceTree = "<group>"; };
@@ -108,8 +110,6 @@
 		CC31CBE0174550FA006CDD4B /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
 		CC31CBE1174550FA006CDD4B /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		CC31CBE2174550FA006CDD4B /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
-		CC4B4F6C1746BEF9008C06C6 /* MicroblogsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MicroblogsService.h; sourceTree = "<group>"; };
-		CC4B4F6D1746BEF9008C06C6 /* MicroblogsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MicroblogsService.m; sourceTree = "<group>"; };
 		CC4B4F6F1746BF11008C06C6 /* MicroblogsEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MicroblogsEntry.h; sourceTree = "<group>"; };
 		CC4B4F701746BF11008C06C6 /* MicroblogsEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MicroblogsEntry.m; sourceTree = "<group>"; };
 		CC51A45B176B6A0800745190 /* Phone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Phone.h; sourceTree = "<group>"; };
@@ -316,9 +316,10 @@
 			isa = PBXGroup;
 			children = (
 				CCB2A2DC174D566B006C3486 /* Contacts */,
-				CC4B4F6B1746BEF9008C06C6 /* Microblogs */,
 				CC31CBD117455097006CDD4B /* BaseService.h */,
 				CC31CBD217455097006CDD4B /* BaseService.m */,
+				CC1CCBA9189705F700C8B364 /* ServiceFactory.h */,
+				CC1CCBAA189705F700C8B364 /* ServiceFactory.m */,
 			);
 			path = "Portal Services";
 			sourceTree = "<group>";
@@ -339,15 +340,6 @@
 				CC31CBE2174550FA006CDD4B /* SBJsonWriter.m */,
 			);
 			path = SBJson;
-			sourceTree = "<group>";
-		};
-		CC4B4F6B1746BEF9008C06C6 /* Microblogs */ = {
-			isa = PBXGroup;
-			children = (
-				CC4B4F6C1746BEF9008C06C6 /* MicroblogsService.h */,
-				CC4B4F6D1746BEF9008C06C6 /* MicroblogsService.m */,
-			);
-			path = Microblogs;
 			sourceTree = "<group>";
 		};
 		CCAB24B217443E48001F0F3D = {
@@ -585,6 +577,7 @@
 				CC31CBBB17454C64006CDD4B /* HttpClient.m in Sources */,
 				292C8DA1186DB2CA008C549B /* LRBaseService.m in Sources */,
 				CC31CBC117454E11006CDD4B /* PrefsUtil.m in Sources */,
+				CC1CCBAB189705F700C8B364 /* ServiceFactory.m in Sources */,
 				CC31CBC417454E78006CDD4B /* Validator.m in Sources */,
 				CC31CBC817454EBD006CDD4B /* UIView+Loading.m in Sources */,
 				CC31CBCF17454EF2006CDD4B /* MBProgressHUD.m in Sources */,
@@ -596,7 +589,6 @@
 				CC31CBE5174550FA006CDD4B /* SBJsonBase.m in Sources */,
 				CC31CBE6174550FA006CDD4B /* SBJsonParser.m in Sources */,
 				CC31CBE7174550FA006CDD4B /* SBJsonWriter.m in Sources */,
-				CC4B4F6E1746BEF9008C06C6 /* MicroblogsService.m in Sources */,
 				CC4B4F711746BF11008C06C6 /* MicroblogsEntry.m in Sources */,
 				CCB2A2DB174D455A006C3486 /* ContactsTableViewController.m in Sources */,
 				292C8DA4186DB2CA008C549B /* LRSession.m in Sources */,

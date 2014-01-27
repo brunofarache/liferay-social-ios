@@ -12,6 +12,7 @@
  * details.
  */
 
+#import "LRCallback.h"
 #import "LRSession.h"
 #import "Validator.h"
 
@@ -31,6 +32,7 @@
 + (CGRect)getScreenFrame:(UIDeviceOrientation)orientation;
 + (NSString *)getServer;
 + (LRSession *)getSession;
++ (LRSession *)getSession:(id<LRCallback>)callback;
 + (BOOL)isTrustCertificate;
 + (BOOL)needsSetup;
 + (BOOL)reloadUserSites;

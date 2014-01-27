@@ -13,7 +13,7 @@
  */
 
 #import "MicroblogsTableViewController.h"
-#import "MicroblogsService.h"
+#import "GetMicroblogsCallback.h"
 
 /**
  * @author Bruno Farache
@@ -33,8 +33,21 @@
 }
 
 - (void)viewDidLoad {
-	[MicroblogsService getMicroblogsEntries:self
-		loadingView:self.navigationController.view];
+	[self.navigationController.view showLoadingHUD];
+
+	GetMicroblogsCallback *callback =
+		[[GetMicroblogsCallback alloc]
+			init:self loadingView:self.navigationController.view];
+
+	LRSession *session = [PrefsUtil getSession:callback];
+
+	LRMicroblogsentryService_v62 *service =
+		(LRMicroblogsentryService_v62 *)
+			[ServiceFactory getService:[LRMicroblogsentryService_v62 class]
+				session:session];
+
+	NSError *error;
+	[service getMicroblogsEntriesWithStart:-1 end:-1 error:&error];
 }
 
 #pragma mark - Private Methods

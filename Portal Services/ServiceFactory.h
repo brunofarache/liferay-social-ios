@@ -12,33 +12,14 @@
  * details.
  */
 
-#import "MicroblogsService.h"
+#import "LRBaseService.h"
 
 /**
  * @author Bruno Farache
  */
 
-@implementation MicroblogsService
+@interface ServiceFactory : NSObject
 
-+ (void)getMicroblogsEntries:(MicroblogsTableViewController *)viewController
-		loadingView:(UIView *)loadingView {
-
-	LRMicroblogsentryService_v62 *service =
-		[[LRMicroblogsentryService_v62 alloc] init];
-
-	GetMicroblogsCallback *callback =
-		[[GetMicroblogsCallback alloc]
-			init:viewController loadingView:loadingView];
-
-	LRSession *session = [PrefsUtil getSession];
-
-	[session setCallback:callback];
-	[service setSession:session];
-	[loadingView showLoadingHUD];
-
-	NSError *error;
-
-	[service getMicroblogsEntriesWithStart:-1 end:-1 error:&error];
-}
++ (LRBaseService *)getService:(Class)clazz session:(LRSession *)session;
 
 @end
