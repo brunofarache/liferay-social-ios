@@ -20,7 +20,7 @@
 
 @implementation ContactDetailsTableViewController
 
-- (id)init:(UserModel *)user {
+- (id)init:(User *)user {
 	self = [super initWithStyle:UITableViewStyleGrouped];
 
 	if (self) {

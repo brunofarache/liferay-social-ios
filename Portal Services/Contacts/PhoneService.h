@@ -14,7 +14,7 @@
 
 #import "BaseService.h"
 #import "HttpClient.h"
-#import "PhoneModel.h"
+#import "Phone.h"
 
 /**
  * @author Bruno Farache

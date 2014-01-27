@@ -53,8 +53,7 @@
 	NSMutableArray *entries = [NSMutableArray array];
 
 	for (NSDictionary *jsonObj in jsonArray) {
-		MicroblogsEntryModel *entry =
-			[[MicroblogsEntryModel alloc] initWithJSON:jsonObj];
+		MicroblogsEntry *entry = [[MicroblogsEntry alloc] initWithJSON:jsonObj];
 
 		[entries addObject:entry];
 	}

@@ -16,12 +16,19 @@
  * @author Bruno Farache
  */
 
-@interface PhoneModel : NSObject
+@interface MicroblogsEntry : NSObject
 
-@property (nonatomic, strong) NSString *extension;
-@property (nonatomic, strong) NSString *number;
-@property (nonatomic) long phoneId;
-@property (nonatomic) BOOL primary;
+@property (nonatomic) long companyId;
+@property (nonatomic, strong) NSString *content;
+@property (nonatomic, strong) NSDate *createDate;
+@property (nonatomic) long microblogsEntryId;
+@property (nonatomic, strong) NSDate *modifiedDate;
+@property (nonatomic) long receiverMicroblogsEntryId;
+@property (nonatomic) long receiverUserId;
+@property (nonatomic) int socialRelationType;
+@property (nonatomic) int type;
+@property (nonatomic) long userId;
+@property (nonatomic, strong) NSString *userName;
 
 - (id)initWithJSON:(NSDictionary *)jsonObj;
 

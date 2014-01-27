@@ -12,25 +12,17 @@
  * details.
  */
 
-#import "PhoneModel.h"
-
 /**
  * @author Bruno Farache
  */
 
-@implementation PhoneModel
+@interface Phone : NSObject
 
-- (id)initWithJSON:(NSDictionary *)jsonObj {
-	self = [super init];
+@property (nonatomic, strong) NSString *extension;
+@property (nonatomic, strong) NSString *number;
+@property (nonatomic) long phoneId;
+@property (nonatomic) BOOL primary;
 
-	if (self) {
-		self.extension = [jsonObj objectForKey:@"extension"];
-		self.number = [jsonObj objectForKey:@"number"];
-		self.phoneId = [[jsonObj objectForKey:@"phoneId"] longValue];
-		self.primary = [[jsonObj objectForKey:@"primary"] boolValue];
-	}
-
-	return self;
-}
+- (id)initWithJSON:(NSDictionary *)jsonObj;
 
 @end

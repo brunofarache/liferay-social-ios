@@ -64,7 +64,7 @@
 				reuseIdentifier:CellIdentifier];
 	}
 
-	UserModel *user = [self.entries objectAtIndex:indexPath.row];
+	User *user = [self.entries objectAtIndex:indexPath.row];
 
 	[cell.textLabel setText:user.firstName];
 
@@ -76,7 +76,7 @@
 - (void)tableView:(UITableView *)tableView
 		didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
-	UserModel *user = [self.entries objectAtIndex:indexPath.row];
+	User *user = [self.entries objectAtIndex:indexPath.row];
 
 	NSArray *phones = [PhoneService getPhones:user.contactId];
 

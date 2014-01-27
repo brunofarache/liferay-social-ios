@@ -91,7 +91,7 @@
 				reuseIdentifier:CellIdentifier];
 	}
 
-	MicroblogsEntryModel *entry = [self.entries objectAtIndex:indexPath.row];
+	MicroblogsEntry *entry = [self.entries objectAtIndex:indexPath.row];
 
 	[cell.textLabel setFont:TITLE_FONT];
 	[cell.textLabel setText:entry.userName];
@@ -120,7 +120,7 @@
 - (CGFloat)tableView:(UITableView *)tableView
 		heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-	MicroblogsEntryModel *entry = [self.entries objectAtIndex:indexPath.row];
+	MicroblogsEntry *entry = [self.entries objectAtIndex:indexPath.row];
 
 	NSString *username = [entry userName];
 	NSString *content = [entry content];

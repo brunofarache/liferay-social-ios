@@ -12,7 +12,7 @@
  * details.
  */
 
-#import "UserModel.h"
+#import "User.h"
 
 /**
  * @author Bruno Farache
@@ -20,8 +20,8 @@
 
 @interface ContactDetailsTableViewController : UITableViewController
 
-@property (nonatomic, strong) UserModel *user;
+@property (nonatomic, strong) User *user;
 
-- (id)init:(UserModel *)user;
+- (id)init:(User *)user;
 
 @end

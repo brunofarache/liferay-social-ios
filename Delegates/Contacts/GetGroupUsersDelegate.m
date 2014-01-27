@@ -45,15 +45,15 @@
 }
 
 - (NSMutableArray *)toArray:(NSArray *)jsonArray {
-	NSMutableArray *entries = [NSMutableArray array];
+	NSMutableArray *users = [NSMutableArray array];
 
 	for (NSDictionary *jsonObj in jsonArray) {
-		UserModel *entry = [[UserModel alloc] initWithJSON:jsonObj];
+		User *user = [[User alloc] initWithJSON:jsonObj];
 
-		[entries addObject:entry];
+		[users addObject:user];
 	}
 
-	return entries;
+	return users;
 }
 
 @end

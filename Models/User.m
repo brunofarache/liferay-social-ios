@@ -12,13 +12,13 @@
  * details.
  */
 
-#import "UserModel.h"
+#import "User.h"
 
 /**
  * @author Bruno Farache
  */
 
-@implementation UserModel
+@implementation User
 
 - (id)initWithJSON:(NSDictionary *)jsonObj {
 	self = [super init];

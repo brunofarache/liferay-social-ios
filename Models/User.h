@@ -12,13 +12,13 @@
  * details.
  */
 
-#import "PhoneModel.h"
+#import "Phone.h"
 
 /**
  * @author Bruno Farache
  */
 
-@interface UserModel : NSObject
+@interface User : NSObject
 
 @property (nonatomic) long companyId;
 @property (nonatomic) long contactId;
@@ -32,7 +32,7 @@
 @property (nonatomic, strong) NSDate *lastLoginDate;
 @property (nonatomic, strong) NSString *lastName;
 @property (nonatomic, strong) NSString *middleName;
-@property (nonatomic, strong) PhoneModel *phone;
+@property (nonatomic, strong) Phone *phone;
 @property (nonatomic) long portraitId;
 @property (nonatomic, strong) NSString *screenName;
 @property (nonatomic, strong) NSString *timeZoneId;

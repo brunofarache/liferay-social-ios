@@ -12,7 +12,7 @@
  * details.
  */
 
-#import "MicroblogsEntryModel.h"
+#import "MicroblogsEntry.h"
 
 /**
  * @author Bruno Farache

@@ -37,7 +37,7 @@ static NSString *_serviceName = @"phone";
 	NSMutableArray *phones = [NSMutableArray array];
 
 	for (NSDictionary *phone in jsonArray) {
-		[phones addObject:[[PhoneModel alloc] initWithJSON:phone]];
+		[phones addObject:[[Phone alloc] initWithJSON:phone]];
 	}
 
 	return phones;

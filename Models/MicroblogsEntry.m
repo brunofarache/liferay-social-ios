@@ -12,13 +12,13 @@
  * details.
  */
 
-#import "MicroblogsEntryModel.h"
+#import "MicroblogsEntry.h"
 
 /**
  * @author Bruno Farache
  */
 
-@implementation MicroblogsEntryModel
+@implementation MicroblogsEntry
 
 - (id)initWithJSON:(NSDictionary *)jsonObj {
 	self = [super init];
