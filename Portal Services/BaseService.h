@@ -33,12 +33,6 @@ typedef enum {
 + (NSString *)getURL:(NSString *)serviceName methodName:(NSString *)methodName;
 + (id)handleException:(NSString *)response view:(UIView *)view;
 
-+ (BOOL)isCertificateErrorMessage:(NSInteger)code
-	alertDelegate:(id)alertDelegate;
-
-+ (BOOL)setTrustCertificate:(NSInteger *)tag
-	buttonIndex:(NSInteger)buttonIndex;
-
 + (void)showErrorMessage:(NSError *)error view:(UIView *)view;
 + (void)showFailMessage:(NSString *)message view:(UIView *)view;
 

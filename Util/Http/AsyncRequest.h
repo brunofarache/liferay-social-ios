@@ -42,8 +42,6 @@ typedef enum {
 @property (nonatomic, strong) ProgressDelegate *progressDelegate;
 @property (nonatomic) int tag;
 
-- (id)initWithRequest:(NSURLRequest *)request download:(BOOL)download;
-
 - (void)setDelegate:(id<AsyncRequestDelegate>)delegate
 	loadingView:(UIView *)loadingView;
 

@@ -18,87 +18,21 @@
  * @author Bruno Farache
  */
 
-#define INVALID_GROUP_ID -1
-
-static NSMutableArray *_folderPath;
 static LRSession *_session;
 static NSUserDefaults *_userDefaults;
 
 @implementation PrefsUtil
 
-+ (void)initialize {
-	if (!_folderPath) {
-		_folderPath = [[NSMutableArray alloc] init];
-	}
-
-	if (!_userDefaults) {
-		_userDefaults = [NSUserDefaults standardUserDefaults];
-	}
-}
-
-+ (NSString *)encodeURL:(NSString *)string {
-	NSString *newString =
-		CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(
-			kCFAllocatorDefault, (CFStringRef)string, NULL,
-			CFSTR(":/?#[]@!$ &'()*+,;=\"<>%{}|\\^~`"),
-			CFStringConvertNSStringEncodingToEncoding(
-				NSUTF8StringEncoding)));
-
-	if (newString) {
-		return newString;
-	}
-
-	return @"";
-}
-
-+ (NSString *)getEmail {
-	return @"test@liferay.com";
-}
-
-+ (NSString *)getFolderPath {
-	NSString *folderPath = @"";
-
-	for (NSString *key in _folderPath) {
-		NSArray *names = [key componentsSeparatedByString:@"#"];
-
-		NSString *name = [names objectAtIndex:1];
-
-		name = [self encodeURL:name];
-
-		folderPath = [folderPath stringByAppendingFormat:@"%@/", name];
-	}
-
-	return folderPath;
-}
-
-+ (NSString *)getGroupFriendlyURL {
-	return [_userDefaults objectForKey:@"groupFriendlyURL"];
-}
-
 + (NSNumber *)getGroupId {
 	return @(10184);
 }
 
++ (NSString *)getLogin {
+	return @"test@liferay.com";
+}
+
 + (NSString *)getPassword {
 	return @"test";
-}
-
-+ (CGRect)getScreenFrame {
-	return [self getScreenFrame:nil];
-}
-
-+ (CGRect)getScreenFrame:(UIDeviceOrientation)orientation {
-	if (!orientation) {
-		orientation = [UIApplication sharedApplication].statusBarOrientation;
-	}
-
-	CGRect frame = [[UIScreen mainScreen] bounds];
-
-	if (UIDeviceOrientationIsLandscape(orientation)) {
-		frame = CGRectMake(0, 0, frame.size.height, frame.size.width);
-	}
-
-	return frame;
 }
 
 + (NSString *)getServer {
@@ -112,7 +46,7 @@ static NSUserDefaults *_userDefaults;
 + (LRSession *)getSession:(id<LRCallback>)callback {
 	if (!_session) {
 		NSString *server = [self getServer];
-		NSString *email = [self getEmail];
+		NSString *email = [self getLogin];
 		NSString *password = [self getPassword];
 
 		_session = [[LRSession alloc] init:server username:email
@@ -124,85 +58,29 @@ static NSUserDefaults *_userDefaults;
 	return _session;
 }
 
-+ (BOOL)isTrustCertificate {
-	NSString *server = [self getServer];
-
-	if (!server) {
-		return NO;
-	}
-
-	return [_userDefaults objectForKey:server];
-}
-
-+ (BOOL)needsSetup {
-	NSString *email = [self getEmail];
-	NSString *password = [self getPassword];
-	NSString *server = [self getServer];
-
-	return ([Validator isNull:email] || [Validator isNull:password] ||
-		[Validator isNull:server]);
-}
-
-+ (BOOL)reloadUserSites {
-	long groupId = [[self getGroupId] longValue];
-
-	return (groupId == INVALID_GROUP_ID);
-}
-
-+ (void)saveEmail:(NSString *)email {
-	[_userDefaults setObject:email forKey:@"email"];
++ (void)setLogin:(NSString *)login {
+	[_userDefaults setObject:login forKey:login];
 	[_userDefaults synchronize];
 
 	_session = nil;
 }
 
-+ (void)savePassword:(NSString *)password {
-	[_userDefaults setObject:password forKey:@"password"];
++ (void)setPassword:(NSString *)password {
+	[_userDefaults setObject:password forKey:PASSWORD];
 	[_userDefaults synchronize];
 
 	_session = nil;
 }
 
-+ (void)saveServer:(NSString *)server {
++ (void)setServer:(NSString *)server {
 	if (!([server hasPrefix:@"http://"] || [server hasPrefix:@"https://"])) {
 		server = [NSString stringWithFormat:@"http://%@", server];
 	}
 
-	[_userDefaults setObject:server forKey:@"server"];
+	[_userDefaults setObject:server forKey:SERVER];
 	[_userDefaults synchronize];
 
 	_session = nil;
-}
-
-+ (void)setTrustCertificate:(BOOL)trustCertificate {
-	NSString *server = [self getServer];
-
-	[_userDefaults setBool:trustCertificate forKey:server];
-
-	[_userDefaults synchronize];
-}
-
-+ (void)updateFolderPath:(long)folderId folderName:(NSString *)folderName {
-	if (folderId == 0) {
-		_folderPath = [[NSMutableArray alloc] init];
-
-		return;
-	}
-
-	NSString *key = [NSString stringWithFormat:@"%ld#%@", folderId, folderName];
-
-	int index = [_folderPath indexOfObject:key];
-
-	if (index == NSNotFound) {
-		[_folderPath addObject:key];
-	}
-	else {
-		int toIndex = index + 1;
-
-		if (toIndex < [_folderPath count]) {
-			[_folderPath removeLastObject];
-		}
-	}
 }
 
 @end

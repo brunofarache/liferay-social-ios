@@ -95,11 +95,11 @@ static NSString *_path = @"/api/jsonws/invoke";
 	[_client setBaseURL:baseURL];
 	[_client setParameterEncoding:parameterEncoding];
 
-	NSString *email = [PrefsUtil getEmail];
+	NSString *login = [PrefsUtil getLogin];
 	NSString *password = [PrefsUtil getPassword];
 
 	[_client clearAuthorizationHeader];
-	[_client setAuthorizationHeaderWithUsername:email password:password];
+	[_client setAuthorizationHeaderWithUsername:login password:password];
 
 	return _client;
 }
@@ -128,8 +128,7 @@ static NSString *_path = @"/api/jsonws/invoke";
 	NSURLRequest *request =
 		[client requestWithMethod:method path:URL parameters:nil];
 
-	AsyncRequest *asyncRequest =
-		[[AsyncRequest alloc] initWithRequest:request download:YES];
+	AsyncRequest *asyncRequest = [[AsyncRequest alloc] initWithRequest:request];
 
 	asyncRequest.outputStream =
 		[NSOutputStream outputStreamToFileAtPath:filePath append:NO];

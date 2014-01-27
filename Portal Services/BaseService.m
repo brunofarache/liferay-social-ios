@@ -59,39 +59,6 @@
 	return jsonObj;
 }
 
-+ (BOOL)isCertificateErrorMessage:(NSInteger)code
-		alertDelegate:(id)alertDelegate {
-
-	if (code == INVALID_CERTIFICATE_CODE) {
-		NSString *message = NSLocalizedString(
-			@"the-certificate-could-not-be-verified", nil);
-
-		UIAlertView *alertView =
-			[[UIAlertView alloc] initWithTitle:@""
-				message:message delegate:alertDelegate
-				cancelButtonTitle:NSLocalizedString(@"cancel", nil)
-				otherButtonTitles:NSLocalizedString(@"always-trust", nil), nil];
-
-		alertView.tag = CertificateError;
-
-		[alertView show];
-
-		return YES;
-	}
-
-	return NO;
-}
-
-+ (BOOL)setTrustCertificate:(NSInteger *)tag buttonIndex:(NSInteger)index {
-	if ((tag == CertificateError) && (index == 1)) {
-		[PrefsUtil setTrustCertificate:YES];
-
-		return YES;
-	}
-
-	return NO;
-}
-
 + (void)showErrorMessage:(NSError *)error view:(UIView *)view {
 	NSString *message = [error localizedDescription];
 	NSInteger code = [error code];

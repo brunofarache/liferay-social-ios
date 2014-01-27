@@ -12,34 +12,26 @@
  * details.
  */
 
-#import "LRCallback.h"
 #import "LRSession.h"
-#import "Validator.h"
 
 /**
  * @author Bruno Farache
  */
 
+#define LOGIN		@"login"
+#define PASSWORD	@"password"
+#define SERVER		@"server"
+
 @interface PrefsUtil : NSObject
 
-+ (NSString *)encodeURL:(NSString *)string;
-+ (NSString *)getEmail;
-+ (NSString *)getFolderPath;
-+ (NSString *)getGroupFriendlyURL;
 + (NSNumber *)getGroupId;
++ (NSString *)getLogin;
 + (NSString *)getPassword;
-+ (CGRect)getScreenFrame;
-+ (CGRect)getScreenFrame:(UIDeviceOrientation)orientation;
 + (NSString *)getServer;
 + (LRSession *)getSession;
 + (LRSession *)getSession:(id<LRCallback>)callback;
-+ (BOOL)isTrustCertificate;
-+ (BOOL)needsSetup;
-+ (BOOL)reloadUserSites;
-+ (void)saveEmail:(NSString *)email;
-+ (void)savePassword:(NSString *)password;
-+ (void)saveServer:(NSString *)server;
-+ (void)setTrustCertificate:(BOOL)trustCertificate;
-+ (void)updateFolderPath:(long)folderId folderName:(NSString *)folderName;
++ (void)setLogin:(NSString *)login;
++ (void)setPassword:(NSString *)password;
++ (void)setServer:(NSString *)server;
 
 @end
