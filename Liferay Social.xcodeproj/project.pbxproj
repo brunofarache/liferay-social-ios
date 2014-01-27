@@ -388,8 +388,8 @@
 				CCE3A79C174440D80022B6BF /* Supporting Files */,
 				CC31CBB417454C64006CDD4B /* Util */,
 			);
-			path = "Liferay Social";
-			sourceTree = "<group>";
+			name = "Liferay Social";
+			sourceTree = SOURCE_ROOT;
 		};
 		CCB2A2DC174D566B006C3486 /* Contacts */ = {
 			isa = PBXGroup;
@@ -670,8 +670,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Liferay Social/Supporting Files/Liferay Social-Prefix.pch";
-				INFOPLIST_FILE = "Liferay Social/Supporting Files/Liferay Social-Info.plist";
+				GCC_PREFIX_HEADER = "Supporting Files/Liferay Social-Prefix.pch";
+				INFOPLIST_FILE = "Supporting Files/Liferay Social-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -681,8 +681,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Liferay Social/Supporting Files/Liferay Social-Prefix.pch";
-				INFOPLIST_FILE = "Liferay Social/Supporting Files/Liferay Social-Info.plist";
+				GCC_PREFIX_HEADER = "Supporting Files/Liferay Social-Prefix.pch";
+				INFOPLIST_FILE = "Supporting Files/Liferay Social-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
