@@ -12,14 +12,10 @@
  * details.
  */
 
-#import "MicroblogsEntry.h"
-
 /**
  * @author Bruno Farache
  */
 
-@interface MicroblogsTableViewController : UITableViewController
-
-@property (nonatomic, strong) NSMutableArray *entries;
-
-@end
+#define CELL_PADDING	26
+#define DETAIL_FONT		[UIFont systemFontOfSize:12]
+#define TITLE_FONT		[UIFont boldSystemFontOfSize:14]

@@ -79,6 +79,7 @@
 		7520D264188EBEEE00E191B0 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		CC1CCBA51896FFD400C8B364 /* DateUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtil.m; sourceTree = "<group>"; };
 		CC1CCBA61896FFD400C8B364 /* DateUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtil.h; sourceTree = "<group>"; };
+		CC1CCBA8189704D900C8B364 /* UIDimensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDimensions.h; sourceTree = "<group>"; };
 		CC31CBB617454C64006CDD4B /* AsyncRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncRequest.h; sourceTree = "<group>"; };
 		CC31CBB717454C64006CDD4B /* AsyncRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncRequest.m; sourceTree = "<group>"; };
 		CC31CBB817454C64006CDD4B /* HttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpClient.h; sourceTree = "<group>"; };
@@ -275,6 +276,7 @@
 				CC31CBD5174550D3006CDD4B /* HandleException.m */,
 				CC31CBBF17454E11006CDD4B /* PrefsUtil.h */,
 				CC31CBC017454E11006CDD4B /* PrefsUtil.m */,
+				CC1CCBA8189704D900C8B364 /* UIDimensions.h */,
 				CC31CBC217454E78006CDD4B /* Validator.h */,
 				CC31CBC317454E78006CDD4B /* Validator.m */,
 			);
