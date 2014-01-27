@@ -12,26 +12,20 @@
  * details.
  */
 
-#import "DateUtil.h"
+#import "Validator.h"
 
 /**
  * @author Bruno Farache
  */
 
-@interface MicroblogsEntry : NSObject
+@implementation DateUtil
 
-@property (nonatomic) long companyId;
-@property (nonatomic, strong) NSString *content;
-@property (nonatomic, strong) NSDate *createDate;
-@property (nonatomic) long microblogsEntryId;
-@property (nonatomic, strong) NSDate *modifiedDate;
-@property (nonatomic) long receiverMicroblogsEntryId;
-@property (nonatomic) long receiverUserId;
-@property (nonatomic) int socialRelationType;
-@property (nonatomic) int type;
-@property (nonatomic) long userId;
-@property (nonatomic, strong) NSString *userName;
++ (NSDate *)convertNumberToDate:(NSNumber *)number {
+	NSString *modifiedDate = [number stringValue];
 
-- (id)initWithJSON:(NSDictionary *)jsonObj;
+	modifiedDate = [modifiedDate substringToIndex:(modifiedDate.length - 3)];
+
+	return [NSDate dateWithTimeIntervalSince1970:[modifiedDate longLongValue]];
+}
 
 @end

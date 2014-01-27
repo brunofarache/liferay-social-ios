@@ -28,13 +28,14 @@
 		self.content = [jsonObj objectForKey:@"content"];
 
 		self.createDate =
-			[self convertNumberToDate:[jsonObj objectForKey:@"createDate"]];
+			[DateUtil convertNumberToDate:[jsonObj objectForKey:@"createDate"]];
 
 		self.microblogsEntryId =
 			[[jsonObj objectForKey:@"microblogsEntryId"] longValue];
 
 		self.modifiedDate =
-			[self convertNumberToDate:[jsonObj objectForKey:@"modifiedDate"]];
+			[DateUtil convertNumberToDate:
+				[jsonObj objectForKey:@"modifiedDate"]];
 
 		self.receiverMicroblogsEntryId =
 			[[jsonObj objectForKey:@"receiverMicroblogsEntryId"] longValue];
@@ -51,14 +52,6 @@
 	}
 
 	return self;
-}
-
-- (NSDate *)convertNumberToDate:(NSNumber *)number {
-	NSString *modifiedDate = [number stringValue];
-
-	modifiedDate = [modifiedDate substringToIndex:(modifiedDate.length - 3)];
-
-	return [NSDate dateWithTimeIntervalSince1970:[modifiedDate longLongValue]];
 }
 
 @end

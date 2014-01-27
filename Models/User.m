@@ -28,7 +28,7 @@
 		self.contactId = [[jsonObj objectForKey:@"contactId"] longValue];
 
 		self.createDate =
-			[self convertNumberToDate:[jsonObj objectForKey:@"createDate"]];
+			[DateUtil convertNumberToDate:[jsonObj objectForKey:@"createDate"]];
 
 		self.emailAddress = [jsonObj objectForKey:@"emailAddress"];
 		self.facebookId = [[jsonObj objectForKey:@"facebookId"] longValue];
@@ -38,7 +38,8 @@
 		self.languageId = [jsonObj objectForKey:@"languageId"];
 
 		self.lastLoginDate =
-			[self convertNumberToDate:[jsonObj objectForKey:@"lastLoginDate"]];
+			[DateUtil convertNumberToDate:
+				[jsonObj objectForKey:@"lastLoginDate"]];
 
 		self.lastName = [jsonObj objectForKey:@"lastName"];
 		self.middleName = [jsonObj objectForKey:@"middleName"];
@@ -50,14 +51,6 @@
 	}
 
 	return self;
-}
-
-- (NSDate *)convertNumberToDate:(NSNumber *)number {
-	NSString *modifiedDate = [number stringValue];
-
-	modifiedDate = [modifiedDate substringToIndex:(modifiedDate.length - 3)];
-
-	return [NSDate dateWithTimeIntervalSince1970:[modifiedDate longLongValue]];
 }
 
 @end

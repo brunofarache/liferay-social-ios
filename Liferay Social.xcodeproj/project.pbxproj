@@ -16,6 +16,7 @@
 		7520D262188EB9F300E191B0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7520D261188EB9F300E191B0 /* Default-568h@2x.png */; };
 		7520D265188EBEEE00E191B0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7520D263188EBEEE00E191B0 /* Default.png */; };
 		7520D266188EBEEE00E191B0 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7520D264188EBEEE00E191B0 /* Default@2x.png */; };
+		CC1CCBA71896FFD400C8B364 /* DateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1CCBA51896FFD400C8B364 /* DateUtil.m */; };
 		CC31CBBA17454C64006CDD4B /* AsyncRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CC31CBB717454C64006CDD4B /* AsyncRequest.m */; };
 		CC31CBBB17454C64006CDD4B /* HttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CC31CBB917454C64006CDD4B /* HttpClient.m */; };
 		CC31CBBE17454C89006CDD4B /* ProgressDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC31CBBD17454C89006CDD4B /* ProgressDelegate.m */; };
@@ -77,6 +78,8 @@
 		7520D261188EB9F300E191B0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		7520D263188EBEEE00E191B0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		7520D264188EBEEE00E191B0 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		CC1CCBA51896FFD400C8B364 /* DateUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtil.m; sourceTree = "<group>"; };
+		CC1CCBA61896FFD400C8B364 /* DateUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtil.h; sourceTree = "<group>"; };
 		CC31CBB617454C64006CDD4B /* AsyncRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncRequest.h; sourceTree = "<group>"; };
 		CC31CBB717454C64006CDD4B /* AsyncRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncRequest.m; sourceTree = "<group>"; };
 		CC31CBB817454C64006CDD4B /* HttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpClient.h; sourceTree = "<group>"; };
@@ -268,6 +271,8 @@
 			isa = PBXGroup;
 			children = (
 				CC31CBB517454C64006CDD4B /* Http */,
+				CC1CCBA61896FFD400C8B364 /* DateUtil.h */,
+				CC1CCBA51896FFD400C8B364 /* DateUtil.m */,
 				CC31CBD4174550D3006CDD4B /* HandleException.h */,
 				CC31CBD5174550D3006CDD4B /* HandleException.m */,
 				CC31CBBF17454E11006CDD4B /* PrefsUtil.h */,
@@ -564,6 +569,7 @@
 				CCE3A7A2174440D80022B6BF /* LiferaySocialAppDelegate.m in Sources */,
 				292C8DAC186DB629008C549B /* GetMicroblogsCallback.m in Sources */,
 				CCE3A7AB174440D80022B6BF /* main.m in Sources */,
+				CC1CCBA71896FFD400C8B364 /* DateUtil.m in Sources */,
 				CCE3A7AE174442F80022B6BF /* MicroblogsTableViewController.m in Sources */,
 				292C8DA2186DB2CA008C549B /* LRBatchSession.m in Sources */,
 				CCE3A7C417454A050022B6BF /* AFHTTPClient.m in Sources */,
