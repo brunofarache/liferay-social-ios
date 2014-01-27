@@ -13,9 +13,7 @@
  */
 
 #import "BaseService.h"
-#import "LRCallback.h"
 #import "MicroblogsTableViewController.h"
-#import "UIView+Loading.h"
 
 /**
  * @author Silvio Santos

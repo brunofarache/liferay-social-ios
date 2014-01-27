@@ -13,7 +13,6 @@
  */
 
 #import "ContactDetailsTableViewController.h"
-#import "UserModel.h"
 #import "PhoneService.h"
 
 /**

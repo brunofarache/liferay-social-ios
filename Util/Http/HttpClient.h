@@ -13,11 +13,9 @@
  */
 
 #import "AFHTTPClient.h"
-#import "AFJSONRequestOperation.h"
 #import "AsyncRequest.h"
 #import "AFNetworkActivityIndicatorManager.h"
 #import "JSON.h"
-#import "PrefsUtil.h"
 
 /**
  * @author Josiane Bezerra

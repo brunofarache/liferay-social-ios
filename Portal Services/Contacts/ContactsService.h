@@ -12,10 +12,7 @@
  * details.
  */
 
-#import "ContactsTableViewController.h"
 #import "GetGroupUsersDelegate.h"
-#import "HttpClient.h"
-#import "PrefsUtil.h"
 
 /**
  * @author Bruno Farache
