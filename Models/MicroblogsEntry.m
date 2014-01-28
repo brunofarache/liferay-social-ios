@@ -17,7 +17,6 @@
 /**
  * @author Bruno Farache
  */
-
 @implementation MicroblogsEntry
 
 - (id)initWithJSON:(NSDictionary *)jsonObj {

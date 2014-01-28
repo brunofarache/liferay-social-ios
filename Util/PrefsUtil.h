@@ -17,7 +17,6 @@
 /**
  * @author Bruno Farache
  */
-
 #define LOGIN		@"login"
 #define PASSWORD	@"password"
 #define SERVER		@"server"

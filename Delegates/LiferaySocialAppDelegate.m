@@ -17,7 +17,6 @@
 /**
  * @author Bruno Farache
  */
-
 @implementation LiferaySocialAppDelegate
 
 - (BOOL)application:(UIApplication *)application

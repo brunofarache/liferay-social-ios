@@ -17,7 +17,6 @@
 /**
  * @author Bruno Farache
  */
-
 @implementation DateUtil
 
 + (NSDate *)convertNumberToDate:(NSNumber *)number {

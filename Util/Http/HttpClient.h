@@ -21,7 +21,6 @@
  * @author Josiane Bezerra
  * @author Bruno Farache
  */
-
 @interface HttpClient : AFHTTPClient
 
 @property (nonatomic, strong) NSURL *baseURL;

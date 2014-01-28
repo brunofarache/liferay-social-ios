@@ -17,7 +17,6 @@
 /**
  * @author Josiane Bezerra
  */
-
 @implementation HandleException
 
 + (NSString *)stringForException:(NSString *)error {

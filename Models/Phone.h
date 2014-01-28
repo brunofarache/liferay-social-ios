@@ -15,7 +15,6 @@
 /**
  * @author Bruno Farache
  */
-
 @interface Phone : NSObject
 
 @property (nonatomic, strong) NSString *extension;

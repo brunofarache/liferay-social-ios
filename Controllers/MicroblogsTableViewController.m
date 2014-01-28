@@ -18,7 +18,6 @@
 /**
  * @author Bruno Farache
  */
-
 @implementation MicroblogsTableViewController
 
 - (id)init {

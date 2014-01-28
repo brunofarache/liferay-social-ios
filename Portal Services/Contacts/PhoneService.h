@@ -19,7 +19,6 @@
 /**
  * @author Bruno Farache
  */
-
 @interface PhoneService : BaseService
 
 + (NSArray *)getPhones:(long)contactId;

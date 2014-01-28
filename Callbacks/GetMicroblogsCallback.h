@@ -18,7 +18,6 @@
 /**
  * @author Silvio Santos
  */
-
 @interface GetMicroblogsCallback : NSObject <LRCallback>
 
 @property (nonatomic, strong) UIView *loadingView;

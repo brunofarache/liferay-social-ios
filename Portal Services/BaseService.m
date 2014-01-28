@@ -17,9 +17,6 @@
 /**
  * @author Bruno Farache
  */
-
-#define INVALID_CERTIFICATE_CODE -1202
-
 @implementation BaseService
 
 + (NSString *)getCommand:(NSString *)serviceName

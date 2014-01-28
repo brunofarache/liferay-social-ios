@@ -14,12 +14,11 @@
 
 #import "PhoneService.h"
 
+static NSString *_serviceName = @"phone";
+
 /**
  * @author Bruno Farache
  */
-
-static NSString *_serviceName = @"phone";
-
 @implementation PhoneService
 
 + (NSArray *)getPhones:(long)contactId {

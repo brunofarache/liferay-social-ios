@@ -18,7 +18,6 @@
 /**
  * @author Bruno Farache
  */
-
 @interface LiferaySocialAppDelegate : NSObject <UIApplicationDelegate>
 
 @property (strong, nonatomic) UITabBarController *tabBarController;

@@ -18,7 +18,6 @@
  * @author Josiane Bezerra
  * @author Bruno Farache
  */
-
 @implementation AsyncRequest
 
 - (void)setDelegate:(id<AsyncRequestDelegate>)delegate {

@@ -17,7 +17,6 @@
 /**
  * @author Bruno Farache
  */
-
 @interface GetGroupUsersDelegate : NSObject
 
 @property (nonatomic, strong) ContactsTableViewController *viewController;

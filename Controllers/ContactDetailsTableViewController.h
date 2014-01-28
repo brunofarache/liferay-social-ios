@@ -17,7 +17,6 @@
 /**
  * @author Bruno Farache
  */
-
 @interface ContactDetailsTableViewController : UITableViewController
 
 @property (nonatomic, strong) User *user;

@@ -19,7 +19,6 @@
 /**
  * @author Bruno Farache
  */
-
 @interface MicroblogsTableViewController : UITableViewController
 
 @property (nonatomic, strong) NSMutableArray *entries;

@@ -17,7 +17,6 @@
 /**
  * @author Bruno Farache
  */
-
 @implementation Validator
 
 + (BOOL)isNull:(NSString *)string {

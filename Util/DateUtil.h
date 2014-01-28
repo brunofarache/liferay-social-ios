@@ -15,7 +15,6 @@
 /**
  * @author Bruno Farache
  */
-
 @interface DateUtil : NSObject
 
 + (NSDate *)convertNumberToDate:(NSNumber *)number;

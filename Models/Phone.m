@@ -17,7 +17,6 @@
 /**
  * @author Bruno Farache
  */
-
 @implementation Phone
 
 - (id)initWithJSON:(NSDictionary *)jsonObj {

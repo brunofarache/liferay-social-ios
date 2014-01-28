@@ -16,7 +16,6 @@
  * @author Bruno Farache
  * @author Josiane Bezerra
  */
-
 @interface ProgressDelegate : NSObject
 
 - (void)setProgress:(float)progress;

@@ -17,7 +17,6 @@
 /**
  * @author Josiane Bezerra
  */
-
 @interface UIView (Loading) <MBProgressHUDDelegate>
 
 - (void)hideLoadingHUD;

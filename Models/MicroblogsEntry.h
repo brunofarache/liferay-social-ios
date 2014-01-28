@@ -17,7 +17,6 @@
 /**
  * @author Bruno Farache
  */
-
 @interface MicroblogsEntry : NSObject
 
 @property (nonatomic) long companyId;

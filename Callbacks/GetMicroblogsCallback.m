@@ -17,7 +17,6 @@
 /**
  * @author Silvio Santos
  */
-
 @implementation GetMicroblogsCallback
 
 - (id)init:(MicroblogsTableViewController *)viewController

@@ -17,14 +17,13 @@
 #import "PrefsUtil.h"
 #import "UIView+Loading.h"
 
-/**
- * @author Bruno Farache
- */
-
 typedef enum {
 	CertificateError
 } ErrorTag;
 
+/**
+ * @author Bruno Farache
+ */
 @interface BaseService : NSObject
 
 + (NSString *)getCommand:(NSString *)serviceName

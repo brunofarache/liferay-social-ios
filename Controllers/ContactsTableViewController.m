@@ -18,7 +18,6 @@
 /**
  * @author Bruno Farache
  */
-
 @implementation ContactsTableViewController
 
 - (id)init {

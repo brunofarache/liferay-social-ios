@@ -18,7 +18,6 @@
 /**
  * @author Bruno Farache
  */
-
 @interface User : NSObject
 
 @property (nonatomic) long companyId;

@@ -14,14 +14,13 @@
 
 #import "HttpClient.h"
 
+static HttpClient *_client = nil;
+static NSString *_path = @"/api/jsonws/invoke";
+
 /**
  * @author Josiane Bezerra
  * @author Bruno Farache
  */
-
-static HttpClient *_client = nil;
-static NSString *_path = @"/api/jsonws/invoke";
-
 @implementation HttpClient
 
 #pragma mark - Life Cycle

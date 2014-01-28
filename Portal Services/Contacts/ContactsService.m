@@ -14,12 +14,11 @@
 
 #import "ContactsService.h"
 
+static NSString *_serviceName = @"user";
+
 /**
  * @author Bruno Farache
  */
-
-static NSString *_serviceName = @"user";
-
 @implementation ContactsService
 
 + (void)getGroupUsers:(ContactsTableViewController *)viewController

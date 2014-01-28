@@ -17,7 +17,6 @@
 /**
  * @author Bruno Farache
  */
-
 @implementation GetGroupUsersDelegate
 
 - (id)init:(ContactsTableViewController *)viewController {

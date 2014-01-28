@@ -14,12 +14,11 @@
 
 #import "ServiceFactory.h"
 
+static NSMutableDictionary *_services;
+
 /**
  * @author Bruno Farache
  */
-
-static NSMutableDictionary *_services;
-
 @implementation ServiceFactory
 
 + (void)initialize {

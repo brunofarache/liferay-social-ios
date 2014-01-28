@@ -15,7 +15,6 @@
 /**
  * @author Josiane Bezerra
  */
-
 @interface HandleException : NSObject
 
 + (NSString *)stringForException:(NSString *)error;

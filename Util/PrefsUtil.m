@@ -14,13 +14,12 @@
 
 #import "PrefsUtil.h"
 
-/**
- * @author Bruno Farache
- */
-
 static LRSession *_session;
 static NSUserDefaults *_userDefaults;
 
+/**
+ * @author Bruno Farache
+ */
 @implementation PrefsUtil
 
 + (NSNumber *)getGroupId {

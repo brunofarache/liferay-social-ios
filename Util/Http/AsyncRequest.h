@@ -17,11 +17,6 @@
 #import "PrefsUtil.h"
 #import "UIView+Loading.h"
 
-/**
- * @author Josiane Bezerra
- * @author Bruno Farache
- */
-
 typedef enum {
 	AddEntryRequest,
 	DeleteEntryRequest,
@@ -36,6 +31,10 @@ typedef enum {
 
 @end
 
+/**
+ * @author Josiane Bezerra
+ * @author Bruno Farache
+ */
 @interface AsyncRequest : AFHTTPRequestOperation
 
 @property (nonatomic, strong) id<AsyncRequestDelegate> delegate;

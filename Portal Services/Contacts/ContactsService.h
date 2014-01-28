@@ -17,7 +17,6 @@
 /**
  * @author Bruno Farache
  */
-
 @interface ContactsService : BaseService
 
 + (void)getGroupUsers:(ContactsTableViewController *)viewController

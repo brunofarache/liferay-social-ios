@@ -15,7 +15,6 @@
 /**
  * @author Bruno Farache
  */
-
 #define CELL_PADDING	26
 #define DETAIL_FONT		[UIFont systemFontOfSize:12]
 #define TITLE_FONT		[UIFont boldSystemFontOfSize:14]

@@ -17,7 +17,6 @@
 /**
  * @author Bruno Farache
  */
-
 @implementation ContactDetailsTableViewController
 
 - (id)init:(User *)user {

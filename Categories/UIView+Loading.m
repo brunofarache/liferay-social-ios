@@ -17,7 +17,6 @@
 /**
  * @author Josiane Bezerra
  */
-
 @implementation UIView (Loading)
 
 static MBProgressHUD *_HUD;
