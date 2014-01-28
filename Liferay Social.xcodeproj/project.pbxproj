@@ -17,7 +17,7 @@
 		7520D265188EBEEE00E191B0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7520D263188EBEEE00E191B0 /* Default.png */; };
 		7520D266188EBEEE00E191B0 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7520D264188EBEEE00E191B0 /* Default@2x.png */; };
 		CC1CCBA71896FFD400C8B364 /* DateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1CCBA51896FFD400C8B364 /* DateUtil.m */; };
-		CC1CCBAB189705F700C8B364 /* ServiceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1CCBAA189705F700C8B364 /* ServiceFactory.m */; };
+		CC1CCBAB189705F700C8B364 /* LRServiceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1CCBAA189705F700C8B364 /* LRServiceFactory.m */; };
 		CC31CBBA17454C64006CDD4B /* AsyncRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CC31CBB717454C64006CDD4B /* AsyncRequest.m */; };
 		CC31CBBB17454C64006CDD4B /* HttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CC31CBB917454C64006CDD4B /* HttpClient.m */; };
 		CC31CBC117454E11006CDD4B /* PrefsUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CC31CBC017454E11006CDD4B /* PrefsUtil.m */; };
@@ -80,8 +80,8 @@
 		CC1CCBA51896FFD400C8B364 /* DateUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtil.m; sourceTree = "<group>"; };
 		CC1CCBA61896FFD400C8B364 /* DateUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtil.h; sourceTree = "<group>"; };
 		CC1CCBA8189704D900C8B364 /* UIDimensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDimensions.h; sourceTree = "<group>"; };
-		CC1CCBA9189705F700C8B364 /* ServiceFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceFactory.h; sourceTree = "<group>"; };
-		CC1CCBAA189705F700C8B364 /* ServiceFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceFactory.m; sourceTree = "<group>"; };
+		CC1CCBA9189705F700C8B364 /* LRServiceFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRServiceFactory.h; sourceTree = "<group>"; };
+		CC1CCBAA189705F700C8B364 /* LRServiceFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRServiceFactory.m; sourceTree = "<group>"; };
 		CC31CBB617454C64006CDD4B /* AsyncRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncRequest.h; sourceTree = "<group>"; };
 		CC31CBB717454C64006CDD4B /* AsyncRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncRequest.m; sourceTree = "<group>"; };
 		CC31CBB817454C64006CDD4B /* HttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpClient.h; sourceTree = "<group>"; };
@@ -318,8 +318,8 @@
 				CCB2A2DC174D566B006C3486 /* Contacts */,
 				CC31CBD117455097006CDD4B /* BaseService.h */,
 				CC31CBD217455097006CDD4B /* BaseService.m */,
-				CC1CCBA9189705F700C8B364 /* ServiceFactory.h */,
-				CC1CCBAA189705F700C8B364 /* ServiceFactory.m */,
+				CC1CCBA9189705F700C8B364 /* LRServiceFactory.h */,
+				CC1CCBAA189705F700C8B364 /* LRServiceFactory.m */,
 			);
 			path = "Portal Services";
 			sourceTree = "<group>";
@@ -577,7 +577,7 @@
 				CC31CBBB17454C64006CDD4B /* HttpClient.m in Sources */,
 				292C8DA1186DB2CA008C549B /* LRBaseService.m in Sources */,
 				CC31CBC117454E11006CDD4B /* PrefsUtil.m in Sources */,
-				CC1CCBAB189705F700C8B364 /* ServiceFactory.m in Sources */,
+				CC1CCBAB189705F700C8B364 /* LRServiceFactory.m in Sources */,
 				CC31CBC417454E78006CDD4B /* Validator.m in Sources */,
 				CC31CBC817454EBD006CDD4B /* UIView+Loading.m in Sources */,
 				CC31CBCF17454EF2006CDD4B /* MBProgressHUD.m in Sources */,

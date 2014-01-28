@@ -17,7 +17,7 @@
 /**
  * @author Bruno Farache
  */
-@interface ServiceFactory : NSObject
+@interface LRServiceFactory : NSObject
 
 + (LRBaseService *)getService:(Class)clazz session:(LRSession *)session;
 

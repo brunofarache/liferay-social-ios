@@ -12,14 +12,14 @@
  * details.
  */
 
-#import "ServiceFactory.h"
+#import "LRServiceFactory.h"
 
 static NSMutableDictionary *_services;
 
 /**
  * @author Bruno Farache
  */
-@implementation ServiceFactory
+@implementation LRServiceFactory
 
 + (void)initialize {
 	if (!_services) {

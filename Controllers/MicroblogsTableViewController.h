@@ -13,8 +13,8 @@
  */
 
 #import "LRMicroblogsentryService_v62.h"
+#import "LRServiceFactory.h"
 #import "MicroblogsEntry.h"
-#import "ServiceFactory.h"
 
 /**
  * @author Bruno Farache

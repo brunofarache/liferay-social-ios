@@ -42,7 +42,7 @@
 
 	LRMicroblogsentryService_v62 *service =
 		(LRMicroblogsentryService_v62 *)
-			[ServiceFactory getService:[LRMicroblogsentryService_v62 class]
+			[LRServiceFactory getService:[LRMicroblogsentryService_v62 class]
 				session:session];
 
 	NSError *error;
