@@ -13,6 +13,8 @@
  */
 
 #import "ContactDetailsTableViewController.h"
+#import "LREntryService_v62.h"
+#import "LRServiceFactory.h"
 #import "PhoneService.h"
 
 /**

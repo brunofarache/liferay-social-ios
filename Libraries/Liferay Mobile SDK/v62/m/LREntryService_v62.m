@@ -12,15 +12,24 @@
  * details.
  */
 
-#import "ContactsTableViewController.h"
+#import "LREntryService_v62.h"
 
 /**
  * @author Bruno Farache
  */
-@interface GetGroupUsersDelegate : NSObject
+@implementation LREntryService_v62
 
-@property (nonatomic, strong) ContactsTableViewController *viewController;
+- (NSArray *)searchUsersAndContactsWithCompanyId:(long long)companyId keywords:(NSString *)keywords start:(int)start end:(int)end error:(NSError **)error {
+	NSDictionary *_params = @{
+		@"companyId": @(companyId),
+		@"keywords": keywords,
+		@"start": @(start),
+		@"end": @(end)
+	};
 
-- (id)init:(ContactsTableViewController *)viewController;
+	NSDictionary *_command = @{@"/contacts-portlet/entry/search-users-and-contacts": _params};
+
+	return (NSArray *)[self.session invoke:_command error:error];
+}
 
 @end

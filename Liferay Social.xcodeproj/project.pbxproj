@@ -39,8 +39,6 @@
 		CCAB24C317443E48001F0F3D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCAB24C217443E48001F0F3D /* CoreGraphics.framework */; };
 		CCB2A2DB174D455A006C3486 /* ContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB2A2DA174D455A006C3486 /* ContactsTableViewController.m */; };
 		CCB2A2E1174D566B006C3486 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB2A2DE174D566B006C3486 /* User.m */; };
-		CCB2A2E2174D566B006C3486 /* ContactsService.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB2A2E0174D566B006C3486 /* ContactsService.m */; };
-		CCB2A2EA174D5CE8006C3486 /* GetGroupUsersDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB2A2E9174D5CE8006C3486 /* GetGroupUsersDelegate.m */; };
 		CCE3A7A2174440D80022B6BF /* LiferaySocialAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE3A793174440D80022B6BF /* LiferaySocialAppDelegate.m */; };
 		CCE3A7A6174440D80022B6BF /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = CCE3A798174440D80022B6BF /* first.png */; };
 		CCE3A7A7174440D80022B6BF /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CCE3A799174440D80022B6BF /* first@2x.png */; };
@@ -58,6 +56,8 @@
 		CCE3A7CF17454AB20022B6BF /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE3A7CD17454AB20022B6BF /* MobileCoreServices.framework */; };
 		CCE3A7D017454AB20022B6BF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE3A7CE17454AB20022B6BF /* SystemConfiguration.framework */; };
 		CCE469A7177387E800B6FCDA /* ContactDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE469A6177387E800B6FCDA /* ContactDetailsTableViewController.m */; };
+		CCFB45C31899730D0037414C /* LREntryService_v62.m in Sources */ = {isa = PBXBuildFile; fileRef = CCFB45C21899730D0037414C /* LREntryService_v62.m */; };
+		CCFB45C618997FED0037414C /* GetContactsCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = CCFB45C518997FED0037414C /* GetContactsCallback.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -124,10 +124,6 @@
 		CCB2A2DA174D455A006C3486 /* ContactsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsTableViewController.m; sourceTree = "<group>"; };
 		CCB2A2DD174D566B006C3486 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		CCB2A2DE174D566B006C3486 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		CCB2A2DF174D566B006C3486 /* ContactsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsService.h; sourceTree = "<group>"; };
-		CCB2A2E0174D566B006C3486 /* ContactsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsService.m; sourceTree = "<group>"; };
-		CCB2A2E8174D5CE8006C3486 /* GetGroupUsersDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetGroupUsersDelegate.h; sourceTree = "<group>"; };
-		CCB2A2E9174D5CE8006C3486 /* GetGroupUsersDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetGroupUsersDelegate.m; sourceTree = "<group>"; };
 		CCE3A792174440D80022B6BF /* LiferaySocialAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiferaySocialAppDelegate.h; sourceTree = "<group>"; };
 		CCE3A793174440D80022B6BF /* LiferaySocialAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiferaySocialAppDelegate.m; sourceTree = "<group>"; };
 		CCE3A798174440D80022B6BF /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
@@ -160,6 +156,10 @@
 		CCE3A7CE17454AB20022B6BF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		CCE469A5177387E800B6FCDA /* ContactDetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactDetailsTableViewController.h; sourceTree = "<group>"; };
 		CCE469A6177387E800B6FCDA /* ContactDetailsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactDetailsTableViewController.m; sourceTree = "<group>"; };
+		CCFB45C1189973050037414C /* LREntryService_v62.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LREntryService_v62.h; sourceTree = "<group>"; };
+		CCFB45C21899730D0037414C /* LREntryService_v62.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LREntryService_v62.m; sourceTree = "<group>"; };
+		CCFB45C418997FED0037414C /* GetContactsCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GetContactsCallback.h; path = Callbacks/GetContactsCallback.h; sourceTree = "<group>"; };
+		CCFB45C518997FED0037414C /* GetContactsCallback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GetContactsCallback.m; path = Callbacks/GetContactsCallback.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +231,7 @@
 		292C8D9D186DB2CA008C549B /* h */ = {
 			isa = PBXGroup;
 			children = (
+				CCFB45C1189973050037414C /* LREntryService_v62.h */,
 				292C8D9E186DB2CA008C549B /* LRMicroblogsentryService_v62.h */,
 			);
 			path = h;
@@ -239,6 +240,7 @@
 		292C8D9F186DB2CA008C549B /* m */ = {
 			isa = PBXGroup;
 			children = (
+				CCFB45C21899730D0037414C /* LREntryService_v62.m */,
 				292C8DA0186DB2CA008C549B /* LRMicroblogsentryService_v62.m */,
 			);
 			path = m;
@@ -247,6 +249,8 @@
 		292C8DA6186DB5BE008C549B /* Callbacks */ = {
 			isa = PBXGroup;
 			children = (
+				CCFB45C418997FED0037414C /* GetContactsCallback.h */,
+				CCFB45C518997FED0037414C /* GetContactsCallback.m */,
 				292C8DAA186DB629008C549B /* GetMicroblogsCallback.h */,
 				292C8DAB186DB629008C549B /* GetMicroblogsCallback.m */,
 			);
@@ -391,19 +395,8 @@
 		CCB2A2DC174D566B006C3486 /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
-				CCB2A2DF174D566B006C3486 /* ContactsService.h */,
-				CCB2A2E0174D566B006C3486 /* ContactsService.m */,
 				CC51A45E176B6CA000745190 /* PhoneService.h */,
 				CC51A45F176B6CA000745190 /* PhoneService.m */,
-			);
-			path = Contacts;
-			sourceTree = "<group>";
-		};
-		CCB2A2E3174D5C51006C3486 /* Contacts */ = {
-			isa = PBXGroup;
-			children = (
-				CCB2A2E8174D5CE8006C3486 /* GetGroupUsersDelegate.h */,
-				CCB2A2E9174D5CE8006C3486 /* GetGroupUsersDelegate.m */,
 			);
 			path = Contacts;
 			sourceTree = "<group>";
@@ -424,7 +417,6 @@
 		CCE3A791174440D80022B6BF /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
-				CCB2A2E3174D5C51006C3486 /* Contacts */,
 				CCE3A792174440D80022B6BF /* LiferaySocialAppDelegate.h */,
 				CCE3A793174440D80022B6BF /* LiferaySocialAppDelegate.m */,
 				CC31CBBC17454C89006CDD4B /* ProgressDelegate.h */,
@@ -570,6 +562,7 @@
 				CCE3A7C817454A050022B6BF /* AFNetworkActivityIndicatorManager.m in Sources */,
 				292C8DA5186DB2CA008C549B /* LRMicroblogsentryService_v62.m in Sources */,
 				CCE3A7C917454A050022B6BF /* AFPropertyListRequestOperation.m in Sources */,
+				CCFB45C31899730D0037414C /* LREntryService_v62.m in Sources */,
 				CCE3A7CA17454A050022B6BF /* AFURLConnectionOperation.m in Sources */,
 				CCE3A7CB17454A050022B6BF /* AFXMLRequestOperation.m in Sources */,
 				CCE3A7CC17454A050022B6BF /* UIImageView+AFNetworking.m in Sources */,
@@ -584,6 +577,7 @@
 				CC31CBD317455097006CDD4B /* BaseService.m in Sources */,
 				292C8DA3186DB2CA008C549B /* LRHttpUtil.m in Sources */,
 				CC31CBD6174550D3006CDD4B /* HandleException.m in Sources */,
+				CCFB45C618997FED0037414C /* GetContactsCallback.m in Sources */,
 				CC31CBE3174550FA006CDD4B /* NSObject+SBJSON.m in Sources */,
 				CC31CBE4174550FA006CDD4B /* NSString+SBJSON.m in Sources */,
 				CC31CBE5174550FA006CDD4B /* SBJsonBase.m in Sources */,
@@ -593,8 +587,6 @@
 				CCB2A2DB174D455A006C3486 /* ContactsTableViewController.m in Sources */,
 				292C8DA4186DB2CA008C549B /* LRSession.m in Sources */,
 				CCB2A2E1174D566B006C3486 /* User.m in Sources */,
-				CCB2A2E2174D566B006C3486 /* ContactsService.m in Sources */,
-				CCB2A2EA174D5CE8006C3486 /* GetGroupUsersDelegate.m in Sources */,
 				CC51A45D176B6A0800745190 /* Phone.m in Sources */,
 				CC51A460176B6CA000745190 /* PhoneService.m in Sources */,
 				CCE469A7177387E800B6FCDA /* ContactDetailsTableViewController.m in Sources */,

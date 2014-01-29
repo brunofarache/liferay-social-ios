@@ -15,6 +15,8 @@
 #import "LRMicroblogsentryService_v62.h"
 #import "LRServiceFactory.h"
 #import "MicroblogsEntry.h"
+#import "PrefsUtil.h"
+#import "UIView+Loading.h"
 
 /**
  * @author Bruno Farache

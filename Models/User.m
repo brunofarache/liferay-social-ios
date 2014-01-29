@@ -23,30 +23,26 @@
 	self = [super init];
 
 	if (self) {
-		self.companyId = [[jsonObj objectForKey:@"companyId"] longValue];
-		self.contactId = [[jsonObj objectForKey:@"contactId"] longValue];
-
-		self.createDate =
-			[DateUtil convertNumberToDate:[jsonObj objectForKey:@"createDate"]];
-
 		self.emailAddress = [jsonObj objectForKey:@"emailAddress"];
-		self.facebookId = [[jsonObj objectForKey:@"facebookId"] longValue];
-		self.firstName = [jsonObj objectForKey:@"firstName"];
-		self.greeting = [jsonObj objectForKey:@"greeting"];
-		self.jobTitle = [jsonObj objectForKey:@"jobTitle"];
-		self.languageId = [jsonObj objectForKey:@"languageId"];
+		self.fullName = [jsonObj objectForKey:@"fullName"];
+		self.portalUser = [[jsonObj objectForKey:@"portalUser"] boolValue];
 
-		self.lastLoginDate =
-			[DateUtil convertNumberToDate:
-				[jsonObj objectForKey:@"lastLoginDate"]];
+		if (self.portalUser) {
+			self.block = [[jsonObj objectForKey:@"block"] boolValue];
+			self.connected = [[jsonObj objectForKey:@"connected"] boolValue];
+			self.connectionRequested =
+				[[jsonObj objectForKey:@"connectionRequested"] boolValue];
 
-		self.lastName = [jsonObj objectForKey:@"lastName"];
-		self.middleName = [jsonObj objectForKey:@"middleName"];
-		self.portraitId = [[jsonObj objectForKey:@"portraitId"] longValue];
-		self.screenName = [jsonObj objectForKey:@"screenName"];
-		self.timeZoneId = [jsonObj objectForKey:@"timeZoneId"];
-		self.userId = [[jsonObj objectForKey:@"userId"] longValue];
-		self.uuid = [jsonObj objectForKey:@"uuid"];
+			self.firstName = [jsonObj objectForKey:@"firstName"];
+			self.following = [[jsonObj objectForKey:@"following"] boolValue];
+			self.jobTitle = [jsonObj objectForKey:@"jobTitle"];
+			self.lastName = [jsonObj objectForKey:@"lastName"];
+			self.userId = [[jsonObj objectForKey:@"userId"] longLongValue];
+		}
+		else {
+			self.comments = [jsonObj objectForKey:@"comments"];
+			self.entryId = [[jsonObj objectForKey:@"entryId"] longLongValue];
+		}
 	}
 
 	return self;

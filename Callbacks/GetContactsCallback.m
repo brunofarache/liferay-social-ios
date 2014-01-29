@@ -12,12 +12,12 @@
  * details.
  */
 
-#import "GetGroupUsersDelegate.h"
+#import "GetContactsCallback.h"
 
 /**
  * @author Bruno Farache
  */
-@implementation GetGroupUsersDelegate
+@implementation GetContactsCallback
 
 - (id)init:(ContactsTableViewController *)viewController {
 	self = [super init];
@@ -29,30 +29,22 @@
 	return self;
 }
 
-- (void)requestFailed:(NSError *)error type:(int)type {
-	NSLog(@"%@", error);
+- (void)onFailure:(NSError *)error {
+	NSLog(@"Error: %@", error);
+
+	[self.viewController setEntries:[NSMutableArray array]];
 }
 
-- (void)requestFinished:(NSString *)response type:(int)type {
-	NSArray *jsonArray =
-		[BaseService handleException:response
-			view:self.viewController.tableView];
-
-	self.viewController.entries = [self toArray:jsonArray];
-
-	[self.viewController.tableView reloadData];
-}
-
-- (NSMutableArray *)toArray:(NSArray *)jsonArray {
+- (void)onSuccess:(id)result {
 	NSMutableArray *users = [NSMutableArray array];
 
-	for (NSDictionary *jsonObj in jsonArray) {
+	for (NSDictionary *jsonObj in result) {
 		User *user = [[User alloc] initWithJSON:jsonObj];
 
 		[users addObject:user];
 	}
 
-	return users;
+	[self.viewController setEntries:users];
 }
 
 @end

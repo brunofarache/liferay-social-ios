@@ -34,9 +34,7 @@
 - (void)viewDidLoad {
 	[self.navigationController.view showLoadingHUD];
 
-	GetMicroblogsCallback *callback =
-		[[GetMicroblogsCallback alloc]
-			init:self loadingView:self.navigationController.view];
+	GetMicroblogsCallback *callback = [[GetMicroblogsCallback alloc] init:self];
 
 	LRSession *session = [PrefsUtil getSession:callback];
 
@@ -47,6 +45,12 @@
 
 	NSError *error;
 	[service getMicroblogsEntriesWithStart:-1 end:-1 error:&error];
+}
+
+- (void)setEntries:(NSMutableArray *)entries {
+	[self.navigationController.view hideLoadingHUD];
+	_entries = entries;
+	[self.tableView reloadData];
 }
 
 #pragma mark - Private Methods

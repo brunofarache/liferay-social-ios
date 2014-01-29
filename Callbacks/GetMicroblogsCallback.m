@@ -19,45 +19,32 @@
  */
 @implementation GetMicroblogsCallback
 
-- (id)init:(MicroblogsTableViewController *)viewController
-		loadingView:(UIView *)loadingView {
-
+- (id)init:(MicroblogsTableViewController *)viewController {
 	self = [super init];
 
 	if (self) {
 		self.viewController = viewController;
-		self.loadingView = loadingView;
 	}
 
 	return self;
 }
 
 - (void)onFailure:(NSError *)error {
-	[self.loadingView hideLoadingHUD];
+	NSLog(@"Error: %@", error);
 
-	[BaseService showErrorMessage:error view:self.loadingView];
+	[self.viewController setEntries:[NSMutableArray array]];
 }
 
 - (void)onSuccess:(id)result {
-	[self.loadingView hideLoadingHUD];
-
-	NSArray *jsonArray = result;
-
-	self.viewController.entries = [self toArray:jsonArray];
-
-	[self.viewController.tableView reloadData];
-}
-
-- (NSMutableArray *)toArray:(NSArray *)jsonArray {
 	NSMutableArray *entries = [NSMutableArray array];
 
-	for (NSDictionary *jsonObj in jsonArray) {
+	for (NSDictionary *jsonObj in result) {
 		MicroblogsEntry *entry = [[MicroblogsEntry alloc] initWithJSON:jsonObj];
 
 		[entries addObject:entry];
 	}
 
-	return entries;
+	[self.viewController setEntries:entries];
 }
 
 @end

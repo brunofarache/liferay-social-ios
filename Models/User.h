@@ -20,24 +20,19 @@
  */
 @interface User : NSObject
 
-@property (nonatomic) long companyId;
-@property (nonatomic) long contactId;
-@property (nonatomic, strong) NSDate *createDate;
+@property (nonatomic) BOOL block;
+@property (nonatomic, strong) NSString *comments;
+@property (nonatomic) BOOL connected;
+@property (nonatomic) BOOL connectionRequested;
 @property (nonatomic, strong) NSString *emailAddress;
-@property (nonatomic) long facebookId;
+@property (nonatomic) long long entryId;
 @property (nonatomic, strong) NSString *firstName;
-@property (nonatomic, strong) NSString *greeting;
+@property (nonatomic) BOOL following;
+@property (nonatomic, strong) NSString *fullName;
 @property (nonatomic, strong) NSString *jobTitle;
-@property (nonatomic, strong) NSString *languageId;
-@property (nonatomic, strong) NSDate *lastLoginDate;
 @property (nonatomic, strong) NSString *lastName;
-@property (nonatomic, strong) NSString *middleName;
-@property (nonatomic, strong) Phone *phone;
-@property (nonatomic) long portraitId;
-@property (nonatomic, strong) NSString *screenName;
-@property (nonatomic, strong) NSString *timeZoneId;
-@property (nonatomic) long userId;
-@property (nonatomic, strong) NSString *uuid;
+@property (nonatomic) BOOL portalUser;
+@property (nonatomic) long long userId;
 
 - (id)initWithJSON:(NSDictionary *)jsonObj;
 

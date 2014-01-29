@@ -13,7 +13,7 @@
  */
 
 #import "ContactsTableViewController.h"
-#import "ContactsService.h"
+#import "GetContactsCallback.h"
 
 /**
  * @author Bruno Farache
@@ -32,8 +32,25 @@
 }
 
 - (void)viewDidLoad {
-	[ContactsService getGroupUsers:self
-		loadingView:self.navigationController.view];
+	[self.navigationController.view showLoadingHUD];
+
+	GetContactsCallback *callback = [[GetContactsCallback alloc] init:self];
+	LRSession *session = [PrefsUtil getSession:callback];
+
+	LREntryService_v62 *service =
+		(LREntryService_v62 *)
+			[LRServiceFactory getService:[LREntryService_v62 class]
+				session:session];
+
+	NSError *error;
+	[service searchUsersAndContactsWithCompanyId:10157 keywords:@""
+		start:-1 end:-1 error:&error];
+}
+
+- (void)setEntries:(NSMutableArray *)entries {
+	[self.navigationController.view hideLoadingHUD];
+	_entries = entries;
+	[self.tableView reloadData];
 }
 
 #pragma mark - UITableViewDataSource
@@ -65,7 +82,7 @@
 
 	User *user = [self.entries objectAtIndex:indexPath.row];
 
-	[cell.textLabel setText:user.firstName];
+	[cell.textLabel setText:user.fullName];
 
 	return cell;
 }
@@ -77,16 +94,16 @@
 
 	User *user = [self.entries objectAtIndex:indexPath.row];
 
-	NSArray *phones = [PhoneService getPhones:user.contactId];
-
-	if ([phones count]) {
-		[user setPhone:phones[0]];
-	}
-
-	ContactDetailsTableViewController *details =
-		[[ContactDetailsTableViewController alloc] init:user];
-
-	[self.navigationController pushViewController:details animated:YES];
+//	NSArray *phones = [PhoneService getPhones:user.contactId];
+//
+//	if ([phones count]) {
+//		[user setPhone:phones[0]];
+//	}
+//
+//	ContactDetailsTableViewController *details =
+//		[[ContactDetailsTableViewController alloc] init:user];
+//
+//	[self.navigationController pushViewController:details animated:YES];
 }
 
 @end

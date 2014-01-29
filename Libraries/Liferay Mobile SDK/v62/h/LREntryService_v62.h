@@ -12,14 +12,13 @@
  * details.
  */
 
-#import "GetGroupUsersDelegate.h"
+#import "LRBaseService.h"
 
 /**
  * @author Bruno Farache
  */
-@interface ContactsService : BaseService
+@interface LREntryService_v62 : LRBaseService
 
-+ (void)getGroupUsers:(ContactsTableViewController *)viewController
-	loadingView:(UIView *)loadingView;
+- (NSArray *)searchUsersAndContactsWithCompanyId:(long long)companyId keywords:(NSString *)keywords start:(int)start end:(int)end error:(NSError **)error;
 
 @end

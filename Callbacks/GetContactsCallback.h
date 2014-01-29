@@ -12,15 +12,15 @@
  * details.
  */
 
-#import "MicroblogsTableViewController.h"
+#import "ContactsTableViewController.h"
 
 /**
- * @author Silvio Santos
+ * @author Bruno Farache
  */
-@interface GetMicroblogsCallback : NSObject <LRCallback>
+@interface GetContactsCallback : NSObject <LRCallback>
 
-@property (nonatomic, strong) MicroblogsTableViewController *viewController;
+@property (nonatomic, strong) ContactsTableViewController *viewController;
 
-- (id)init:(MicroblogsTableViewController *)viewController;
+- (id)init:(ContactsTableViewController *)viewController;
 
 @end
