@@ -94,16 +94,20 @@
 
 	User *user = [self.entries objectAtIndex:indexPath.row];
 
-//	NSArray *phones = [PhoneService getPhones:user.contactId];
-//
-//	if ([phones count]) {
-//		[user setPhone:phones[0]];
-//	}
-//
-//	ContactDetailsTableViewController *details =
-//		[[ContactDetailsTableViewController alloc] init:user];
-//
-//	[self.navigationController pushViewController:details animated:YES];
+	if (!user.portalUser) {
+		return;
+	}
+
+	NSArray *phones = [PhoneService getPhones:user.contactId];
+
+	if ([phones count]) {
+		[user setPhone:phones[0]];
+	}
+
+	ContactDetailsTableViewController *details =
+		[[ContactDetailsTableViewController alloc] init:user];
+
+	[self.navigationController pushViewController:details animated:YES];
 }
 
 @end

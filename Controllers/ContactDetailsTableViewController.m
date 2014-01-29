@@ -58,7 +58,7 @@
 	}
 
 	if (indexPath.section == 0) {
-//		[cell.textLabel setText:self.user.phone.number];
+		[cell.textLabel setText:self.user.phone.number];
 	}
 	else if (indexPath.section == 1) {
 		[cell.textLabel setText:self.user.emailAddress];
@@ -78,7 +78,7 @@
 	NSString *action;
 
 	if (indexPath.section == 0) {
-//		action = [NSString stringWithFormat:@"tel:%@", self.user.phone.number];
+		action = [NSString stringWithFormat:@"tel:%@", self.user.phone.number];
 	}
 	else if (indexPath.section == 1) {
 		action =

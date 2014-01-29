@@ -33,11 +33,18 @@
 			self.connectionRequested =
 				[[jsonObj objectForKey:@"connectionRequested"] boolValue];
 
+			self.contactId =
+				[[jsonObj objectForKey:@"contactId"] longLongValue];
+
 			self.firstName = [jsonObj objectForKey:@"firstName"];
 			self.following = [[jsonObj objectForKey:@"following"] boolValue];
 			self.jobTitle = [jsonObj objectForKey:@"jobTitle"];
 			self.lastName = [jsonObj objectForKey:@"lastName"];
+			self.portraitId =
+				[[jsonObj objectForKey:@"portraitId"] longLongValue];
+
 			self.userId = [[jsonObj objectForKey:@"userId"] longLongValue];
+			self.uuid = [jsonObj objectForKey:@"uuid"];
 		}
 		else {
 			self.comments = [jsonObj objectForKey:@"comments"];
