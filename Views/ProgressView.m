@@ -21,10 +21,9 @@
 
 + (void)hide:(UIViewController *)viewController {
 	UIView *parent = viewController.navigationController.view;
-	[parent setUserInteractionEnabled:YES];
-
 	UIView *view = [parent viewWithTag:PROGRESS_TAG];
 
+	[parent setUserInteractionEnabled:YES];
 	[view removeFromSuperview];
 }
 
