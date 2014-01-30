@@ -19,7 +19,7 @@
  */
 @implementation MicroblogsEntry
 
-- (id)initWithJSON:(NSDictionary *)jsonObj {
+- (id)init:(NSDictionary *)jsonObj {
 	self = [super init];
 
 	if (self) {

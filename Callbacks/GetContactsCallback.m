@@ -39,7 +39,7 @@
 	NSMutableArray *users = [NSMutableArray array];
 
 	for (NSDictionary *jsonObj in result) {
-		User *user = [[User alloc] initWithJSON:jsonObj];
+		User *user = [[User alloc] init:jsonObj];
 
 		[users addObject:user];
 	}

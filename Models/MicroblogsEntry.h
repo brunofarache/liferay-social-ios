@@ -31,6 +31,6 @@
 @property (nonatomic) long userId;
 @property (nonatomic, strong) NSString *userName;
 
-- (id)initWithJSON:(NSDictionary *)jsonObj;
+- (id)init:(NSDictionary *)jsonObj;
 
 @end

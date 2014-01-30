@@ -14,6 +14,7 @@
 
 #import "ContactsTableViewController.h"
 #import "GetContactsCallback.h"
+#import "GetDetailsCallback.h"
 
 /**
  * @author Bruno Farache
@@ -51,6 +52,14 @@
 	[self.navigationController.view hideLoadingHUD];
 	_entries = entries;
 	[self.tableView reloadData];
+}
+
+- (void)showDetails:(User *)user {
+	DetailsTableViewController *detailsController =
+		[[DetailsTableViewController alloc] init:user];
+
+	[self.navigationController pushViewController:detailsController
+		animated:YES];
 }
 
 #pragma mark - UITableViewDataSource
@@ -98,16 +107,26 @@
 		return;
 	}
 
-	NSArray *phones = [PhoneService getPhones:user.contactId];
+	LRBatchSession *batch = [[LRBatchSession alloc]
+		init:[PrefsUtil getSession]];
 
-	if ([phones count]) {
-		[user setPhone:phones[0]];
-	}
+	GetDetailsCallback *callback = [[GetDetailsCallback alloc]
+		init:self user:user];
 
-	ContactDetailsTableViewController *details =
-		[[ContactDetailsTableViewController alloc] init:user];
+	[batch setCallback:callback];
 
-	[self.navigationController pushViewController:details animated:YES];
+	NSError *error;
+
+	LRContactService_v62 *contactService = [[LRContactService_v62 alloc]
+		init:batch];
+
+	LRPhoneService_v62 *phoneService = [[LRPhoneService_v62 alloc] init:batch];
+
+	[contactService getContactWithContactId:user.contactId error:&error];
+	[phoneService getPhonesWithClassName:@"com.liferay.portal.model.Contact"
+		 classPK:user.contactId error:&error];
+
+	[batch invoke:&error];
 }
 
 @end

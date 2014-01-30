@@ -12,15 +12,15 @@
  * details.
  */
 
-#import "BaseService.h"
-#import "HttpClient.h"
-#import "Phone.h"
+#import "User.h"
 
 /**
  * @author Bruno Farache
  */
-@interface PhoneService : BaseService
+@interface DetailsTableViewController : UITableViewController
 
-+ (NSArray *)getPhones:(long)contactId;
+@property (nonatomic, strong) User *user;
+
+- (id)init:(User *)user;
 
 @end

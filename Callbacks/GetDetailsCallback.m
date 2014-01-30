@@ -12,16 +12,33 @@
  * details.
  */
 
+#import "GetDetailsCallback.h"
+
 /**
  * @author Bruno Farache
  */
-@interface Phone : NSObject
+@implementation GetDetailsCallback
 
-@property (nonatomic, strong) NSString *extension;
-@property (nonatomic, strong) NSString *number;
-@property (nonatomic) long phoneId;
-@property (nonatomic) BOOL primary;
+- (id)init:(ContactsTableViewController *)viewController user:(User *)user {
+	self = [super init];
 
-- (id)initWithJSON:(NSDictionary *)jsonObj;
+	if (self) {
+		self.viewController = viewController;
+		self.user = user;
+	}
+
+	return self;
+}
+
+- (void)onFailure:(NSError *)error {
+	NSLog(@"Error: %@", error);
+}
+
+- (void)onSuccess:(id)result {
+	Contact *contact = [[Contact alloc] init:result];
+
+	[self.user setContact:contact];
+	[self.viewController showDetails:self.user];
+}
 
 @end

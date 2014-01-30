@@ -12,7 +12,7 @@
  * details.
  */
 
-#import "Phone.h"
+#import "Contact.h"
 
 /**
  * @author Bruno Farache
@@ -23,6 +23,7 @@
 @property (nonatomic, strong) NSString *comments;
 @property (nonatomic) BOOL connected;
 @property (nonatomic) BOOL connectionRequested;
+@property (nonatomic, strong) Contact *contact;
 @property (nonatomic) long long contactId;
 @property (nonatomic, strong) NSString *emailAddress;
 @property (nonatomic) long long entryId;
@@ -31,12 +32,11 @@
 @property (nonatomic, strong) NSString *fullName;
 @property (nonatomic, strong) NSString *jobTitle;
 @property (nonatomic, strong) NSString *lastName;
-@property (nonatomic, strong) Phone *phone;
 @property (nonatomic) BOOL portalUser;
 @property (nonatomic) long long portraitId;
 @property (nonatomic) long long userId;
 @property (nonatomic, strong) NSString *uuid;
 
-- (id)initWithJSON:(NSDictionary *)jsonObj;
+- (id)init:(NSDictionary *)jsonObj;
 
 @end

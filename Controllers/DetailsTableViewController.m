@@ -12,12 +12,12 @@
  * details.
  */
 
-#import "ContactDetailsTableViewController.h"
+#import "DetailsTableViewController.h"
 
 /**
  * @author Bruno Farache
  */
-@implementation ContactDetailsTableViewController
+@implementation DetailsTableViewController
 
 - (id)init:(User *)user {
 	self = [super initWithStyle:UITableViewStyleGrouped];
@@ -33,11 +33,21 @@
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-	return 3;
+	return 4;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView
-		numberOfRowsInSection:(NSInteger)section {
+ 		numberOfRowsInSection:(NSInteger)section {
+
+	if (section == 3) {
+		NSArray *phones = self.user.contact.phones;
+
+		if ([phones count] == 0) {
+			return 1;
+		}
+
+		return [phones count];
+	}
 
 	return 1;
 }
@@ -57,17 +67,45 @@
 				reuseIdentifier:CellIdentifier];
 	}
 
+	NSString *text = @"";
+
 	if (indexPath.section == 0) {
-		[cell.textLabel setText:self.user.phone.number];
+		text = self.user.fullName;
 	}
 	else if (indexPath.section == 1) {
-		[cell.textLabel setText:self.user.emailAddress];
+		text = self.user.contact.emailAddress;
 	}
 	else if (indexPath.section == 2) {
-		[cell.textLabel setText:@"Add to contacts"];
+		text = self.user.contact.birthday;
+	}
+	else {
+		NSArray *phones = self.user.contact.phones;
+
+		if ([phones count] > 0) {
+			text = [phones objectAtIndex:indexPath.row];
+		}
 	}
 
+	[cell.textLabel setText:text];
+
 	return cell;
+}
+
+- (NSString *)tableView:(UITableView *)tableView
+		titleForHeaderInSection:(NSInteger)section {
+
+	if (section == 0) {
+		return @"Name";
+	}
+	else if (section == 1) {
+		return @"Email";
+	}
+	else if (section == 2) {
+		return @"Birthday";
+	}
+	else {
+		return @"Phones";
+	}
 }
 
 #pragma mark - UITableViewDelegate
@@ -77,12 +115,14 @@
 
 	NSString *action;
 
-	if (indexPath.section == 0) {
-		action = [NSString stringWithFormat:@"tel:%@", self.user.phone.number];
-	}
-	else if (indexPath.section == 1) {
+	if (indexPath.section == 1) {
 		action =
 			[NSString stringWithFormat:@"mailto:%@", self.user.emailAddress];
+	}
+	else if (indexPath.section == 3) {
+		action =
+			[NSString stringWithFormat:@"tel:%@",
+				self.user.contact.phones[indexPath.row]];
 	}
 
 	NSURL *URL = [NSURL URLWithString:action];

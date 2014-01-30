@@ -12,23 +12,17 @@
  * details.
  */
 
-#import "DetailsTableViewController.h"
-#import "LRBatchSession.h"
-#import "LRContactService_v62.h"
-#import "LREntryService_v62.h"
-#import "LRPhoneService_v62.h"
-#import "LRServiceFactory.h"
-#import "PrefsUtil.h"
-#import "UIView+Loading.h"
-#import "User.h"
+#import "DateUtil.h"
 
 /**
  * @author Bruno Farache
  */
-@interface ContactsTableViewController : UITableViewController
+@interface Contact : NSObject
 
-@property (nonatomic, strong) NSMutableArray *entries;
+@property (nonatomic, retain) NSString *birthday;
+@property (nonatomic, retain) NSString *emailAddress;
+@property (nonatomic, retain) NSMutableArray *phones;
 
-- (void)showDetails:(User *)user;
+- (id)init:(NSArray *)jsonArray;
 
 @end

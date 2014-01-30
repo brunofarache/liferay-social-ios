@@ -13,6 +13,7 @@
  */
 
 #import "ContactsTableViewController.h"
+#import "User.h"
 
 /**
  * @author Bruno Farache

@@ -12,24 +12,16 @@
  * details.
  */
 
-#import "Phone.h"
+#import <Foundation/Foundation.h>
+#import "LRBaseService.h"
 
 /**
- * @author Bruno Farache
+ * author Bruno Farache
  */
-@implementation Phone
+@interface LRContactService_v62 : LRBaseService
 
-- (id)initWithJSON:(NSDictionary *)jsonObj {
-	self = [super init];
-
-	if (self) {
-		self.extension = [jsonObj objectForKey:@"extension"];
-		self.number = [jsonObj objectForKey:@"number"];
-		self.phoneId = [[jsonObj objectForKey:@"phoneId"] longValue];
-		self.primary = [[jsonObj objectForKey:@"primary"] boolValue];
-	}
-
-	return self;
-}
+- (NSDictionary *)getContactWithContactId:(long long)contactId error:(NSError **)error;
+- (NSArray *)getContactsWithClassNameId:(long long)classNameId classPK:(long long)classPK start:(int)start end:(int)end orderByComparator:(NSDictionary *)orderByComparator error:(NSError **)error;
+- (NSNumber *)getContactsCountWithClassNameId:(long long)classNameId classPK:(long long)classPK error:(NSError **)error;
 
 @end
