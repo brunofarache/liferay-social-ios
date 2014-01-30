@@ -12,8 +12,6 @@
  * details.
  */
 
-#import <Foundation/Foundation.h>
-
 /**
  * @author Bruno Farache
  */

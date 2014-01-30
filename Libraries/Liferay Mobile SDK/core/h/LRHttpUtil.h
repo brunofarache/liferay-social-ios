@@ -12,7 +12,6 @@
  * details.
  */
 
-#import <Foundation/Foundation.h>
 #import "LRBatchSession.h"
 
 /**

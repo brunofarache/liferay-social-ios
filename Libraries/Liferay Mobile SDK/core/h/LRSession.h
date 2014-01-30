@@ -12,7 +12,6 @@
  * details.
  */
 
-#import <Foundation/Foundation.h>
 #import "LRCallback.h"
 
 #define DEFAULT_CONNECTION_TIMEOUT 15
