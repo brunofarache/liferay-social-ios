@@ -162,8 +162,8 @@
 				292C8D98186DB2CA008C549B /* LRBaseService.m */,
 				292C8D99186DB2CA008C549B /* LRBatchSession.m */,
 				292C8D9A186DB2CA008C549B /* LRHttpUtil.m */,
-				CCFB45D4189A80700037414C /* LRServiceFactory.m */,
 				292C8D9B186DB2CA008C549B /* LRSession.m */,
+				CCFB45D4189A80700037414C /* LRServiceFactory.m */,
 			);
 			path = m;
 			sourceTree = "<group>";

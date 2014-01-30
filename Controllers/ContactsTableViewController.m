@@ -107,13 +107,10 @@
 		return;
 	}
 
-	LRBatchSession *batch = [[LRBatchSession alloc]
-		init:[PrefsUtil getSession]];
+	GetDetailsCallback *callback = [[GetDetailsCallback alloc] init:self
+		user:user];
 
-	GetDetailsCallback *callback = [[GetDetailsCallback alloc]
-		init:self user:user];
-
-	[batch setCallback:callback];
+	LRBatchSession *batch = [PrefsUtil getBatchSession:callback];
 
 	NSError *error;
 
@@ -123,6 +120,7 @@
 	LRPhoneService_v62 *phoneService = [[LRPhoneService_v62 alloc] init:batch];
 
 	[contactService getContactWithContactId:user.contactId error:&error];
+
 	[phoneService getPhonesWithClassName:@"com.liferay.portal.model.Contact"
 		 classPK:user.contactId error:&error];
 
