@@ -32,7 +32,7 @@
 }
 
 - (void)viewDidLoad {
-	[self.navigationController.view showLoadingHUD];
+	[ProgressView show:self];
 
 	GetMicroblogsCallback *callback = [[GetMicroblogsCallback alloc] init:self];
 
@@ -48,7 +48,7 @@
 }
 
 - (void)setEntries:(NSMutableArray *)entries {
-	[self.navigationController.view hideLoadingHUD];
+	[ProgressView hide:self];
 	_entries = entries;
 	[self.tableView reloadData];
 }

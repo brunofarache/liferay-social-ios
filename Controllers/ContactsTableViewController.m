@@ -33,7 +33,7 @@
 }
 
 - (void)viewDidLoad {
-	[self.navigationController.view showLoadingHUD];
+	[ProgressView show:self];
 
 	GetContactsCallback *callback = [[GetContactsCallback alloc] init:self];
 	LRSession *session = [PrefsUtil getSession:callback];
@@ -44,12 +44,12 @@
 				session:session];
 
 	NSError *error;
-	[service searchUsersAndContactsWithCompanyId:10157 keywords:@""
-		start:-1 end:-1 error:&error];
+	[service searchUsersAndContactsWithCompanyId:10157 keywords:@"" start:-1
+		end:-1 error:&error];
 }
 
 - (void)setEntries:(NSMutableArray *)entries {
-	[self.navigationController.view hideLoadingHUD];
+	[ProgressView hide:self];
 	_entries = entries;
 	[self.tableView reloadData];
 }

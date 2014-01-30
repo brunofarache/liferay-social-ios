@@ -19,7 +19,7 @@
 #import "LRPhoneService_v62.h"
 #import "LRServiceFactory.h"
 #import "PrefsUtil.h"
-#import "UIView+Loading.h"
+#import "ProgressView.h"
 #import "User.h"
 
 /**

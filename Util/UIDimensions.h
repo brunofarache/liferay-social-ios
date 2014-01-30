@@ -15,6 +15,11 @@
 /**
  * @author Bruno Farache
  */
+
 #define CELL_PADDING	26
 #define DETAIL_FONT		[UIFont systemFontOfSize:12]
 #define TITLE_FONT		[UIFont boldSystemFontOfSize:14]
+
+#define PROGRESS_RADIUS	5
+#define PROGRESS_HEIGHT	100
+#define PROGRESS_WIDTH	100

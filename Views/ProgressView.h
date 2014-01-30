@@ -12,13 +12,14 @@
  * details.
  */
 
+#define PROGRESS_TAG	51
+
 /**
  * @author Bruno Farache
- * @author Josiane Bezerra
  */
-@interface ProgressDelegate : NSObject
+@interface ProgressView : NSObject
 
-- (void)setProgress:(float)progress;
-- (void)showProgressBar:(BOOL)showProgressBar;
++ (void)hide:(UIViewController *)viewController;
++ (void)show:(UIViewController *)viewController;
 
 @end

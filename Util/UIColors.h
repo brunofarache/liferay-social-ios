@@ -12,15 +12,10 @@
  * details.
  */
 
-#import "MBProgressHUD.h"
-
 /**
- * @author Josiane Bezerra
+ * @author Bruno Farache
  */
-@interface UIView (Loading) <MBProgressHUDDelegate>
 
-- (void)hideLoadingHUD;
-- (void)showLoadingHUD;
-- (void)showMessageHUD:(NSString *)message customView:(UIView *)view;
-
-@end
+#define PROGRESS_COLOR			[UIColor colorWithWhite:0.0 alpha:0.75]
+#define PROGRESS_SHADOW_COLOR	[UIColor blackColor]
+#define PROGRESS_SHADOW_OPACITY	0.25
