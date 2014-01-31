@@ -35,7 +35,7 @@
 	[parent addSubview:progress];
 }
 
-#pragma Private Methods
+#pragma mark - Private Methods
 
 + (UIView *)createProgress:(UIView *)parent {
 	UIView *progress = [[UIView alloc] initWithFrame:

@@ -26,8 +26,8 @@
 		NSDictionary *contact = [jsonArray objectAtIndex:0];
 		self.emailAddress = [contact objectForKey:@"emailAddress"];
 
-		self.phones = [[NSMutableArray alloc] init];
 		NSArray *phones = [jsonArray objectAtIndex:1];
+		self.phones = [[NSMutableArray alloc] init];
 
 		for (NSDictionary *phone in phones) {
 			[self.phones addObject:[phone objectForKey:@"number"]];

@@ -23,10 +23,10 @@
 
 @interface PrefsUtil : NSObject
 
++ (LRBatchSession *)getBatchSession:(id<LRCallback>)callback;
 + (NSString *)getLogin;
 + (NSString *)getPassword;
 + (NSString *)getServer;
-+ (LRBatchSession *)getBatchSession:(id<LRCallback>)callback;
 + (LRSession *)getSession;
 + (LRSession *)getSession:(id<LRCallback>)callback;
 + (void)setLogin:(NSString *)login;

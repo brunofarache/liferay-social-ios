@@ -22,6 +22,10 @@ static NSUserDefaults *_userDefaults;
  */
 @implementation PrefsUtil
 
++ (LRBatchSession *)getBatchSession:(id<LRCallback>)callback {
+	return [[LRBatchSession alloc] init:[self getSession:callback]];
+}
+
 + (NSString *)getLogin {
 	return @"test@liferay.com";
 }
@@ -32,10 +36,6 @@ static NSUserDefaults *_userDefaults;
 
 + (NSString *)getServer {
 	return @"http://localhost:8080";
-}
-
-+ (LRBatchSession *)getBatchSession:(id<LRCallback>)callback {
-	return [[LRBatchSession alloc] init:[self getSession:callback]];
 }
 
 + (LRSession *)getSession {
