@@ -28,7 +28,7 @@
 	self.tabBarController = [[UITabBarController alloc] init];
 
 	UIViewController *contactsViewController =
-		[[ContactsTableViewController alloc] init];
+		[[UsersTableViewController alloc] init];
 
 	UINavigationController *contactsNavigationController =
 		[self getNavigationController:contactsViewController];

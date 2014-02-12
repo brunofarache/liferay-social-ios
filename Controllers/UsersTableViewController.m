@@ -12,14 +12,14 @@
  * details.
  */
 
-#import "ContactsTableViewController.h"
-#import "GetContactsCallback.h"
+#import "UsersTableViewController.h"
 #import "GetDetailsCallback.h"
+#import "GetUsersCallback.h"
 
 /**
  * @author Bruno Farache
  */
-@implementation ContactsTableViewController
+@implementation UsersTableViewController
 
 - (id)init {
 	self = [super initWithStyle:UITableViewStylePlain];
@@ -35,7 +35,7 @@
 - (void)viewDidLoad {
 	[ProgressView show:self];
 
-	GetContactsCallback *callback = [[GetContactsCallback alloc] init:self];
+	GetUsersCallback *callback = [[GetUsersCallback alloc] init:self];
 	LRSession *session = [PrefsUtil getSession:callback];
 
 	LREntryService_v62 *service =
@@ -48,9 +48,9 @@
 		end:-1 error:&error];
 }
 
-- (void)setEntries:(NSMutableArray *)entries {
+- (void)setUsers:(NSMutableArray *)entries {
 	[ProgressView hide:self];
-	_entries = entries;
+	_users = entries;
 	[self.tableView reloadData];
 }
 
@@ -71,7 +71,7 @@
 - (NSInteger)tableView:(UITableView *)tableView
 		numberOfRowsInSection:(NSInteger)section {
 
-	return [self.entries count];
+	return [self.users count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
@@ -89,7 +89,7 @@
 				reuseIdentifier:CellIdentifier];
 	}
 
-	User *user = [self.entries objectAtIndex:indexPath.row];
+	User *user = [self.users objectAtIndex:indexPath.row];
 
 	[cell.textLabel setText:user.fullName];
 
@@ -101,7 +101,7 @@
 - (void)tableView:(UITableView *)tableView
 		didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
-	User *user = [self.entries objectAtIndex:indexPath.row];
+	User *user = [self.users objectAtIndex:indexPath.row];
 
 	if (!user.portalUser) {
 		return;
@@ -122,7 +122,7 @@
 	[contactService getContactWithContactId:user.contactId error:&error];
 
 	[phoneService getPhonesWithClassName:@"com.liferay.portal.model.Contact"
-		 classPK:user.contactId error:&error];
+		classPK:user.contactId error:&error];
 
 	[batch invoke:&error];
 }

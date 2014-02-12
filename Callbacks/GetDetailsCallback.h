@@ -12,8 +12,8 @@
  * details.
  */
 
-#import "ContactsTableViewController.h"
 #import "LRCallback.h"
+#import "UsersTableViewController.h"
 
 /**
  * @author Bruno Farache
@@ -21,8 +21,8 @@
 @interface GetDetailsCallback : NSObject <LRCallback>
 
 @property (nonatomic, retain) User *user;
-@property (nonatomic, strong) ContactsTableViewController *viewController;
+@property (nonatomic, strong) UsersTableViewController *viewController;
 
-- (id)init:(ContactsTableViewController *)viewController user:(User *)user;
+- (id)init:(UsersTableViewController *)viewController user:(User *)user;
 
 @end

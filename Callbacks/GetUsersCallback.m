@@ -12,14 +12,14 @@
  * details.
  */
 
-#import "GetContactsCallback.h"
+#import "GetUsersCallback.h"
 
 /**
  * @author Bruno Farache
  */
-@implementation GetContactsCallback
+@implementation GetUsersCallback
 
-- (id)init:(ContactsTableViewController *)viewController {
+- (id)init:(UsersTableViewController *)viewController {
 	self = [super init];
 
 	if (self) {
@@ -32,7 +32,7 @@
 - (void)onFailure:(NSError *)error {
 	NSLog(@"Error: %@", error);
 
-	[self.viewController setEntries:[NSMutableArray array]];
+	[self.viewController setUsers:[NSMutableArray array]];
 }
 
 - (void)onSuccess:(id)result {
@@ -44,7 +44,7 @@
 		[users addObject:user];
 	}
 
-	[self.viewController setEntries:users];
+	[self.viewController setUsers:users];
 }
 
 @end

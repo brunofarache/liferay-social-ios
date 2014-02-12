@@ -19,7 +19,7 @@
  */
 @implementation GetDetailsCallback
 
-- (id)init:(ContactsTableViewController *)viewController user:(User *)user {
+- (id)init:(UsersTableViewController *)viewController user:(User *)user {
 	self = [super init];
 
 	if (self) {

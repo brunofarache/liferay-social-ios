@@ -12,16 +12,21 @@
  * details.
  */
 
-#import "ContactsTableViewController.h"
-#import "User.h"
+#import "DetailsTableViewController.h"
+#import "LRContactService_v62.h"
+#import "LREntryService_v62.h"
+#import "LRPhoneService_v62.h"
+#import "LRServiceFactory.h"
+#import "PrefsUtil.h"
+#import "ProgressView.h"
 
 /**
  * @author Bruno Farache
  */
-@interface GetContactsCallback : NSObject <LRCallback>
+@interface UsersTableViewController : UITableViewController
 
-@property (nonatomic, strong) ContactsTableViewController *viewController;
+@property (nonatomic, strong) NSMutableArray *users;
 
-- (id)init:(ContactsTableViewController *)viewController;
+- (void)showDetails:(User *)user;
 
 @end

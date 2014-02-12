@@ -12,8 +12,8 @@
  * details.
  */
 
-#import "ContactsTableViewController.h"
 #import "MicroblogsTableViewController.h"
+#import "UsersTableViewController.h"
 
 /**
  * @author Bruno Farache
