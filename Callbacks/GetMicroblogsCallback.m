@@ -19,11 +19,11 @@
  */
 @implementation GetMicroblogsCallback
 
-- (id)init:(MicroblogsTableViewController *)viewController {
+- (id)init:(MicroblogsTableViewController *)controller {
 	self = [super init];
 
 	if (self) {
-		self.viewController = viewController;
+		self.controller = controller;
 	}
 
 	return self;
@@ -32,7 +32,7 @@
 - (void)onFailure:(NSError *)error {
 	NSLog(@"Error: %@", error);
 
-	[self.viewController setEntries:[NSMutableArray array]];
+	[self.controller setEntries:[NSMutableArray array]];
 }
 
 - (void)onSuccess:(id)result {
@@ -44,7 +44,7 @@
 		[entries addObject:entry];
 	}
 
-	[self.viewController setEntries:entries];
+	[self.controller setEntries:entries];
 }
 
 @end

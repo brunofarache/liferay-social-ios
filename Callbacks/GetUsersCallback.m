@@ -19,11 +19,11 @@
  */
 @implementation GetUsersCallback
 
-- (id)init:(UsersTableViewController *)viewController {
+- (id)init:(UsersTableViewController *)controller {
 	self = [super init];
 
 	if (self) {
-		self.viewController = viewController;
+		self.controller = controller;
 	}
 
 	return self;
@@ -32,7 +32,7 @@
 - (void)onFailure:(NSError *)error {
 	NSLog(@"Error: %@", error);
 
-	[self.viewController setUsers:[NSMutableArray array]];
+	[self.controller setUsers:[NSMutableArray array]];
 }
 
 - (void)onSuccess:(id)result {
@@ -44,7 +44,7 @@
 		[users addObject:user];
 	}
 
-	[self.viewController setUsers:users];
+	[self.controller setUsers:users];
 }
 
 @end

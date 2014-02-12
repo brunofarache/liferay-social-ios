@@ -19,11 +19,11 @@
  */
 @implementation GetDetailsCallback
 
-- (id)init:(UsersTableViewController *)viewController user:(User *)user {
+- (id)init:(UsersTableViewController *)controller user:(User *)user {
 	self = [super init];
 
 	if (self) {
-		self.viewController = viewController;
+		self.controller = controller;
 		self.user = user;
 	}
 
@@ -38,7 +38,7 @@
 	Contact *contact = [[Contact alloc] init:result];
 
 	[self.user setContact:contact];
-	[self.viewController showDetails:self.user];
+	[self.controller showDetails:self.user];
 }
 
 @end

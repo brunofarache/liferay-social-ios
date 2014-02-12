@@ -19,16 +19,16 @@
  */
 @implementation ProgressView
 
-+ (void)hide:(UIViewController *)viewController {
-	UIView *parent = viewController.navigationController.view;
++ (void)hide:(UIViewController *)controller {
+	UIView *parent = controller.navigationController.view;
 	UIView *view = [parent viewWithTag:PROGRESS_TAG];
 
 	[parent setUserInteractionEnabled:YES];
 	[view removeFromSuperview];
 }
 
-+ (void)show:(UIViewController *)viewController {
-	UIView *parent = viewController.navigationController.view;
++ (void)show:(UIViewController *)controller {
+	UIView *parent = controller.navigationController.view;
 	UIView *progress = [self createProgress:parent];
 
 	[parent setUserInteractionEnabled:NO];

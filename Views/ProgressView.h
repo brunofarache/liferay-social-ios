@@ -19,7 +19,7 @@
  */
 @interface ProgressView : NSObject
 
-+ (void)hide:(UIViewController *)viewController;
-+ (void)show:(UIViewController *)viewController;
++ (void)hide:(UIViewController *)controller;
++ (void)show:(UIViewController *)controller;
 
 @end

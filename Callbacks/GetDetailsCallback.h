@@ -21,8 +21,8 @@
 @interface GetDetailsCallback : NSObject <LRCallback>
 
 @property (nonatomic, retain) User *user;
-@property (nonatomic, strong) UsersTableViewController *viewController;
+@property (nonatomic, strong) UsersTableViewController *controller;
 
-- (id)init:(UsersTableViewController *)viewController user:(User *)user;
+- (id)init:(UsersTableViewController *)controller user:(User *)user;
 
 @end

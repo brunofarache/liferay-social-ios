@@ -19,8 +19,8 @@
  */
 @interface GetMicroblogsCallback : NSObject <LRCallback>
 
-@property (nonatomic, strong) MicroblogsTableViewController *viewController;
+@property (nonatomic, strong) MicroblogsTableViewController *controller;
 
-- (id)init:(MicroblogsTableViewController *)viewController;
+- (id)init:(MicroblogsTableViewController *)controller;
 
 @end

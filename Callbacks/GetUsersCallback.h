@@ -20,8 +20,8 @@
  */
 @interface GetUsersCallback : NSObject <LRCallback>
 
-@property (nonatomic, strong) UsersTableViewController *viewController;
+@property (nonatomic, strong) UsersTableViewController *controller;
 
-- (id)init:(UsersTableViewController *)viewController;
+- (id)init:(UsersTableViewController *)controller;
 
 @end
