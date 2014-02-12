@@ -77,20 +77,29 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView
 		cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-	static NSString *CellIdentifier = @"Cell";
-
 	UITableViewCell *cell =
-		[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-
-	if (cell == nil) {
-		cell =
-			[[UITableViewCell alloc]
-				initWithStyle:UITableViewCellStyleDefault
-				reuseIdentifier:CellIdentifier];
-	}
+		[[UITableViewCell alloc]
+			initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
 
 	User *user = [self.users objectAtIndex:indexPath.row];
 
+	dispatch_queue_t queue = dispatch_get_global_queue(
+		DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+
+	dispatch_async(queue, ^{
+		NSString *portraitURL = [LRPortraitUtil getPortraitURL:
+			[PrefsUtil getSession] male:YES portraitId:user.portraitId
+			uuid:user.uuid];
+
+		NSData *data = [NSData dataWithContentsOfURL:
+			[NSURL URLWithString:portraitURL]];
+
+		dispatch_async(dispatch_get_main_queue(), ^{
+			[cell.imageView setImage:[UIImage imageWithData:data]];
+		});
+	});
+
+	[cell.imageView setImage:[UIImage imageNamed:@"portrait"]];
 	[cell.textLabel setText:user.fullName];
 
 	return cell;

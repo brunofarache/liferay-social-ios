@@ -12,22 +12,19 @@
  * details.
  */
 
-#import "DetailsTableViewController.h"
-#import "LRContactService_v62.h"
-#import "LREntryService_v62.h"
-#import "LRPhoneService_v62.h"
-#import "LRPortraitUtil.h"
-#import "LRServiceFactory.h"
-#import "PrefsUtil.h"
-#import "ProgressView.h"
+#import <CommonCrypto/CommonDigest.h>
+#import "LRHttpUtil.h"
+#import "LRSession.h"
 
 /**
  * @author Bruno Farache
  */
-@interface UsersTableViewController : UITableViewController
+@interface LRPortraitUtil : NSObject
 
-@property (nonatomic, strong) NSMutableArray *users;
++ (NSString *)getPortraitURL:(LRSession *)session male:(BOOL)male
+	portraitId:(long long)portraitId;
 
-- (void)showDetails:(User *)user;
++ (NSString *)getPortraitURL:(LRSession *)session male:(BOOL)male
+	portraitId:(long long)portraitId uuid:(NSString *)uuid;
 
 @end
