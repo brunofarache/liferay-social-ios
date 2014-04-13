@@ -15,8 +15,6 @@
 /**
  * @author Bruno Farache
  */
-@interface LiferaySocialAppDelegate : NSObject <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
+@interface SignInViewController : UITableViewController <UITextFieldDelegate>
 
 @end

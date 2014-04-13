@@ -13,6 +13,7 @@
  */
 
 #import "LiferaySocialAppDelegate.h"
+#import "SignInViewController.h"
 
 /**
  * @author Bruno Farache
@@ -25,25 +26,7 @@
 	self.window =
 		[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
-	self.tabBarController = [[UITabBarController alloc] init];
-
-	UIViewController *contactsViewController =
-		[[UsersTableViewController alloc] init];
-
-	UINavigationController *contactsNavigationController =
-		[self getNavigationController:contactsViewController];
-
-	UIViewController *microblogsViewController =
-		[[MicroblogsTableViewController alloc] init];
-
-	UINavigationController *microblogsNavigationController =
-		[self getNavigationController:microblogsViewController];
-
-	self.tabBarController.viewControllers =
-		@[contactsNavigationController, microblogsNavigationController];
-
-	self.window.rootViewController = self.tabBarController;
-
+	[self.window setRootViewController:[[SignInViewController alloc] init]];
 	[self.window makeKeyAndVisible];
 
 	return YES;

@@ -18,6 +18,7 @@
 		CC31CBC417454E78006CDD4B /* Validator.m in Sources */ = {isa = PBXBuildFile; fileRef = CC31CBC317454E78006CDD4B /* Validator.m */; };
 		CC4B4F711746BF11008C06C6 /* MicroblogsEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4B4F701746BF11008C06C6 /* MicroblogsEntry.m */; };
 		CC7F31CB18ABFF1200AB7B3E /* portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = CC7F31CA18ABFF1200AB7B3E /* portrait.png */; };
+		CC982DB018FA1B020030417B /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC982DAF18FA1B020030417B /* SignInViewController.m */; };
 		CCAB24BF17443E48001F0F3D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCAB24BE17443E48001F0F3D /* UIKit.framework */; };
 		CCAB24C117443E48001F0F3D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCAB24C017443E48001F0F3D /* Foundation.framework */; };
 		CCAB24C317443E48001F0F3D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCAB24C217443E48001F0F3D /* CoreGraphics.framework */; };
@@ -57,6 +58,8 @@
 		CC4B4F6F1746BF11008C06C6 /* MicroblogsEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MicroblogsEntry.h; sourceTree = "<group>"; };
 		CC4B4F701746BF11008C06C6 /* MicroblogsEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MicroblogsEntry.m; sourceTree = "<group>"; };
 		CC7F31CA18ABFF1200AB7B3E /* portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = portrait.png; sourceTree = "<group>"; };
+		CC982DAE18FA1B020030417B /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
+		CC982DAF18FA1B020030417B /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		CCAB24BB17443E48001F0F3D /* Liferay Social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Liferay Social.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCAB24BE17443E48001F0F3D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CCAB24C017443E48001F0F3D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -185,6 +188,15 @@
 			path = Util;
 			sourceTree = "<group>";
 		};
+		CC982DAD18FA1B020030417B /* SignInViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CC982DAE18FA1B020030417B /* SignInViewController.h */,
+				CC982DAF18FA1B020030417B /* SignInViewController.m */,
+			);
+			path = SignInViewController;
+			sourceTree = "<group>";
+		};
 		CCAB24B217443E48001F0F3D = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +247,7 @@
 		CCE3A78C174440D80022B6BF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CC982DAD18FA1B020030417B /* SignInViewController */,
 				CCE469A5177387E800B6FCDA /* DetailsTableViewController.h */,
 				CCE469A6177387E800B6FCDA /* DetailsTableViewController.m */,
 				CCE3A7AC174442F80022B6BF /* MicroblogsTableViewController.h */,
@@ -412,6 +425,7 @@
 				CCFB45D21899A60E0037414C /* Contact.m in Sources */,
 				CCB2A2E1174D566B006C3486 /* User.m in Sources */,
 				CCE469A7177387E800B6FCDA /* DetailsTableViewController.m in Sources */,
+				CC982DB018FA1B020030417B /* SignInViewController.m in Sources */,
 				CCFB45DB189A85200037414C /* ProgressView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
