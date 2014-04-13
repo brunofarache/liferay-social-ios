@@ -23,7 +23,7 @@
 	UIView *parent = [UIApplication sharedApplication].delegate.window;
 	UIView *view = [parent viewWithTag:PROGRESS_TAG];
 
-	[parent setUserInteractionEnabled:YES];
+	[view.superview setUserInteractionEnabled:YES];
 	[view removeFromSuperview];
 }
 
