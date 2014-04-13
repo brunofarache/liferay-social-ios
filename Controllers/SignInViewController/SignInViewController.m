@@ -14,6 +14,7 @@
 
 #import "GetUserSitesCallback.h"
 #import "LRGroupService_v62.h"
+#import "ProgressView.h"
 #import "SignInViewController.h"
 
 /**
@@ -96,6 +97,8 @@
 		didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
 	if (indexPath.section == 1) {
+		[ProgressView show:self];
+		
 		NSString *username = [self _getTextFieldValue:0];
 		NSString *password = [self _getTextFieldValue:1];
 		NSString *server = [self _getTextFieldValue:2];

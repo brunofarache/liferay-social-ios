@@ -13,6 +13,7 @@
  */
 
 #import "GetMicroblogsCallback.h"
+#import "ProgressView.h"
 
 /**
  * @author Silvio Santos
@@ -32,10 +33,13 @@
 - (void)onFailure:(NSError *)error {
 	NSLog(@"Error: %@", error);
 
+	[ProgressView hide];
 	[self.controller setEntries:[NSMutableArray array]];
 }
 
 - (void)onSuccess:(id)result {
+	[ProgressView hide];
+
 	NSMutableArray *entries = [NSMutableArray array];
 
 	for (NSDictionary *jsonObj in result) {

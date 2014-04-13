@@ -13,6 +13,7 @@
  */
 
 #import "GetUserSitesCallback.h"
+#import "ProgressView.h"
 #import "SettingsUtil.h"
 
 /**
@@ -21,6 +22,7 @@
 @implementation GetUserSitesCallback
 
 - (void)onFailure:(NSError *)error {
+	[ProgressView hide];
 	NSLog(@"%@", error);
 }
 
@@ -30,6 +32,7 @@
 		return;
 	}
 
+	[ProgressView hide];
 	NSDictionary *site = result[0];
 	[SettingsUtil setCompanyId:site[@"companyId"]];
 }

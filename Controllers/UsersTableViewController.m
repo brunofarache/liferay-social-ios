@@ -49,7 +49,6 @@
 }
 
 - (void)setUsers:(NSMutableArray *)entries {
-	[ProgressView hide:self];
 	_users = entries;
 	[self.tableView reloadData];
 }

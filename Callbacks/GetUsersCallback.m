@@ -32,10 +32,13 @@
 - (void)onFailure:(NSError *)error {
 	NSLog(@"Error: %@", error);
 
+	[ProgressView hide];
 	[self.controller setUsers:[NSMutableArray array]];
 }
 
 - (void)onSuccess:(id)result {
+	[ProgressView hide];
+
 	NSMutableArray *users = [NSMutableArray array];
 
 	for (NSDictionary *jsonObj in result) {

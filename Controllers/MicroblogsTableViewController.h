@@ -16,7 +16,6 @@
 #import "LRServiceFactory.h"
 #import "MicroblogsEntry.h"
 #import "SettingsUtil.h"
-#import "ProgressView.h"
 
 /**
  * @author Bruno Farache
