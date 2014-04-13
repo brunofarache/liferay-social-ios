@@ -12,25 +12,11 @@
  * details.
  */
 
-#import "LRBatchSession.h"
+#import "LRCallback.h"
 
 /**
  * @author Bruno Farache
  */
-#define LOGIN		@"login"
-#define PASSWORD	@"password"
-#define SERVER		@"server"
-
-@interface PrefsUtil : NSObject
-
-+ (LRBatchSession *)getBatchSession:(id<LRCallback>)callback;
-+ (NSString *)getLogin;
-+ (NSString *)getPassword;
-+ (NSString *)getServer;
-+ (LRSession *)getSession;
-+ (LRSession *)getSession:(id<LRCallback>)callback;
-+ (void)setLogin:(NSString *)login;
-+ (void)setPassword:(NSString *)password;
-+ (void)setServer:(NSString *)server;
+@interface GetUserSitesCallback : NSObject <LRCallback>
 
 @end

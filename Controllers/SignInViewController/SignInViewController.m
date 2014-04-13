@@ -12,6 +12,8 @@
  * details.
  */
 
+#import "GetUserSitesCallback.h"
+#import "LRGroupService_v62.h"
 #import "SignInViewController.h"
 
 /**
@@ -65,7 +67,9 @@
 			[field setTag:2];
 		}
 
+		[field setAutocapitalizationType:UITextAutocapitalizationTypeNone];
 		[field setDelegate:self];
+
 		[cell.contentView addSubview:field];
 	}
 	else {
@@ -86,6 +90,40 @@
 	return @"";
 }
 
+#pragma mark -UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView
+		didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+	if (indexPath.section == 1) {
+		NSString *username = [self _getTextFieldValue:0];
+		NSString *password = [self _getTextFieldValue:1];
+		NSString *server = [self _getTextFieldValue:2];
+
+		LRSession *session = [[LRSession alloc] init:server username:username
+			password:password];
+
+		[session setCallback:[[GetUserSitesCallback alloc] init]];
+
+		LRGroupService_v62 *service = [[LRGroupService_v62 alloc]
+			initWithSession:session];
+
+		NSError *error;
+		[service getUserSites:&error];
+	}
+}
+
+- (BOOL)tableView:(UITableView *)tableView
+		shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath {
+
+	if (indexPath.section == 0) {
+		return NO;
+	}
+	else {
+		return YES;
+	}
+}
+
 #pragma mark - UITextFieldDelegate
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
@@ -100,5 +138,16 @@
 
 	return YES;
 }
+
+#pragma mark - Private Methods
+
+- (NSString *)_getTextFieldValue:(int)row {
+	NSIndexPath *path = [NSIndexPath indexPathForRow:row inSection:0];
+	UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:path];
+	UITextField *field = [cell.contentView subviews][0];
+
+	return field.text;
+}
+
 
 @end

@@ -36,7 +36,7 @@
 
 	GetMicroblogsCallback *callback = [[GetMicroblogsCallback alloc] init:self];
 
-	LRSession *session = [PrefsUtil getSession:callback];
+	LRSession *session = [SettingsUtil getSession:callback];
 
 	LRMicroblogsentryService_v62 *service =
 		(LRMicroblogsentryService_v62 *)

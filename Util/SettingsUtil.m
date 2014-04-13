@@ -12,22 +12,28 @@
  * details.
  */
 
-#import "PrefsUtil.h"
+#import "SettingsUtil.h"
 
 static LRSession *_session;
-static NSUserDefaults *_userDefaults;
+static NSUserDefaults *_preferences;
 
 /**
  * @author Bruno Farache
  */
-@implementation PrefsUtil
+@implementation SettingsUtil
+
++ (void)initialize {
+	if (!_preferences) {
+		_preferences = [NSUserDefaults standardUserDefaults];
+	}
+}
 
 + (LRBatchSession *)getBatchSession:(id<LRCallback>)callback {
 	return [[LRBatchSession alloc] init:[self getSession:callback]];
 }
 
-+ (NSString *)getLogin {
-	return @"test@liferay.com";
++ (long)getCompanyId {
+	return [[_preferences objectForKey:COMPANY_ID] longValue];
 }
 
 + (NSString *)getPassword {
@@ -43,32 +49,30 @@ static NSUserDefaults *_userDefaults;
 }
 
 + (LRSession *)getSession:(id<LRCallback>)callback {
-	if (!_session) {
-		NSString *server = [self getServer];
-		NSString *email = [self getLogin];
-		NSString *password = [self getPassword];
+	NSString *server = [self getServer];
+	NSString *username = [self getUsername];
+	NSString *password = [self getPassword];
 
-		_session = [[LRSession alloc] init:server username:email
-			password:password];
-	}
+	_session = [[LRSession alloc] init:server username:username
+		password:password];
 
 	[_session setCallback:callback];
 
 	return _session;
 }
 
-+ (void)setLogin:(NSString *)login {
-	[_userDefaults setObject:login forKey:login];
-	[_userDefaults synchronize];
-
-	_session = nil;
++ (NSString *)getUsername {
+	return @"test@liferay.com";
 }
 
 + (void)setPassword:(NSString *)password {
-	[_userDefaults setObject:password forKey:PASSWORD];
-	[_userDefaults synchronize];
+	[_preferences setObject:password forKey:PASSWORD];
+	[_preferences synchronize];
+}
 
-	_session = nil;
++ (void)setCompanyId:(NSNumber *)companyId {
+	[_preferences setObject:companyId forKey:COMPANY_ID];
+	[_preferences synchronize];
 }
 
 + (void)setServer:(NSString *)server {
@@ -76,10 +80,13 @@ static NSUserDefaults *_userDefaults;
 		server = [NSString stringWithFormat:@"http://%@", server];
 	}
 
-	[_userDefaults setObject:server forKey:SERVER];
-	[_userDefaults synchronize];
+	[_preferences setObject:server forKey:SERVER];
+	[_preferences synchronize];
+}
 
-	_session = nil;
++ (void)setUsername:(NSString *)username {
+	[_preferences setObject:username forKey:username];
+	[_preferences synchronize];
 }
 
 @end

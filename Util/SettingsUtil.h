@@ -12,22 +12,28 @@
  * details.
  */
 
-#import "DetailsTableViewController.h"
-#import "LRContactService_v62.h"
-#import "LREntryService_v62.h"
-#import "LRPhoneService_v62.h"
-#import "LRPortraitUtil.h"
-#import "LRServiceFactory.h"
-#import "ProgressView.h"
-#import "SettingsUtil.h"
+#import "LRBatchSession.h"
+
+#define COMPANY_ID	@"companyId"
+#define PASSWORD	@"password"
+#define SERVER		@"server"
+#define USERNAME	@"username"
 
 /**
  * @author Bruno Farache
  */
-@interface UsersTableViewController : UITableViewController
+@interface SettingsUtil : NSObject
 
-@property (nonatomic, strong) NSMutableArray *users;
-
-- (void)showDetails:(User *)user;
++ (LRBatchSession *)getBatchSession:(id<LRCallback>)callback;
++ (long)getCompanyId;
++ (NSString *)getPassword;
++ (NSString *)getServer;
++ (LRSession *)getSession;
++ (LRSession *)getSession:(id<LRCallback>)callback;
++ (NSString *)getUsername;
++ (void)setCompanyId:(NSNumber *)companyId;
++ (void)setPassword:(NSString *)password;
++ (void)setServer:(NSString *)server;
++ (void)setUsername:(NSString *)username;
 
 @end

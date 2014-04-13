@@ -14,8 +14,9 @@
 		7520D265188EBEEE00E191B0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7520D263188EBEEE00E191B0 /* Default.png */; };
 		7520D266188EBEEE00E191B0 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7520D264188EBEEE00E191B0 /* Default@2x.png */; };
 		CC1CCBA71896FFD400C8B364 /* DateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1CCBA51896FFD400C8B364 /* DateUtil.m */; };
-		CC31CBC117454E11006CDD4B /* PrefsUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CC31CBC017454E11006CDD4B /* PrefsUtil.m */; };
+		CC31CBC117454E11006CDD4B /* SettingsUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CC31CBC017454E11006CDD4B /* SettingsUtil.m */; };
 		CC31CBC417454E78006CDD4B /* Validator.m in Sources */ = {isa = PBXBuildFile; fileRef = CC31CBC317454E78006CDD4B /* Validator.m */; };
+		CC371AD218FB2B2400C07890 /* GetUserSitesCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = CC371AD118FB2B2400C07890 /* GetUserSitesCallback.m */; };
 		CC4B4F711746BF11008C06C6 /* MicroblogsEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4B4F701746BF11008C06C6 /* MicroblogsEntry.m */; };
 		CC7F31CB18ABFF1200AB7B3E /* portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = CC7F31CA18ABFF1200AB7B3E /* portrait.png */; };
 		CC982DB018FA1B020030417B /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC982DAF18FA1B020030417B /* SignInViewController.m */; };
@@ -51,10 +52,12 @@
 		CC1CCBA51896FFD400C8B364 /* DateUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtil.m; sourceTree = "<group>"; };
 		CC1CCBA61896FFD400C8B364 /* DateUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtil.h; sourceTree = "<group>"; };
 		CC1CCBA8189704D900C8B364 /* UIDimensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDimensions.h; sourceTree = "<group>"; };
-		CC31CBBF17454E11006CDD4B /* PrefsUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefsUtil.h; sourceTree = "<group>"; };
-		CC31CBC017454E11006CDD4B /* PrefsUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrefsUtil.m; sourceTree = "<group>"; };
+		CC31CBBF17454E11006CDD4B /* SettingsUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsUtil.h; sourceTree = "<group>"; };
+		CC31CBC017454E11006CDD4B /* SettingsUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsUtil.m; sourceTree = "<group>"; };
 		CC31CBC217454E78006CDD4B /* Validator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Validator.h; sourceTree = "<group>"; };
 		CC31CBC317454E78006CDD4B /* Validator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Validator.m; sourceTree = "<group>"; };
+		CC371AD018FB2B2400C07890 /* GetUserSitesCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GetUserSitesCallback.h; path = Callbacks/GetUserSitesCallback.h; sourceTree = "<group>"; };
+		CC371AD118FB2B2400C07890 /* GetUserSitesCallback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GetUserSitesCallback.m; path = Callbacks/GetUserSitesCallback.m; sourceTree = "<group>"; };
 		CC4B4F6F1746BF11008C06C6 /* MicroblogsEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MicroblogsEntry.h; sourceTree = "<group>"; };
 		CC4B4F701746BF11008C06C6 /* MicroblogsEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MicroblogsEntry.m; sourceTree = "<group>"; };
 		CC7F31CA18ABFF1200AB7B3E /* portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = portrait.png; sourceTree = "<group>"; };
@@ -152,6 +155,8 @@
 			children = (
 				CCFB45C418997FED0037414C /* GetUsersCallback.h */,
 				CCFB45C518997FED0037414C /* GetUsersCallback.m */,
+				CC371AD018FB2B2400C07890 /* GetUserSitesCallback.h */,
+				CC371AD118FB2B2400C07890 /* GetUserSitesCallback.m */,
 				CCFB45CD1899A4920037414C /* GetDetailsCallback.h */,
 				CCFB45CE1899A4920037414C /* GetDetailsCallback.m */,
 				292C8DAA186DB629008C549B /* GetMicroblogsCallback.h */,
@@ -178,8 +183,8 @@
 			children = (
 				CC1CCBA61896FFD400C8B364 /* DateUtil.h */,
 				CC1CCBA51896FFD400C8B364 /* DateUtil.m */,
-				CC31CBBF17454E11006CDD4B /* PrefsUtil.h */,
-				CC31CBC017454E11006CDD4B /* PrefsUtil.m */,
+				CC31CBBF17454E11006CDD4B /* SettingsUtil.h */,
+				CC31CBC017454E11006CDD4B /* SettingsUtil.m */,
 				CCFB45DC189A942F0037414C /* UIColors.h */,
 				CC1CCBA8189704D900C8B364 /* UIDimensions.h */,
 				CC31CBC217454E78006CDD4B /* Validator.h */,
@@ -413,10 +418,11 @@
 				292C8DAC186DB629008C549B /* GetMicroblogsCallback.m in Sources */,
 				CCE3A7AB174440D80022B6BF /* main.m in Sources */,
 				CC1CCBA71896FFD400C8B364 /* DateUtil.m in Sources */,
+				CC371AD218FB2B2400C07890 /* GetUserSitesCallback.m in Sources */,
 				CCE3A7AE174442F80022B6BF /* MicroblogsTableViewController.m in Sources */,
 				292C8DA5186DB2CA008C549B /* LRMicroblogsentryService_v62.m in Sources */,
 				CCFB45C31899730D0037414C /* LREntryService_v62.m in Sources */,
-				CC31CBC117454E11006CDD4B /* PrefsUtil.m in Sources */,
+				CC31CBC117454E11006CDD4B /* SettingsUtil.m in Sources */,
 				CC31CBC417454E78006CDD4B /* Validator.m in Sources */,
 				CCFB45CF1899A4920037414C /* GetDetailsCallback.m in Sources */,
 				CCFB45C618997FED0037414C /* GetUsersCallback.m in Sources */,

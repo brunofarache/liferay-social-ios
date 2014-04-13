@@ -36,7 +36,7 @@
 	[ProgressView show:self];
 
 	GetUsersCallback *callback = [[GetUsersCallback alloc] init:self];
-	LRSession *session = [PrefsUtil getSession:callback];
+	LRSession *session = [SettingsUtil getSession:callback];
 
 	LREntryService_v62 *service =
 		(LREntryService_v62 *)
@@ -88,7 +88,7 @@
 
 	dispatch_async(queue, ^{
 		NSString *portraitURL = [LRPortraitUtil getPortraitURL:
-			[PrefsUtil getSession] male:YES portraitId:user.portraitId
+			[SettingsUtil getSession] male:YES portraitId:user.portraitId
 			uuid:user.uuid];
 
 		NSData *data = [NSData dataWithContentsOfURL:
@@ -119,7 +119,7 @@
 	GetDetailsCallback *callback = [[GetDetailsCallback alloc] init:self
 		user:user];
 
-	LRBatchSession *batch = [PrefsUtil getBatchSession:callback];
+	LRBatchSession *batch = [SettingsUtil getBatchSession:callback];
 
 	NSError *error;
 

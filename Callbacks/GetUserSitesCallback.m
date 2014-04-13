@@ -12,22 +12,26 @@
  * details.
  */
 
-#import "DetailsTableViewController.h"
-#import "LRContactService_v62.h"
-#import "LREntryService_v62.h"
-#import "LRPhoneService_v62.h"
-#import "LRPortraitUtil.h"
-#import "LRServiceFactory.h"
-#import "ProgressView.h"
+#import "GetUserSitesCallback.h"
 #import "SettingsUtil.h"
 
 /**
  * @author Bruno Farache
  */
-@interface UsersTableViewController : UITableViewController
+@implementation GetUserSitesCallback
 
-@property (nonatomic, strong) NSMutableArray *users;
+- (void)onFailure:(NSError *)error {
+	NSLog(@"%@", error);
+}
 
-- (void)showDetails:(User *)user;
+- (void)onSuccess:(NSArray *)result {
+	if ([result count] == 0) {
+		[self onFailure:nil];
+		return;
+	}
+
+	NSDictionary *site = result[0];
+	[SettingsUtil setCompanyId:site[@"companyId"]];
+}
 
 @end
