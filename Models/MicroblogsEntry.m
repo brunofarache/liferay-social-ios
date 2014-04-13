@@ -14,6 +14,8 @@
 
 #import "MicroblogsEntry.h"
 
+#import "DateUtil.h"
+
 /**
  * @author Bruno Farache
  */

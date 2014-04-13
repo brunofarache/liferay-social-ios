@@ -12,11 +12,6 @@
  * details.
  */
 
-#import "LRMicroblogsentryService_v62.h"
-#import "LRServiceFactory.h"
-#import "MicroblogsEntry.h"
-#import "SettingsUtil.h"
-
 /**
  * @author Bruno Farache
  */

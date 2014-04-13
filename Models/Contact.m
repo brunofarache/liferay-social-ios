@@ -14,6 +14,8 @@
 
 #import "Contact.h"
 
+#import "DateUtil.h"
+
 /**
  * @author Bruno Farache
  */

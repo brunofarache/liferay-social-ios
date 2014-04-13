@@ -13,6 +13,8 @@
  */
 
 #import "GetMicroblogsCallback.h"
+
+#import "MicroblogsEntry.h"
 #import "ProgressView.h"
 
 /**

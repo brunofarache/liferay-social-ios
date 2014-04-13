@@ -12,10 +12,11 @@
  * details.
  */
 
+#import "SignInViewController.h"
+
 #import "GetUserSitesCallback.h"
 #import "LRGroupService_v62.h"
 #import "ProgressView.h"
-#import "SignInViewController.h"
 
 /**
  * @author Bruno Farache

@@ -13,8 +13,17 @@
  */
 
 #import "UsersTableViewController.h"
+
+#import "DetailsTableViewController.h"
 #import "GetDetailsCallback.h"
 #import "GetUsersCallback.h"
+#import "LRContactService_v62.h"
+#import "LREntryService_v62.h"
+#import "LRPhoneService_v62.h"
+#import "LRPortraitUtil.h"
+#import "LRServiceFactory.h"
+#import "ProgressView.h"
+#import "SettingsUtil.h"
 
 /**
  * @author Bruno Farache

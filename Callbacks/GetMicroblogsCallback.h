@@ -12,6 +12,7 @@
  * details.
  */
 
+#import "LRCallback.h"
 #import "MicroblogsTableViewController.h"
 
 /**

@@ -13,6 +13,7 @@
  */
 
 #import "LiferaySocialAppDelegate.h"
+
 #import "SignInViewController.h"
 
 /**

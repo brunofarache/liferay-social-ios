@@ -13,7 +13,13 @@
  */
 
 #import "MicroblogsTableViewController.h"
+
+#import "LRMicroblogsentryService_v62.h"
+#import "LRServiceFactory.h"
+#import "MicroblogsEntry.h"
 #import "GetMicroblogsCallback.h"
+#import "ProgressView.h"
+#import "SettingsUtil.h"
 
 /**
  * @author Bruno Farache

@@ -14,6 +14,8 @@
 
 #import "GetUsersCallback.h"
 
+#import "ProgressView.h"
+
 /**
  * @author Bruno Farache
  */
