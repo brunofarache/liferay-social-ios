@@ -7,12 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		292C8DA1186DB2CA008C549B /* LRBaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 292C8D98186DB2CA008C549B /* LRBaseService.m */; };
-		292C8DA2186DB2CA008C549B /* LRBatchSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 292C8D99186DB2CA008C549B /* LRBatchSession.m */; };
-		292C8DA3186DB2CA008C549B /* LRHttpUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 292C8D9A186DB2CA008C549B /* LRHttpUtil.m */; };
-		292C8DA4186DB2CA008C549B /* LRSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 292C8D9B186DB2CA008C549B /* LRSession.m */; };
 		292C8DA5186DB2CA008C549B /* LRMicroblogsentryService_v62.m in Sources */ = {isa = PBXBuildFile; fileRef = 292C8DA0186DB2CA008C549B /* LRMicroblogsentryService_v62.m */; };
 		292C8DAC186DB629008C549B /* GetMicroblogsCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = 292C8DAB186DB629008C549B /* GetMicroblogsCallback.m */; };
+		364A7F923C954F078AF3D455 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DDD7885C9894787BAE67DB0 /* libPods.a */; };
 		7520D262188EB9F300E191B0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7520D261188EB9F300E191B0 /* Default-568h@2x.png */; };
 		7520D265188EBEEE00E191B0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7520D263188EBEEE00E191B0 /* Default.png */; };
 		7520D266188EBEEE00E191B0 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7520D264188EBEEE00E191B0 /* Default@2x.png */; };
@@ -20,7 +17,6 @@
 		CC31CBC117454E11006CDD4B /* PrefsUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CC31CBC017454E11006CDD4B /* PrefsUtil.m */; };
 		CC31CBC417454E78006CDD4B /* Validator.m in Sources */ = {isa = PBXBuildFile; fileRef = CC31CBC317454E78006CDD4B /* Validator.m */; };
 		CC4B4F711746BF11008C06C6 /* MicroblogsEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4B4F701746BF11008C06C6 /* MicroblogsEntry.m */; };
-		CC7F31C918ABA49A00AB7B3E /* LRPortraitUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7F31C818ABA49A00AB7B3E /* LRPortraitUtil.m */; };
 		CC7F31CB18ABFF1200AB7B3E /* portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = CC7F31CA18ABFF1200AB7B3E /* portrait.png */; };
 		CCAB24BF17443E48001F0F3D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCAB24BE17443E48001F0F3D /* UIKit.framework */; };
 		CCAB24C117443E48001F0F3D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCAB24C017443E48001F0F3D /* Foundation.framework */; };
@@ -37,28 +33,17 @@
 		CCE469A7177387E800B6FCDA /* DetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE469A6177387E800B6FCDA /* DetailsTableViewController.m */; };
 		CCFB45C31899730D0037414C /* LREntryService_v62.m in Sources */ = {isa = PBXBuildFile; fileRef = CCFB45C21899730D0037414C /* LREntryService_v62.m */; };
 		CCFB45C618997FED0037414C /* GetUsersCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = CCFB45C518997FED0037414C /* GetUsersCallback.m */; };
-		CCFB45C91899A1AC0037414C /* LRPhoneService_v62.m in Sources */ = {isa = PBXBuildFile; fileRef = CCFB45C81899A1AC0037414C /* LRPhoneService_v62.m */; };
-		CCFB45CC1899A3F50037414C /* LRContactService_v62.m in Sources */ = {isa = PBXBuildFile; fileRef = CCFB45CB1899A3F50037414C /* LRContactService_v62.m */; };
 		CCFB45CF1899A4920037414C /* GetDetailsCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = CCFB45CE1899A4920037414C /* GetDetailsCallback.m */; };
 		CCFB45D21899A60E0037414C /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = CCFB45D11899A60E0037414C /* Contact.m */; };
-		CCFB45D5189A80700037414C /* LRServiceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = CCFB45D4189A80700037414C /* LRServiceFactory.m */; };
 		CCFB45DB189A85200037414C /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCFB45DA189A85200037414C /* ProgressView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		292C8D92186DB2CA008C549B /* LRBaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRBaseService.h; sourceTree = "<group>"; };
-		292C8D93186DB2CA008C549B /* LRBatchSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRBatchSession.h; sourceTree = "<group>"; };
-		292C8D94186DB2CA008C549B /* LRCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRCallback.h; sourceTree = "<group>"; };
-		292C8D95186DB2CA008C549B /* LRHttpUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRHttpUtil.h; sourceTree = "<group>"; };
-		292C8D96186DB2CA008C549B /* LRSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRSession.h; sourceTree = "<group>"; };
-		292C8D98186DB2CA008C549B /* LRBaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRBaseService.m; sourceTree = "<group>"; };
-		292C8D99186DB2CA008C549B /* LRBatchSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRBatchSession.m; sourceTree = "<group>"; };
-		292C8D9A186DB2CA008C549B /* LRHttpUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRHttpUtil.m; sourceTree = "<group>"; };
-		292C8D9B186DB2CA008C549B /* LRSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRSession.m; sourceTree = "<group>"; };
 		292C8D9E186DB2CA008C549B /* LRMicroblogsentryService_v62.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRMicroblogsentryService_v62.h; sourceTree = "<group>"; };
 		292C8DA0186DB2CA008C549B /* LRMicroblogsentryService_v62.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRMicroblogsentryService_v62.m; sourceTree = "<group>"; };
 		292C8DAA186DB629008C549B /* GetMicroblogsCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GetMicroblogsCallback.h; path = Callbacks/GetMicroblogsCallback.h; sourceTree = "<group>"; };
 		292C8DAB186DB629008C549B /* GetMicroblogsCallback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GetMicroblogsCallback.m; path = Callbacks/GetMicroblogsCallback.m; sourceTree = "<group>"; };
+		6DDD7885C9894787BAE67DB0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7520D261188EB9F300E191B0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		7520D263188EBEEE00E191B0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		7520D264188EBEEE00E191B0 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -71,9 +56,7 @@
 		CC31CBC317454E78006CDD4B /* Validator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Validator.m; sourceTree = "<group>"; };
 		CC4B4F6F1746BF11008C06C6 /* MicroblogsEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MicroblogsEntry.h; sourceTree = "<group>"; };
 		CC4B4F701746BF11008C06C6 /* MicroblogsEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MicroblogsEntry.m; sourceTree = "<group>"; };
-		CC7F31C818ABA49A00AB7B3E /* LRPortraitUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRPortraitUtil.m; sourceTree = "<group>"; };
 		CC7F31CA18ABFF1200AB7B3E /* portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = portrait.png; sourceTree = "<group>"; };
-		CCA56B1718ABA34B000B57DF /* LRPortraitUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRPortraitUtil.h; sourceTree = "<group>"; };
 		CCAB24BB17443E48001F0F3D /* Liferay Social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Liferay Social.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCAB24BE17443E48001F0F3D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CCAB24C017443E48001F0F3D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -99,19 +82,14 @@
 		CCFB45C21899730D0037414C /* LREntryService_v62.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LREntryService_v62.m; sourceTree = "<group>"; };
 		CCFB45C418997FED0037414C /* GetUsersCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GetUsersCallback.h; path = Callbacks/GetUsersCallback.h; sourceTree = "<group>"; };
 		CCFB45C518997FED0037414C /* GetUsersCallback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GetUsersCallback.m; path = Callbacks/GetUsersCallback.m; sourceTree = "<group>"; };
-		CCFB45C71899A1A10037414C /* LRPhoneService_v62.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRPhoneService_v62.h; sourceTree = "<group>"; };
-		CCFB45C81899A1AC0037414C /* LRPhoneService_v62.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRPhoneService_v62.m; sourceTree = "<group>"; };
-		CCFB45CA1899A3EF0037414C /* LRContactService_v62.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRContactService_v62.h; sourceTree = "<group>"; };
-		CCFB45CB1899A3F50037414C /* LRContactService_v62.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRContactService_v62.m; sourceTree = "<group>"; };
 		CCFB45CD1899A4920037414C /* GetDetailsCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GetDetailsCallback.h; path = Callbacks/GetDetailsCallback.h; sourceTree = "<group>"; };
 		CCFB45CE1899A4920037414C /* GetDetailsCallback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GetDetailsCallback.m; path = Callbacks/GetDetailsCallback.m; sourceTree = "<group>"; };
 		CCFB45D01899A60E0037414C /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
 		CCFB45D11899A60E0037414C /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
-		CCFB45D3189A80670037414C /* LRServiceFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRServiceFactory.h; sourceTree = "<group>"; };
-		CCFB45D4189A80700037414C /* LRServiceFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRServiceFactory.m; sourceTree = "<group>"; };
 		CCFB45D9189A85200037414C /* ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
 		CCFB45DA189A85200037414C /* ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
 		CCFB45DC189A942F0037414C /* UIColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIColors.h; sourceTree = "<group>"; };
+		E7B1B46C0572417C97C9B21F /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +102,7 @@
 				CCAB24BF17443E48001F0F3D /* UIKit.framework in Frameworks */,
 				CCAB24C117443E48001F0F3D /* Foundation.framework in Frameworks */,
 				CCAB24C317443E48001F0F3D /* CoreGraphics.framework in Frameworks */,
+				364A7F923C954F078AF3D455 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,46 +112,9 @@
 		292C8D8F186DB2CA008C549B /* Liferay Mobile SDK */ = {
 			isa = PBXGroup;
 			children = (
-				292C8D90186DB2CA008C549B /* core */,
 				292C8D9C186DB2CA008C549B /* v62 */,
 			);
 			path = "Liferay Mobile SDK";
-			sourceTree = "<group>";
-		};
-		292C8D90186DB2CA008C549B /* core */ = {
-			isa = PBXGroup;
-			children = (
-				292C8D91186DB2CA008C549B /* h */,
-				292C8D97186DB2CA008C549B /* m */,
-			);
-			path = core;
-			sourceTree = "<group>";
-		};
-		292C8D91186DB2CA008C549B /* h */ = {
-			isa = PBXGroup;
-			children = (
-				292C8D92186DB2CA008C549B /* LRBaseService.h */,
-				292C8D93186DB2CA008C549B /* LRBatchSession.h */,
-				292C8D94186DB2CA008C549B /* LRCallback.h */,
-				292C8D95186DB2CA008C549B /* LRHttpUtil.h */,
-				CCA56B1718ABA34B000B57DF /* LRPortraitUtil.h */,
-				292C8D96186DB2CA008C549B /* LRSession.h */,
-				CCFB45D3189A80670037414C /* LRServiceFactory.h */,
-			);
-			path = h;
-			sourceTree = "<group>";
-		};
-		292C8D97186DB2CA008C549B /* m */ = {
-			isa = PBXGroup;
-			children = (
-				292C8D98186DB2CA008C549B /* LRBaseService.m */,
-				292C8D99186DB2CA008C549B /* LRBatchSession.m */,
-				292C8D9A186DB2CA008C549B /* LRHttpUtil.m */,
-				CC7F31C818ABA49A00AB7B3E /* LRPortraitUtil.m */,
-				292C8D9B186DB2CA008C549B /* LRSession.m */,
-				CCFB45D4189A80700037414C /* LRServiceFactory.m */,
-			);
-			path = m;
 			sourceTree = "<group>";
 		};
 		292C8D9C186DB2CA008C549B /* v62 */ = {
@@ -187,10 +129,8 @@
 		292C8D9D186DB2CA008C549B /* h */ = {
 			isa = PBXGroup;
 			children = (
-				CCFB45CA1899A3EF0037414C /* LRContactService_v62.h */,
 				CCFB45C1189973050037414C /* LREntryService_v62.h */,
 				292C8D9E186DB2CA008C549B /* LRMicroblogsentryService_v62.h */,
-				CCFB45C71899A1A10037414C /* LRPhoneService_v62.h */,
 			);
 			path = h;
 			sourceTree = "<group>";
@@ -198,10 +138,8 @@
 		292C8D9F186DB2CA008C549B /* m */ = {
 			isa = PBXGroup;
 			children = (
-				CCFB45CB1899A3F50037414C /* LRContactService_v62.m */,
 				CCFB45C21899730D0037414C /* LREntryService_v62.m */,
 				292C8DA0186DB2CA008C549B /* LRMicroblogsentryService_v62.m */,
-				CCFB45C81899A1AC0037414C /* LRPhoneService_v62.m */,
 			);
 			path = m;
 			sourceTree = "<group>";
@@ -253,6 +191,7 @@
 				CCAB24C417443E48001F0F3D /* Liferay Social */,
 				CCAB24BD17443E48001F0F3D /* Frameworks */,
 				CCAB24BC17443E48001F0F3D /* Products */,
+				E7B1B46C0572417C97C9B21F /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -272,6 +211,7 @@
 				CCE3A7CD17454AB20022B6BF /* MobileCoreServices.framework */,
 				CCE3A7CE17454AB20022B6BF /* SystemConfiguration.framework */,
 				CCAB24BE17443E48001F0F3D /* UIKit.framework */,
+				6DDD7885C9894787BAE67DB0 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -361,9 +301,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CCAB24F217443E48001F0F3D /* Build configuration list for PBXNativeTarget "Liferay Social" */;
 			buildPhases = (
+				3769AF3E0D974A0B88880948 /* Check Pods Manifest.lock */,
 				CCAB24B717443E48001F0F3D /* Sources */,
 				CCAB24B817443E48001F0F3D /* Frameworks */,
 				CCAB24B917443E48001F0F3D /* Resources */,
+				364170EFE4974002A5BC7156 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -416,6 +358,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		364170EFE4974002A5BC7156 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3769AF3E0D974A0B88880948 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CCAB24B717443E48001F0F3D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -426,22 +401,14 @@
 				CCE3A7AB174440D80022B6BF /* main.m in Sources */,
 				CC1CCBA71896FFD400C8B364 /* DateUtil.m in Sources */,
 				CCE3A7AE174442F80022B6BF /* MicroblogsTableViewController.m in Sources */,
-				292C8DA2186DB2CA008C549B /* LRBatchSession.m in Sources */,
-				CCFB45CC1899A3F50037414C /* LRContactService_v62.m in Sources */,
-				CCFB45D5189A80700037414C /* LRServiceFactory.m in Sources */,
 				292C8DA5186DB2CA008C549B /* LRMicroblogsentryService_v62.m in Sources */,
 				CCFB45C31899730D0037414C /* LREntryService_v62.m in Sources */,
-				CC7F31C918ABA49A00AB7B3E /* LRPortraitUtil.m in Sources */,
-				CCFB45C91899A1AC0037414C /* LRPhoneService_v62.m in Sources */,
-				292C8DA1186DB2CA008C549B /* LRBaseService.m in Sources */,
 				CC31CBC117454E11006CDD4B /* PrefsUtil.m in Sources */,
 				CC31CBC417454E78006CDD4B /* Validator.m in Sources */,
-				292C8DA3186DB2CA008C549B /* LRHttpUtil.m in Sources */,
 				CCFB45CF1899A4920037414C /* GetDetailsCallback.m in Sources */,
 				CCFB45C618997FED0037414C /* GetUsersCallback.m in Sources */,
 				CC4B4F711746BF11008C06C6 /* MicroblogsEntry.m in Sources */,
 				CCB2A2DB174D455A006C3486 /* UsersTableViewController.m in Sources */,
-				292C8DA4186DB2CA008C549B /* LRSession.m in Sources */,
 				CCFB45D21899A60E0037414C /* Contact.m in Sources */,
 				CCB2A2E1174D566B006C3486 /* User.m in Sources */,
 				CCE469A7177387E800B6FCDA /* DetailsTableViewController.m in Sources */,
@@ -512,6 +479,7 @@
 		};
 		CCAB24F317443E48001F0F3D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7B1B46C0572417C97C9B21F /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Supporting Files/Liferay Social-Prefix.pch";
@@ -523,6 +491,7 @@
 		};
 		CCAB24F417443E48001F0F3D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7B1B46C0572417C97C9B21F /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Supporting Files/Liferay Social-Prefix.pch";

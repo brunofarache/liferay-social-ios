@@ -1,0 +1,10 @@
+PODS:
+  - Liferay-iOS-SDK (6.2.0.1)
+
+DEPENDENCIES:
+  - Liferay-iOS-SDK
+
+SPEC CHECKSUMS:
+  Liferay-iOS-SDK: a4d25c0d096c2007807fab2bda47937840fd752a
+
+COCOAPODS: 0.29.0

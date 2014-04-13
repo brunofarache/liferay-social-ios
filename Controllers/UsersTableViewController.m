@@ -124,9 +124,10 @@
 	NSError *error;
 
 	LRContactService_v62 *contactService = [[LRContactService_v62 alloc]
-		init:batch];
+		initWithSession:batch];
 
-	LRPhoneService_v62 *phoneService = [[LRPhoneService_v62 alloc] init:batch];
+	LRPhoneService_v62 *phoneService = [[LRPhoneService_v62 alloc]
+		initWithSession:batch];
 
 	[contactService getContactWithContactId:user.contactId error:&error];
 

@@ -1,1 +1,4 @@
+Pods/
+
 .DS_Store
+*.xcworkspace

@@ -1,0 +1,1 @@
+pod 'Liferay-iOS-SDK'
