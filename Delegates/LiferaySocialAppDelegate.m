@@ -14,7 +14,9 @@
 
 #import "LiferaySocialAppDelegate.h"
 
+#import "MicroblogsTableViewController.h"
 #import "SignInViewController.h"
+#import "UsersTableViewController.h"
 
 /**
  * @author Bruno Farache
@@ -33,9 +35,30 @@
 	return YES;
 }
 
+- (void)setTabBarController {
+	self.tabBarController = [[UITabBarController alloc] init];
+
+	UIViewController *contactsViewController =
+		[[UsersTableViewController alloc] init];
+
+	UINavigationController *contactsNavigationController =
+		[self _getNavigationController:contactsViewController];
+
+	UIViewController *microblogsViewController =
+		[[MicroblogsTableViewController alloc] init];
+
+	UINavigationController *microblogsNavigationController =
+		[self _getNavigationController:microblogsViewController];
+
+	[self.tabBarController setViewControllers:
+		@[contactsNavigationController, microblogsNavigationController]];
+
+	[self.window setRootViewController:self.tabBarController];
+}
+
 #pragma mark - Private Methods
 
-- (UINavigationController *)getNavigationController:(UIViewController *)root {
+- (UINavigationController *)_getNavigationController:(UIViewController *)root {
 	UINavigationController *navigationController =
 		[[UINavigationController alloc] initWithRootViewController:root];
 

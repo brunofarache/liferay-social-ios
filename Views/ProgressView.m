@@ -23,8 +23,8 @@
 	UIView *parent = [UIApplication sharedApplication].delegate.window;
 	UIView *view = [parent viewWithTag:PROGRESS_TAG];
 
-	[view.superview setUserInteractionEnabled:YES];
 	[view removeFromSuperview];
+	[view.superview setUserInteractionEnabled:YES];
 }
 
 + (void)show:(UIViewController *)controller {
@@ -36,8 +36,8 @@
 
 	UIView *progress = [self createProgress:parent];
 
-	[parent setUserInteractionEnabled:NO];
 	[parent addSubview:progress];
+	[parent setUserInteractionEnabled:NO];
 }
 
 #pragma mark - Private Methods

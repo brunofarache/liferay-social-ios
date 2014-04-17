@@ -14,6 +14,7 @@
 
 #import "GetUserSitesCallback.h"
 
+#import "LiferaySocialAppDelegate.h"
 #import "ProgressView.h"
 #import "SettingsUtil.h"
 
@@ -36,6 +37,11 @@
 	[ProgressView hide];
 	NSDictionary *site = result[0];
 	[SettingsUtil setCompanyId:site[@"companyId"]];
+
+	LiferaySocialAppDelegate *delegate =
+		[UIApplication sharedApplication].delegate;
+
+	[delegate setTabBarController];
 }
 
 @end
