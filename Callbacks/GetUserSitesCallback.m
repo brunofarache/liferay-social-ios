@@ -23,9 +23,19 @@
  */
 @implementation GetUserSitesCallback
 
+- (id)initWithSession:(LRSession *)session {
+	self = [super init];
+
+	if (self) {
+		self.session = session;
+	}
+
+	return self;
+}
+
 - (void)onFailure:(NSError *)error {
-	[ProgressView hide];
 	NSLog(@"%@", error);
+	[ProgressView hide];
 }
 
 - (void)onSuccess:(NSArray *)result {
@@ -35,8 +45,13 @@
 	}
 
 	[ProgressView hide];
+
 	NSDictionary *site = result[0];
-	[SettingsUtil setCompanyId:site[@"companyId"]];
+	NSNumber *companyId = site[@"companyId"];
+
+	[SettingsUtil setCredentialsWithUsername:self.session.username
+		password:self.session.password companyId:companyId
+		server:self.session.server];
 
 	LiferaySocialAppDelegate *delegate =
 		[UIApplication sharedApplication].delegate;

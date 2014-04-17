@@ -107,7 +107,10 @@
 		LRSession *session = [[LRSession alloc] init:server username:username
 			password:password];
 
-		[session setCallback:[[GetUserSitesCallback alloc] init]];
+		GetUserSitesCallback *callback = [[GetUserSitesCallback alloc]
+			initWithSession:session];
+
+		[session setCallback:callback];
 
 		LRGroupService_v62 *service = [[LRGroupService_v62 alloc]
 			initWithSession:session];

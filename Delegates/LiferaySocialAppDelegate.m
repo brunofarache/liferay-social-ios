@@ -15,6 +15,7 @@
 #import "LiferaySocialAppDelegate.h"
 
 #import "MicroblogsTableViewController.h"
+#import "SettingsUtil.h"
 #import "SignInViewController.h"
 #import "UsersTableViewController.h"
 
@@ -29,7 +30,13 @@
 	self.window =
 		[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
-	[self.window setRootViewController:[[SignInViewController alloc] init]];
+	if ([SettingsUtil isSignedIn]) {
+		[self setTabBarController];
+	}
+	else {
+		[self.window setRootViewController:[[SignInViewController alloc] init]];
+	}
+
 	[self.window makeKeyAndVisible];
 
 	return YES;

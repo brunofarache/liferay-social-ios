@@ -13,10 +13,15 @@
  */
 
 #import "LRCallback.h"
+#import "LRSession.h"
 
 /**
  * @author Bruno Farache
  */
 @interface GetUserSitesCallback : NSObject <LRCallback>
+
+@property (nonatomic, strong) LRSession *session;
+
+- (id)initWithSession:(LRSession *)session;
 
 @end

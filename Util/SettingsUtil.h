@@ -31,9 +31,9 @@
 + (LRSession *)getSession;
 + (LRSession *)getSession:(id<LRCallback>)callback;
 + (NSString *)getUsername;
-+ (void)setCompanyId:(NSNumber *)companyId;
-+ (void)setPassword:(NSString *)password;
-+ (void)setServer:(NSString *)server;
-+ (void)setUsername:(NSString *)username;
++ (BOOL)isSignedIn;
++ (void)setCredentialsWithUsername:(NSString *)username
+	password:(NSString *)password companyId:(NSNumber *)companyId
+	server:(NSString *)server;
 
 @end

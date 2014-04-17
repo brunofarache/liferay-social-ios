@@ -15,7 +15,7 @@
 #import "SettingsUtil.h"
 
 static LRSession *_session;
-static NSUserDefaults *_preferences;
+static NSUserDefaults *_settings;
 
 /**
  * @author Bruno Farache
@@ -23,8 +23,8 @@ static NSUserDefaults *_preferences;
 @implementation SettingsUtil
 
 + (void)initialize {
-	if (!_preferences) {
-		_preferences = [NSUserDefaults standardUserDefaults];
+	if (!_settings) {
+		_settings = [NSUserDefaults standardUserDefaults];
 	}
 }
 
@@ -33,15 +33,17 @@ static NSUserDefaults *_preferences;
 }
 
 + (long)getCompanyId {
-	return [[_preferences objectForKey:COMPANY_ID] longValue];
+	return [[_settings objectForKey:COMPANY_ID] longValue];
 }
 
 + (NSString *)getPassword {
-	return @"test";
+	NSURLCredential *credential = [self _getCredential:[self getServer]];
+	return credential.password;
 }
 
 + (NSString *)getServer {
-	return @"http://localhost:8080";
+	NSString *value = [_settings stringForKey:SERVER];
+	return value;
 }
 
 + (LRSession *)getSession {
@@ -62,31 +64,53 @@ static NSUserDefaults *_preferences;
 }
 
 + (NSString *)getUsername {
-	return @"test@liferay.com";
+	NSURLCredential *credential = [self _getCredential:[self getServer]];
+	return credential.user;
 }
 
-+ (void)setPassword:(NSString *)password {
-	[_preferences setObject:password forKey:PASSWORD];
-	[_preferences synchronize];
++ (BOOL)isSignedIn {
+	return [self getUsername] ? YES : NO;
 }
 
-+ (void)setCompanyId:(NSNumber *)companyId {
-	[_preferences setObject:companyId forKey:COMPANY_ID];
-	[_preferences synchronize];
-}
++ (void)setCredentialsWithUsername:(NSString *)username
+		password:(NSString *)password companyId:(NSNumber *)companyId
+		server:(NSString *)server {
 
-+ (void)setServer:(NSString *)server {
 	if (!([server hasPrefix:@"http://"] || [server hasPrefix:@"https://"])) {
 		server = [NSString stringWithFormat:@"http://%@", server];
 	}
 
-	[_preferences setObject:server forKey:SERVER];
-	[_preferences synchronize];
+	NSURLCredential *credential = [NSURLCredential credentialWithUser:username
+		password:password persistence:NSURLCredentialPersistencePermanent];
+
+	NSURLProtectionSpace *space = [self _getProtectionSpace:server];
+
+	[[NSURLCredentialStorage sharedCredentialStorage] setCredential:credential
+		forProtectionSpace:space];
+
+	[_settings setObject:companyId forKey:COMPANY_ID];
+	[_settings setObject:server forKey:SERVER];
+	[_settings synchronize];
 }
 
-+ (void)setUsername:(NSString *)username {
-	[_preferences setObject:username forKey:username];
-	[_preferences synchronize];
++ (NSURLCredential *)_getCredential:(NSString *)server {
+	NSURLProtectionSpace *space = [self _getProtectionSpace:server];
+
+	NSDictionary *credentialStorage =
+		[[NSURLCredentialStorage sharedCredentialStorage]
+			credentialsForProtectionSpace:space];
+
+	NSString *username = credentialStorage.keyEnumerator.nextObject;
+
+	return credentialStorage[username];
+}
+
++ (NSURLProtectionSpace *)_getProtectionSpace:(NSString *)server {
+	NSURL *URL = [NSURL URLWithString:server];
+
+	return [[NSURLProtectionSpace alloc] initWithHost:URL.host
+		port:[URL.port integerValue] protocol:URL.scheme realm:nil
+		authenticationMethod:NSURLAuthenticationMethodHTTPDigest];
 }
 
 @end
