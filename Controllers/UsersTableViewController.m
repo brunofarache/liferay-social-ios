@@ -53,8 +53,8 @@
 				session:session];
 
 	NSError *error;
-	[service searchUsersAndContactsWithCompanyId:10157 keywords:@"" start:-1
-		end:-1 error:&error];
+	[service searchUsersAndContactsWithCompanyId:[SettingsUtil getCompanyId]
+		keywords:@"" start:-1 end:-1 error:&error];
 }
 
 - (void)setUsers:(NSMutableArray *)entries {
